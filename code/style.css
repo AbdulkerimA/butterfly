@@ -96,19 +96,28 @@ main #sec1 article p {
   margin: 5vh 2vw;
 }
 main #sec2 {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 100%;
-  height: 50vh;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 10vh 10vw;
   position: relative;
+  /* firest article*/
+  /*second article on this section*/
+  /*therd article on this section*/
 }
-main #sec2 article img {
+main #sec2 #article1 {
+  /*border: 3px solid red ;*/
+  /* display: none; /* for development only deseble it  */
+  /* second article on this section */
+}
+main #sec2 #article1 img {
   width: 30%;
   height: 40vh;
   position: absolute;
   border-radius: 10px;
 }
-main #sec2 article #disc1 {
+main #sec2 #article1 #disc1 {
   width: 30%;
   height: 40vh;
   padding: 0vw 2vh;
@@ -118,28 +127,123 @@ main #sec2 article #disc1 {
   align-items: center;
   left: 45%;
 }
-main #sec2 article #disc1 header h1 {
+main #sec2 #article1 #disc1 header h1 {
   font-family: monospace;
   font-weight: bold;
   font-size: 5vh;
   padding-bottom: 2vh;
 }
-main #sec2 article #disc1 p {
+main #sec2 #article1 #disc1 p {
   font-family: sans-serif;
   font-weight: lighter;
   padding-bottom: 3vh;
 }
-main #sec2 article #disc1 button {
+main #sec2 #article1 #disc1 button {
   border-radius: 10px;
   width: 15vw;
-  height: 10vh;
+  height: 7vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   background-color: #742904;
 }
-main #sec2 article #disc1 button a {
+main #sec2 #article1 #disc1 button a {
+  color: white;
+  font-weight: bold;
+}
+main #sec2 #article2 {
+  /*border: 1px solid black;*/
+  position: relative;
+  top: 60vh;
+}
+main #sec2 #article2 img {
+  width: 30%;
+  height: 40vh;
+  position: absolute;
+  left: 45%;
+  border-radius: 10px;
+}
+main #sec2 #article2 #disc2 {
+  width: 30%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0vw 2vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #sec2 #article2 #disc2 header h1 {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 5vh;
+  padding-bottom: 2vh;
+}
+main #sec2 #article2 #disc2 p {
+  font-family: sans-serif;
+  font-weight: lighter;
+  padding-bottom: 3vh;
+  text-align: right;
+}
+main #sec2 #article2 #disc2 button {
+  border-radius: 10px;
+  width: 15vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #742904;
+}
+main #sec2 #article2 #disc2 button a {
+  color: white;
+  font-weight: bold;
+}
+main #sec2 #article3 {
+  /*border: 1px solid black;*/
+  position: relative;
+  top: 130vh;
+}
+main #sec2 #article3 img {
+  width: 30%;
+  height: 40vh;
+  position: absolute;
+  border-radius: 10px;
+}
+main #sec2 #article3 #disc3 {
+  width: 30%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0vw 2vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 45%;
+}
+main #sec2 #article3 #disc3 header h1 {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 5vh;
+  padding-bottom: 2vh;
+}
+main #sec2 #article3 #disc3 p {
+  font-family: sans-serif;
+  font-weight: lighter;
+  padding-bottom: 3vh;
+}
+main #sec2 #article3 #disc3 button {
+  border-radius: 10px;
+  width: 15vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #742904;
+}
+main #sec2 #article3 #disc3 button a {
   color: white;
   font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

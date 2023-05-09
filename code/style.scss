@@ -3,6 +3,7 @@
     margin: 0px;
     text-decoration: none;
     scroll-behavior: smooth;
+    
 }
 body{
     background-color:#fffefd ;
@@ -98,12 +99,15 @@ main {
     }
     /* second section styling */
     #sec2 {
-        border: 1px solid black;
+        /*border: 1px solid black;*/
         width: 100%;
-        height: 50vh;
+        height: fit-content;
         padding: 10vh 10vw;
         position: relative;
-        article {
+        /* firest article*/
+        #article1 {
+            /*border: 3px solid red ;*/
+           /* display: none; /* for development only deseble it  */
             img{
                 width: 30%;
                 height: 40vh;
@@ -137,7 +141,7 @@ main {
                 button{
                     border-radius: 10px;
                     width: 15vw;
-                    height: 10vh;
+                    height: 7vh;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -148,6 +152,111 @@ main {
                         font-weight: bold;
                     }
                 }
+            }
+            /* second article on this section */
+
+        }
+        /*second article on this section*/
+        #article2{
+            /*border: 1px solid black;*/
+            position: relative;
+            top: 60vh;
+            img {
+               width: 30%;
+               height: 40vh;
+               position: absolute;
+               left: 45%;
+               border-radius: 10px; 
+            }
+            #disc2{
+                width: 30%;
+                height: fit-content;
+                padding:0vw 2vh;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                header{
+                    h1 {
+                        font-family: monospace;
+                        font-weight: bold;
+                        font-size: 5vh;
+                        padding-bottom: 2vh;
+                    }
+                }
+                p{
+                    font-family: sans-serif;
+                    font-weight: lighter;
+                    padding-bottom: 3vh;
+                    text-align: right;
+                }
+                button{
+                    border-radius: 10px;
+                    width: 15vw;
+                    height: 8vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    background-color: #742904;
+                    a{
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+        }
+        
+        /*therd article on this section*/
+        #article3{
+            /*border: 1px solid black;*/
+            position: relative;
+            top: 130vh;
+            img {
+               width: 30%;
+               height: 40vh;
+               position: absolute;
+               border-radius: 10px; 
+            }
+            #disc3{
+                width: 30%;
+                height: fit-content;
+                padding:0vw 2vh;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                left: 45%;
+                header{
+                    h1 {
+                        font-family: monospace;
+                        font-weight: bold;
+                        font-size: 5vh;
+                        padding-bottom: 2vh;
+                    }
+                }
+                p{
+                    font-family: sans-serif;
+                    font-weight: lighter;
+                    padding-bottom: 3vh;
+                }
+                button{
+                    border-radius: 10px;
+                    width: 15vw;
+                    height: 8vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    background-color: #742904;
+                    a{
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+                
             }
         }
     }
