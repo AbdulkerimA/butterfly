@@ -52,7 +52,8 @@ nav {
 
 main {
     /* first section */
-    section{
+    #sec1 {
+        /*display: none;  you have to delete this part */
         article {
             
             /*how the article will be displayed*/
@@ -92,6 +93,61 @@ main {
                 color: #ffa87d;
                 padding: 3vh 3vw;
                 margin: 5vh 2vw;
+            }
+        }
+    }
+    /* second section styling */
+    #sec2 {
+        border: 1px solid black;
+        width: 100%;
+        height: 50vh;
+        padding: 10vh 10vw;
+        position: relative;
+        article {
+            img{
+                width: 30%;
+                height: 40vh;
+                position: absolute;
+                border-radius: 10px;
+            }
+            #disc1 {
+               
+                width: 30%;
+                height: 40vh;
+                padding:0vw 2vh;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                left: 45%;
+
+                header{
+                    h1 {
+                        font-family: monospace;
+                        font-weight: bold;
+                        font-size: 5vh;
+                        padding-bottom: 2vh;
+                    }
+                }
+                p{
+                    font-family: sans-serif;
+                    font-weight: lighter;
+                    padding-bottom: 3vh;
+                }
+                button{
+                    border-radius: 10px;
+                    width: 15vw;
+                    height: 10vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    background-color: #742904;
+                    a{
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }
