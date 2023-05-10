@@ -55,6 +55,9 @@ main {
     /* first section */
     #sec1 {
         /*display: none;  you have to delete this part */
+        background-image: url(./../resource/pic/backgrounds/bg2.jpg);
+        background-repeat: none;
+        background-size: contain;
         article {
             
             /*how the article will be displayed*/
@@ -86,6 +89,7 @@ main {
                     font-family: monospace;
                     font-size: 6vh;
                     color: #742904;
+                    color: white;
                 }
             }
             p{
@@ -262,6 +266,7 @@ main {
         }
     }
     #sec3 {
+        margin-top: 100px;
         article {
             /*border: 1px solid black;/**/
             padding:10px;
@@ -275,8 +280,9 @@ main {
                 align-items: center;
                 margin: 0px  20px 0px 10px;
                 img{
-                    width: 100px;
-                    height: 100px;
+                    width: 200px;
+                    height: 200px;
+                    margin-bottom:20px;
                     border: 1px solid brown;
                     border-radius: 50%;
                     display: flex;
@@ -284,7 +290,8 @@ main {
                     align-items: center ;
                 }
                 blockquote {
-                     text-align: center;
+                    color: gray;
+                    text-align: center;
                 }
             }
 
@@ -295,8 +302,9 @@ main {
                 align-items: center;
                 margin: 0px  20px 0px 10px;
                 img{
-                    width: 100px;
-                    height: 100px;
+                    width: 200px;
+                    height: 200px;
+                    margin-bottom:20px;
                     border: 1px solid brown;
                     border-radius: 50%;
                     display: flex;
@@ -304,7 +312,8 @@ main {
                     align-items: center ;
                 }
                 blockquote {
-                     text-align: center;
+                color: gray; 
+                text-align: center;
                 }
             }
             /*section three testmonial section*/
@@ -315,8 +324,9 @@ main {
                 align-items: center;
                 margin: 0px  20px 0px 10px;
                 img{
-                    width: 100px;
-                    height: 100px;
+                    width: 200px;
+                    height: 200px;
+                    margin-bottom:20px;
                     border: 1px solid brown;
                     border-radius: 50%;
                     display: flex;
@@ -324,7 +334,8 @@ main {
                     align-items: center ;
                 }
                 blockquote {
-                     text-align: center;
+                    color: gray;
+                    text-align: center;
                 }
             }
             #test4{
@@ -334,8 +345,9 @@ main {
                 align-items: center;
                 margin: 0px  20px 0px 10px;
                 img{
-                    width: 100px;
-                    height: 100px;
+                    width: 200px;
+                    height: 200px;
+                    margin-bottom:20px;
                     border: 1px solid brown;
                     border-radius: 50%;
                     display: flex;
@@ -343,7 +355,8 @@ main {
                     align-items: center ;
                 }
                 blockquote {
-                     text-align: center;
+                    color: gray;
+                    text-align: center;
                 }
             }
 
