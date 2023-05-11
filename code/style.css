@@ -3,6 +3,7 @@
   margin: 0px;
   text-decoration: none;
   scroll-behavior: smooth;
+  /*box-sizing: border-box;*/
 }
 
 body {
@@ -52,7 +53,13 @@ nav #links {
 /* styling main section article*/
 main {
   /* first section */
+  overflow: hidden;
   /* second section styling */
+  /*section three for brands section */
+  /* animation for section three brand slide (horizontall scroll)*/
+  /*section four about the company */
+  /*section five for testimonials section*/
+  /*footer section*/
 }
 main #sec1 {
   /*display: none;  you have to delete this part */
@@ -106,6 +113,7 @@ main #sec2 {
   padding: 10vh 10vw;
   position: relative;
   overflow-x: hidden;
+  margin-bottom: 100px;
   /* firest article*/
   /*second article on this section*/
   /*therd article on this section*/
@@ -252,24 +260,87 @@ main #sec2 #article3 #disc3 button a {
   font-weight: bold;
 }
 main #sec3 {
-  margin-top: 100px;
-  /* section four */
+  /*  border: 1px solid black;/**/
 }
-main #sec3 article {
+main #sec3 #article1 {
+  margin: 10px;
+  white-space: nowrap; /**/
+}
+main #sec3 #article1 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #sec3 #article1 header h2 {
+  color: brown;
+  font-family: monospace;
+  font-size: 5vh;
+  margin: 20px 20px;
+}
+main #sec3 #article1 #logos {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+main #sec3 #article1 #logos img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+main #sec4 {
+  padding: 20px;
+}
+main #sec4 #article1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+main #sec4 #article1 header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+main #sec4 #article1 header h1 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 10vh;
+  color: #4e3b40;
+  text-transform: capitalize;
+}
+main #sec4 #article1 p {
+  width: 85%;
+  font-family: cursive;
+  font-weight: lighter;
+  font-size: 17px;
+  color: gray;
+}
+main #sec5 {
+  margin: 100px 0px;
+}
+main #sec5 article {
   /*border: 1px solid black;/**/
   padding: 10px;
   display: flex;
   justify-content: space-around;
   /*section three testmonial section*/
 }
-main #sec3 article #test1 {
+main #sec5 article #test1 {
   /*border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
 }
-main #sec3 article #test1 img {
+main #sec5 article #test1 img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -279,18 +350,18 @@ main #sec3 article #test1 img {
   justify-content: center;
   align-items: center;
 }
-main #sec3 article #test1 blockquote {
+main #sec5 article #test1 blockquote {
   color: gray;
   text-align: center;
 }
-main #sec3 article #test2 {
+main #sec5 article #test2 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
 }
-main #sec3 article #test2 img {
+main #sec5 article #test2 img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -300,18 +371,18 @@ main #sec3 article #test2 img {
   justify-content: center;
   align-items: center;
 }
-main #sec3 article #test2 blockquote {
+main #sec5 article #test2 blockquote {
   color: gray;
   text-align: center;
 }
-main #sec3 article #test3 {
+main #sec5 article #test3 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
 }
-main #sec3 article #test3 img {
+main #sec5 article #test3 img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -321,18 +392,18 @@ main #sec3 article #test3 img {
   justify-content: center;
   align-items: center;
 }
-main #sec3 article #test3 blockquote {
+main #sec5 article #test3 blockquote {
   color: gray;
   text-align: center;
 }
-main #sec3 article #test4 {
+main #sec5 article #test4 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
 }
-main #sec3 article #test4 img {
+main #sec5 article #test4 img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -342,7 +413,11 @@ main #sec3 article #test4 img {
   justify-content: center;
   align-items: center;
 }
-main #sec3 article #test4 blockquote {
+main #sec5 article #test4 blockquote {
   color: gray;
   text-align: center;
+}
+main footer {
+  background-color: #1a0900;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

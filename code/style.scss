@@ -3,7 +3,7 @@
     margin: 0px;
     text-decoration: none;
     scroll-behavior: smooth;
-    
+    /*box-sizing: border-box;*/
 }
 body{
     background-color:#fffefd ;
@@ -53,6 +53,7 @@ nav {
 
 main {
     /* first section */
+    overflow: hidden;
     #sec1 {
         /*display: none;  you have to delete this part */
         background-image: url(./../resource/pic/backgrounds/bg2.jpg);
@@ -109,6 +110,7 @@ main {
         padding: 10vh 10vw;
         position: relative;
         overflow-x:hidden ;
+        margin-bottom:100px ;
         /* firest article*/
         #article1 {
             /*border: 3px solid red ;*/
@@ -265,8 +267,78 @@ main {
             }
         }
     }
-    #sec3 {
-        margin-top: 100px;
+    /*section three for brands section */
+    #sec3{
+      /*  border: 1px solid black;/**/
+        #article1{
+            margin: 10px;
+            white-space: nowrap;/**/
+            header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    color: brown;
+                    font-family: monospace;
+                    font-size: 5vh;
+                    margin: 20px 20px;
+                }
+            }
+            #logos{
+                display: inline-block;
+                animation:  20s slide infinite linear;
+                img{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    padding: 5px 10px ;
+                }
+            }
+        }
+    }
+    /* animation for section three brand slide (horizontall scroll)*/
+    @keyframes slide {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+
+    /*section four about the company */
+    #sec4{
+        padding: 20px;
+        #article1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            header{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                h1{
+                    font-family: sans-serif;
+                    font-weight: bold;
+                    font-size: 10vh;
+                    color: #4e3b40;
+                    text-transform: capitalize;
+                }
+            }
+            p{
+                width: 85%;
+                font-family: cursive;
+                font-weight: lighter;
+                font-size: 17px;
+                color: gray;
+            }
+        }
+    }
+
+    /*section five for testimonials section*/
+    #sec5 {
+        margin: 100px 0px;
         article {
             /*border: 1px solid black;/**/
             padding:10px;
@@ -361,7 +433,10 @@ main {
             }
 
         }
-
-        /* section four */
+    }
+    /*footer section*/
+    footer{
+        background-color: #1a0900;
+        color:white;
     }
 }
