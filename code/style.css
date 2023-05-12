@@ -63,7 +63,7 @@ main {
 }
 main #sec1 {
   /*display: none;  you have to delete this part */
-  background-image: url(./../resource/pic/backgrounds/bg2.jpg);
+  /*background-image: url(./../resource/pic/backgrounds/bg2.jpg);/**/
   background-repeat: none;
   background-size: contain;
 }
