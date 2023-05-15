@@ -420,4 +420,47 @@ main #sec5 article #test4 blockquote {
 main footer {
   background-color: #1a0900;
   color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+main footer #top {
+  display: flex;
+  padding: 50px 40px;
+}
+main footer #top a {
+  margin: 10px;
+  display: block;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+main footer #top h3 {
+  font-family: sans-serif;
+  margin-bottom: 5px;
+}
+main footer #top #contact {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  position: relative;
+  left: 10vh;
+}
+main footer #top #links {
+  position: relative;
+  left: 35vw;
+}
+main footer #top #links h3 {
+  display: flex;
+  justify-content: center;
+}
+main footer #top #Group_members {
+  position: relative;
+  left: 60vw;
+}
+main footer #bottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
 }/*# sourceMappingURL=style.css.map */
