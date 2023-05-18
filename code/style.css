@@ -106,7 +106,7 @@ main #sec1 article p {
   color: #ffa87d;
 }
 main #sec2 {
-  border: 1px solid black; /**/
+  /* border: 1px solid black;/**/
   width: 100%;
   height: 200vh;
   padding: 10vh 10vw;
@@ -125,9 +125,9 @@ main #sec2 #article1 {
 }
 main #sec2 #article1 img {
   width: 30%;
-  height: 40vh;
+  height: 45vh;
   position: absolute;
-  top: 10vh;
+  top: 5vh;
   border-radius: 10px;
 }
 main #sec2 #article1 #disc1 {
@@ -175,10 +175,10 @@ main #sec2 #article2 {
 }
 main #sec2 #article2 img {
   width: 30%;
-  height: 40vh;
+  height: 45vh;
   position: absolute;
   left: 45%;
-  top: 10vh;
+  top: 5vh;
   border-radius: 10px;
 }
 main #sec2 #article2 #disc2 {
@@ -222,13 +222,13 @@ main #sec2 #article2 #disc2 button a {
 main #sec2 #article3 {
   /*border: 1px solid black;/**/
   position: relative;
-  top: 130vh;
+  top: 140vh;
 }
 main #sec2 #article3 img {
   width: 30%;
-  height: 40vh;
+  height: 45vh;
   position: absolute;
-  top: 10vh;
+  top: 5vh;
   border-radius: 10px;
 }
 main #sec2 #article3 #disc3 {
