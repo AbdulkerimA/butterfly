@@ -92,19 +92,18 @@ main #sec1 article header {
 }
 main #sec1 article header h1 {
   /*box modeling */
-  margin-bottom: 2vh;
   /* styling the font of the header */
+  letter-spacing: 0.5em;
   font-family: monospace;
   font-size: 6vh;
+  font-weight: bolder;
   color: #742904;
-  color: white;
 }
 main #sec1 article p {
+  position: relative;
   font-family: sans-serif;
-  font-size: 3vh;
+  font-size: 1em;
   color: #ffa87d;
-  padding: 3vh 3vw;
-  margin: 5vh 2vw;
 }
 main #sec2 {
   /* border: 1px solid black;/**/
@@ -148,7 +147,9 @@ main #sec2 #article1 #disc1 header h1 {
 main #sec2 #article1 #disc1 p {
   font-family: sans-serif;
   font-weight: lighter;
+  line-height: 1.5em;
   padding-bottom: 3vh;
+  color: gray;
 }
 main #sec2 #article1 #disc1 button {
   border-radius: 10px;
@@ -195,8 +196,10 @@ main #sec2 #article2 #disc2 header h1 {
 main #sec2 #article2 #disc2 p {
   font-family: sans-serif;
   font-weight: lighter;
+  line-height: 1.5em;
   padding-bottom: 3vh;
   text-align: right;
+  color: gray;
 }
 main #sec2 #article2 #disc2 button {
   border-radius: 10px;
@@ -243,7 +246,9 @@ main #sec2 #article3 #disc3 header h1 {
 main #sec2 #article3 #disc3 p {
   font-family: sans-serif;
   font-weight: lighter;
+  line-height: 1.5em;
   padding-bottom: 3vh;
+  color: gray;
 }
 main #sec2 #article3 #disc3 button {
   border-radius: 10px;
