@@ -55,10 +55,11 @@ main {
   /* first section */
   overflow: hidden;
   /* second section styling */
-  /*section three for brands section */
+  /*section three for about section */
+  /*section four brands section */
   /* animation for section three brand slide (horizontall scroll)*/
-  /*section four about the company */
-  /*section five for testimonials section*/
+  /* section five numbers */
+  /*section six for testimonials section*/
   /*footer section*/
 }
 main #sec1 {
@@ -132,12 +133,12 @@ main #sec2 .article1 img {
 }
 main #sec2 .article1 .disc1.reveal {
   transform: translateX(50vw);
-  transition: all 2s ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 main #sec2 .article1 .image.reveal {
   transform: translateX(-50vw);
-  transition: all 2s 0.5s ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 main #sec2 .article1 .image.reveal.active {
@@ -201,12 +202,12 @@ main #sec2 #article2 img {
 }
 main #sec2 #article2 .disc2.reveal {
   transform: translateX(-50vw);
-  transition: all 2s ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 main #sec2 #article2 .image.reveal {
   transform: translateX(50vw);
-  transition: all 2s ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 main #sec2 #article2 .image.reveal.active {
@@ -269,12 +270,12 @@ main #sec2 #article3 img {
 }
 main #sec2 #article3 .disc3.reveal {
   transform: translateX(50vw);
-  transition: all 2s ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 main #sec2 #article3 .image.reveal {
   transform: translateX(-50vw);
-  transition: all 2s ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 main #sec2 #article3 .image.reveal.active {
@@ -324,28 +325,56 @@ main #sec2 #article3 .disc3 button a {
   font-weight: bold;
 }
 main #sec3 {
-  /*  border: 1px solid black;/**/
+  padding: 20px;
 }
 main #sec3 #article1 {
-  margin: 10px;
-  white-space: nowrap; /**/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 main #sec3 #article1 header {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
+}
+main #sec3 #article1 header h1 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 10vh;
+  color: #4e3b40;
+  text-transform: capitalize;
+}
+main #sec3 #article1 p {
+  width: 85%;
+  font-family: cursive;
+  font-weight: lighter;
+  font-size: 17px;
+  color: gray;
+}
+main #sec4 {
+  /*  border: 1px solid black;/**/
+}
+main #sec4 #article1 {
+  margin: 10px;
+  white-space: nowrap; /**/
+}
+main #sec4 #article1 header {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-main #sec3 #article1 header h2 {
+main #sec4 #article1 header h2 {
   color: brown;
   font-family: monospace;
   font-size: 5vh;
   margin: 20px 20px;
 }
-main #sec3 #article1 #logos {
+main #sec4 #article1 #logos {
   display: inline-block;
   animation: 20s slide infinite linear;
 }
-main #sec3 #article1 #logos img {
+main #sec4 #article1 #logos img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -359,52 +388,78 @@ main #sec3 #article1 #logos img {
     transform: translateX(-100%);
   }
 }
-main #sec4 {
-  padding: 20px;
+main #sec5 {
+  /*   border: #1a0900 1px solid;/**/
+  position: relative;
 }
-main #sec4 #article1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
-main #sec4 #article1 header {
+main #sec5 .article1 {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
-main #sec4 #article1 header h1 {
+main #sec5 .article1 .view {
+  /* border: 1px solid black;/**/
+  margin: 2rem 8rem 1rem 0rem;
   font-family: sans-serif;
-  font-weight: bold;
-  font-size: 10vh;
-  color: #4e3b40;
-  text-transform: capitalize;
+  font-size: 10rem;
+  font-weight: normal;
 }
-main #sec4 #article1 p {
-  width: 85%;
-  font-family: cursive;
+main #sec5 .article1 .sell {
+  /*border: 1px solid black;/**/
+  margin: 2rem 8rem 1rem 2rem;
+  font-family: sans-serif;
+  font-size: 10rem;
+  font-weight: normal;
+}
+main #sec5 .article1 .product {
+  /*border: 1px solid black;/**/
+  margin: 2rem 0rem 1rem 2rem;
+  font-family: sans-serif;
+  font-size: 10rem;
+  font-weight: normal;
+}
+main #sec5 .article2 {
+  display: flex;
+  position: relative;
+  /*border: 1px solid black;/**/
+}
+main #sec5 .article2 p {
+  font-family: sans-serif;
   font-weight: lighter;
-  font-size: 17px;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-transform: capitalize;
   color: gray;
 }
-main #sec5 {
+main #sec5 .article2 p:nth-child(1) {
+  position: relative;
+  left: 5rem;
+}
+main #sec5 .article2 p:nth-child(2) {
+  position: relative;
+  left: 13rem;
+}
+main #sec5 .article2 p:nth-child(3) {
+  position: relative;
+  left: 20rem;
+}
+main #sec6 {
   margin: 100px 0px;
 }
-main #sec5 article {
+main #sec6 article {
   /*border: 1px solid black;/**/
   padding: 10px;
   display: flex;
   justify-content: space-around;
   /*section three testmonial section*/
 }
-main #sec5 article #test1 {
+main #sec6 article #test1 {
   /*border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
 }
-main #sec5 article #test1 img {
+main #sec6 article #test1 img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -414,18 +469,18 @@ main #sec5 article #test1 img {
   justify-content: center;
   align-items: center;
 }
-main #sec5 article #test1 blockquote {
+main #sec6 article #test1 blockquote {
   color: gray;
   text-align: center;
 }
-main #sec5 article #test2 {
+main #sec6 article #test2 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
 }
-main #sec5 article #test2 img {
+main #sec6 article #test2 img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -435,18 +490,18 @@ main #sec5 article #test2 img {
   justify-content: center;
   align-items: center;
 }
-main #sec5 article #test2 blockquote {
+main #sec6 article #test2 blockquote {
   color: gray;
   text-align: center;
 }
-main #sec5 article #test3 {
+main #sec6 article #test3 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
 }
-main #sec5 article #test3 img {
+main #sec6 article #test3 img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -456,18 +511,18 @@ main #sec5 article #test3 img {
   justify-content: center;
   align-items: center;
 }
-main #sec5 article #test3 blockquote {
+main #sec6 article #test3 blockquote {
   color: gray;
   text-align: center;
 }
-main #sec5 article #test4 {
+main #sec6 article #test4 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
 }
-main #sec5 article #test4 img {
+main #sec6 article #test4 img {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -477,7 +532,7 @@ main #sec5 article #test4 img {
   justify-content: center;
   align-items: center;
 }
-main #sec5 article #test4 blockquote {
+main #sec6 article #test4 blockquote {
   color: gray;
   text-align: center;
 }

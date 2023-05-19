@@ -17,3 +17,18 @@ let reveal = () => {
     }
 }
 window.addEventListener("scroll",reveal);
+
+// secript for section five
+let numberOfview = 200 ;
+let numberOfSell = 341;
+let numberOfProduct = 500;
+
+// appending to the html
+document.querySelector(".view").appendChild(document.createTextNode(numberOfview));
+document.querySelector(".sell").appendChild(document.createTextNode(numberOfSell));
+document.querySelector(".product").appendChild(document.createTextNode(numberOfProduct));
+
+
+
+
+
