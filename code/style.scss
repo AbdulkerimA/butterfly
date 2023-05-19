@@ -92,6 +92,7 @@ main {
                     font-size: 6vh;
                     font-weight: bolder;
                     color: #742904;
+                    
                 }
             }
             p{
@@ -112,7 +113,7 @@ main {
         overflow-x:hidden ;
         margin-bottom:100px ;
         /* firest article*/
-        #article1 {
+        .article1 {
             /*border: 3px solid red ;/**/
             position: relative;
            /* display: none; /* for development only deseble it  */
@@ -123,8 +124,25 @@ main {
                 top: 5vh;
                 border-radius: 10px;
             }
-            #disc1 {
-               
+            .disc1.reveal {
+                transform: translateX(50vw);
+                transition: all 2s  ease;
+                opacity: 0;
+            }
+            .image.reveal{
+                transform: translateX(-50vw);
+                transition: all 2s .5s ease;
+                opacity: 0;
+            }
+            .image.reveal.active {
+                transform: translateX(0vw);
+                opacity: 1;
+            }
+            .disc1.reveal.active{
+                transform: translateX(0%);
+                opacity: 1;
+            }
+            .disc1 {
                 width: 30%;
                 height: fit-content;
                 padding:0vw 2vh;
@@ -133,7 +151,6 @@ main {
                 flex-direction: column;
                 align-items: center;
                 left: 45%;
-
                 header{
                     h1 {
                         font-family: monospace;
@@ -180,7 +197,25 @@ main {
                top: 5vh;
                border-radius: 10px; 
             }
-            #disc2{
+            .disc2.reveal {
+                transform: translateX(-50vw);
+                transition: all 2s  ease;
+                opacity: 0;
+            }
+            .image.reveal{
+                transform: translateX(50vw);
+                transition: all 2s  ease;
+                opacity: 0;
+            }
+            .image.reveal.active {
+                transform: translateX(0vw);
+                opacity: 1;
+            }
+            .disc2.reveal.active{
+                transform: translateX(0%);
+                opacity: 1;
+            }
+            .disc2{
                 width: 30%;
                 height: fit-content;
                 padding:0vw 2vh;
@@ -235,7 +270,25 @@ main {
                top: 5vh;
                border-radius: 10px; 
             }
-            #disc3{
+            .disc3.reveal {
+                transform: translateX(50vw);
+                transition: all 2s  ease;
+                opacity: 0;
+            }
+            .image.reveal{
+                transform: translateX(-50vw);
+                transition: all 2s  ease;
+                opacity: 0;
+            }
+            .image.reveal.active {
+                transform: translateX(0vw);
+                opacity: 1;
+            }
+            .disc3.reveal.active{
+                transform: translateX(0%);
+                opacity: 1;
+            }
+            .disc3{
                 width: 30%;
                 height: fit-content;
                 padding:0vw 2vh;

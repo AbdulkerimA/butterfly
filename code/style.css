@@ -117,20 +117,38 @@ main #sec2 {
   /*second article on this section*/
   /*therd article on this section*/
 }
-main #sec2 #article1 {
+main #sec2 .article1 {
   /*border: 3px solid red ;/**/
   position: relative;
   /* display: none; /* for development only deseble it  */
   /* second article on this section */
 }
-main #sec2 #article1 img {
+main #sec2 .article1 img {
   width: 35%;
   height: 45vh;
   position: absolute;
   top: 5vh;
   border-radius: 10px;
 }
-main #sec2 #article1 #disc1 {
+main #sec2 .article1 .disc1.reveal {
+  transform: translateX(50vw);
+  transition: all 2s ease;
+  opacity: 0;
+}
+main #sec2 .article1 .image.reveal {
+  transform: translateX(-50vw);
+  transition: all 2s 0.5s ease;
+  opacity: 0;
+}
+main #sec2 .article1 .image.reveal.active {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+main #sec2 .article1 .disc1.reveal.active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+main #sec2 .article1 .disc1 {
   width: 30%;
   height: -moz-fit-content;
   height: fit-content;
@@ -141,20 +159,20 @@ main #sec2 #article1 #disc1 {
   align-items: center;
   left: 45%;
 }
-main #sec2 #article1 #disc1 header h1 {
+main #sec2 .article1 .disc1 header h1 {
   font-family: monospace;
   font-weight: bold;
   font-size: 5vh;
   padding-bottom: 2vh;
 }
-main #sec2 #article1 #disc1 p {
+main #sec2 .article1 .disc1 p {
   font-family: sans-serif;
   font-weight: lighter;
   line-height: 1.5em;
   padding-bottom: 3vh;
   color: gray;
 }
-main #sec2 #article1 #disc1 button {
+main #sec2 .article1 .disc1 button {
   border-radius: 10px;
   width: 15vw;
   height: 7vh;
@@ -164,7 +182,7 @@ main #sec2 #article1 #disc1 button {
   border: none;
   background-color: #742904;
 }
-main #sec2 #article1 #disc1 button a {
+main #sec2 .article1 .disc1 button a {
   color: white;
   font-weight: bold;
 }
@@ -181,7 +199,25 @@ main #sec2 #article2 img {
   top: 5vh;
   border-radius: 10px;
 }
-main #sec2 #article2 #disc2 {
+main #sec2 #article2 .disc2.reveal {
+  transform: translateX(-50vw);
+  transition: all 2s ease;
+  opacity: 0;
+}
+main #sec2 #article2 .image.reveal {
+  transform: translateX(50vw);
+  transition: all 2s ease;
+  opacity: 0;
+}
+main #sec2 #article2 .image.reveal.active {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+main #sec2 #article2 .disc2.reveal.active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+main #sec2 #article2 .disc2 {
   width: 30%;
   height: -moz-fit-content;
   height: fit-content;
@@ -191,13 +227,13 @@ main #sec2 #article2 #disc2 {
   flex-direction: column;
   align-items: center;
 }
-main #sec2 #article2 #disc2 header h1 {
+main #sec2 #article2 .disc2 header h1 {
   font-family: monospace;
   font-weight: bold;
   font-size: 5vh;
   padding-bottom: 2vh;
 }
-main #sec2 #article2 #disc2 p {
+main #sec2 #article2 .disc2 p {
   font-family: sans-serif;
   font-weight: lighter;
   line-height: 1.5em;
@@ -205,7 +241,7 @@ main #sec2 #article2 #disc2 p {
   text-align: right;
   color: gray;
 }
-main #sec2 #article2 #disc2 button {
+main #sec2 #article2 .disc2 button {
   border-radius: 10px;
   width: 15vw;
   height: 8vh;
@@ -215,7 +251,7 @@ main #sec2 #article2 #disc2 button {
   border: none;
   background-color: #742904;
 }
-main #sec2 #article2 #disc2 button a {
+main #sec2 #article2 .disc2 button a {
   color: white;
   font-weight: bold;
 }
@@ -231,7 +267,25 @@ main #sec2 #article3 img {
   top: 5vh;
   border-radius: 10px;
 }
-main #sec2 #article3 #disc3 {
+main #sec2 #article3 .disc3.reveal {
+  transform: translateX(50vw);
+  transition: all 2s ease;
+  opacity: 0;
+}
+main #sec2 #article3 .image.reveal {
+  transform: translateX(-50vw);
+  transition: all 2s ease;
+  opacity: 0;
+}
+main #sec2 #article3 .image.reveal.active {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+main #sec2 #article3 .disc3.reveal.active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+main #sec2 #article3 .disc3 {
   width: 30%;
   height: -moz-fit-content;
   height: fit-content;
@@ -242,20 +296,20 @@ main #sec2 #article3 #disc3 {
   align-items: center;
   left: 45%;
 }
-main #sec2 #article3 #disc3 header h1 {
+main #sec2 #article3 .disc3 header h1 {
   font-family: monospace;
   font-weight: bold;
   font-size: 5vh;
   padding-bottom: 2vh;
 }
-main #sec2 #article3 #disc3 p {
+main #sec2 #article3 .disc3 p {
   font-family: sans-serif;
   font-weight: lighter;
   line-height: 1.5em;
   padding-bottom: 3vh;
   color: gray;
 }
-main #sec2 #article3 #disc3 button {
+main #sec2 #article3 .disc3 button {
   border-radius: 10px;
   width: 15vw;
   height: 8vh;
@@ -265,7 +319,7 @@ main #sec2 #article3 #disc3 button {
   border: none;
   background-color: #742904;
 }
-main #sec2 #article3 #disc3 button a {
+main #sec2 #article3 .disc3 button a {
   color: white;
   font-weight: bold;
 }
