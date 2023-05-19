@@ -22,6 +22,7 @@ window.addEventListener("scroll",reveal);
 let numberOfview = 200 ;
 let numberOfSell = 341;
 let numberOfProduct = 500;
+// function
 
 // appending to the html
 document.querySelector(".view").appendChild(document.createTextNode(numberOfview));
