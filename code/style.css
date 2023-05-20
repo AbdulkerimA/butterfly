@@ -326,6 +326,7 @@ main #sec2 #article3 .disc3 button a {
 }
 main #sec3 {
   padding: 20px;
+  margin: 10rem 0rem;
 }
 main #sec3 #article1 {
   display: flex;
@@ -336,7 +337,7 @@ main #sec3 #article1 {
 main #sec3 #article1 header {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 main #sec3 #article1 header h1 {
   font-family: sans-serif;
@@ -345,6 +346,15 @@ main #sec3 #article1 header h1 {
   color: #4e3b40;
   text-transform: capitalize;
 }
+main #sec3 #article1 header .reveal {
+  transform: translateY(10rem);
+  opacity: 0;
+  transition: all 1s ease;
+}
+main #sec3 #article1 header .reveal.active {
+  transform: translateY(0rem);
+  opacity: 1;
+}
 main #sec3 #article1 p {
   width: 85%;
   font-family: cursive;
@@ -352,29 +362,48 @@ main #sec3 #article1 p {
   font-size: 17px;
   color: gray;
 }
+main #sec3 #article1 .reveal {
+  transform: translateY(10rem);
+  opacity: 0;
+  transition: all 1s ease;
+}
+main #sec3 #article1 .reveal.active {
+  transform: translateY(0rem);
+  opacity: 1;
+}
 main #sec4 {
   /*  border: 1px solid black;/**/
+  margin: 10rem 0rem;
 }
-main #sec4 #article1 {
+main #sec4 .reveal {
+  transform: translateY(10rem);
+  opacity: 0;
+  transition: all 1s ease;
+}
+main #sec4 .reveal.active {
+  transform: translateY(0rem);
+  opacity: 1;
+}
+main #sec4 .article1 {
   margin: 10px;
   white-space: nowrap; /**/
 }
-main #sec4 #article1 header {
+main #sec4 .article1 header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main #sec4 #article1 header h2 {
+main #sec4 .article1 header h2 {
   color: brown;
   font-family: monospace;
   font-size: 5vh;
   margin: 20px 20px;
 }
-main #sec4 #article1 #logos {
+main #sec4 .article1 #logos {
   display: inline-block;
   animation: 20s slide infinite linear;
 }
-main #sec4 #article1 #logos img {
+main #sec4 .article1 #logos img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -391,10 +420,12 @@ main #sec4 #article1 #logos img {
 main #sec5 {
   /*   border: #1a0900 1px solid;/**/
   position: relative;
+  margin: 10rem 0rem;
 }
 main #sec5 .article1 {
   display: flex;
   justify-content: center;
+  color: #742904;
 }
 main #sec5 .article1 .view {
   /* border: 1px solid black;/**/
@@ -416,6 +447,7 @@ main #sec5 .article1 .product {
   font-family: sans-serif;
   font-size: 10rem;
   font-weight: normal;
+  position: relative;
 }
 main #sec5 .article2 {
   display: flex;
@@ -432,18 +464,30 @@ main #sec5 .article2 p {
 }
 main #sec5 .article2 p:nth-child(1) {
   position: relative;
-  left: 5rem;
+  left: 12rem;
 }
 main #sec5 .article2 p:nth-child(2) {
   position: relative;
-  left: 13rem;
+  left: 32rem;
 }
 main #sec5 .article2 p:nth-child(3) {
   position: relative;
-  left: 20rem;
+  left: 50rem;
 }
 main #sec6 {
   margin: 100px 0px;
+}
+main #sec6 header {
+  display: flex;
+  justify-content: center;
+}
+main #sec6 header h2 {
+  font-family: monospace;
+  font-size: 4rem;
+  font-weight: bold;
+  color: brown;
+  align-items: center;
+  margin: 4rem 5rem;
 }
 main #sec6 article {
   /*border: 1px solid black;/**/

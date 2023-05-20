@@ -333,6 +333,7 @@ main {
     /*section three for about section */
     #sec3{
         padding: 20px;
+        margin:10rem 0rem;
         #article1{
             display: flex;
             flex-direction: column;
@@ -341,13 +342,22 @@ main {
             header{
                 display: flex;
                 justify-content: center;
-                margin-bottom: 20px;
+                margin-bottom: 2rem;
                 h1{
                     font-family: sans-serif;
                     font-weight: bold;
                     font-size: 10vh;
                     color: #4e3b40;
                     text-transform: capitalize;
+                }
+                .reveal{
+                    transform:translateY(10rem);
+                    opacity: 0;
+                    transition: all 1s ease;
+                }
+                .reveal.active{
+                    transform: translateY(0rem);
+                    opacity: 1;
                 }
             }
             p{
@@ -357,13 +367,32 @@ main {
                 font-size: 17px;
                 color: gray;
             }
+            .reveal{
+                transform:translateY(10rem);
+                opacity: 0;
+                transition: all 1s ease;
+            }
+            .reveal.active{
+                transform: translateY(0rem);
+                opacity: 1;
+            }
         }
     }
 
         /*section four brands section */
     #sec4{
       /*  border: 1px solid black;/**/
-        #article1{
+        margin: 10rem 0rem;
+        .reveal{
+            transform:translateY(10rem);
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        .reveal.active{
+            transform: translateY(0rem);
+            opacity: 1;
+        }
+        .article1{
             margin: 10px;
             white-space: nowrap;/**/
             header{
@@ -376,6 +405,7 @@ main {
                     font-size: 5vh;
                     margin: 20px 20px;
                 }
+                
             }
             #logos{
                 display: inline-block;
@@ -404,15 +434,18 @@ main {
     #sec5{
      /*   border: #1a0900 1px solid;/**/
         position: relative;
+        margin: 10rem 0rem;
         .article1{
             display: flex;
             justify-content: center;
+            color: #742904;
             .view{
                /* border: 1px solid black;/**/
                 margin: 2rem 8rem 1rem 0rem ;
                 font-family: sans-serif;
                 font-size: 10rem;
                 font-weight: normal;
+                
             }
             .sell{
                 /*border: 1px solid black;/**/
@@ -427,6 +460,7 @@ main {
                 font-family: sans-serif;
                 font-size: 10rem;
                 font-weight: normal;
+                position: relative;
             }
         }
         .article2{
@@ -443,15 +477,15 @@ main {
             }
             p:nth-child(1){
                     position: relative;
-                    left: 5rem;
+                    left: 12rem;
                 }
             p:nth-child(2){
                 position: relative;
-                left: 13rem;
+                left: 32rem;
             }
             p:nth-child(3){
                 position: relative;
-                left: 20rem;
+                left: 50rem;
             }
         }
     }
@@ -459,12 +493,23 @@ main {
     /*section six for testimonials section*/
     #sec6 {
         margin: 100px 0px;
+        header {
+            display: flex;
+            justify-content: center;
+            h2{
+                font-family: monospace;
+                font-size: 4rem;
+                font-weight: bold;
+                color: brown;
+                align-items: center;
+                margin: 4rem 5rem;
+               }
+        }
         article {
             /*border: 1px solid black;/**/
             padding:10px;
             display: flex;
             justify-content: space-around;
-           
             #test1{
                 /*border: 1px solid black;/**/
                 display: flex;
