@@ -400,7 +400,7 @@ main {
                 justify-content: center;
                 align-items: center;
                 h2{
-                    color: brown;
+                    color: rgb(66, 1, 1);
                     font-family: monospace;
                     font-size: 5vh;
                     margin: 20px 20px;
@@ -438,7 +438,7 @@ main {
         .article1{
             display: flex;
             justify-content: center;
-            color: #742904;
+            color: rgb(66, 1, 1);
             .view{
                /* border: 1px solid black;/**/
                 margin: 2rem 8rem 1rem 0rem ;
@@ -498,15 +498,16 @@ main {
             justify-content: center;
             h2{
                 font-family: monospace;
-                font-size: 4rem;
+                font-size: 3rem;
                 font-weight: bold;
-                color: brown;
+                color: rgb(66, 1, 1);
                 align-items: center;
-                margin: 4rem 5rem;
+                margin-bottom: 8rem ;
                }
         }
         article {
             /*border: 1px solid black;/**/
+            height: fit-content;
             padding:10px;
             display: flex;
             justify-content: space-around;
@@ -516,85 +517,155 @@ main {
                 flex-direction: column;
                 align-items: center;
                 margin: 0px  20px 0px 10px;
+                background-color: #742904;
+                border-radius: 10px;
+                height: 100%;
+                padding-bottom: 2.5rem;
+                transition: all .5s ease;
                 img{
-                    width: 200px;
-                    height: 200px;
-                    margin-bottom:20px;
-                    border: 1px solid brown;
+                    width: 100px;
+                    height: 100px;
+                    /*margin-bottom:20px;/***/
+                    border: 2px solid brown;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center ;
+                    position:relative;
+                    top: -50px;
+                }
+                p{
+                    color: white;
+                    position: relative;
+                    top: -15px;
+                    font-family: sans-serif;
+                    font-size: 1.2rem;
+                    font-weight: bold;
                 }
                 blockquote {
-                    color: gray;
+                    /*border: 1px solid black;/**/
+                    color: white;
                     text-align: center;
+                    font-family: sans-serif;
+                    font-size: 1em;
+                    line-height: 1.5em;
                 }
+            }
+            #test1:hover{
+                transform: scale(1.05);
             }
 
             #test2{
                /* border: 1px solid black;/**/
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 0px  20px 0px 10px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin: 0px  20px 0px 10px;
+               background-color: #742904;
+               border-radius: 10px;
+               height: 100%;
+               padding-bottom: 2.5rem;
+               transition: all .5s ease;
                 img{
-                    width: 200px;
-                    height: 200px;
-                    margin-bottom:20px;
+                    width: 100px;
+                    height: 100px;
                     border: 1px solid brown;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center ;
+                    position:relative;
+                    top: -50px;
+                }
+                p{
+                    color: white;
+                    position: relative;
+                    top: -15px;
+                    font-family: sans-serif;
+                    font-size: 1.2rem;
+                    font-weight: bold;
                 }
                 blockquote {
-                color: gray; 
+                color: white; 
                 text-align: center;
+                font-family: sans-serif;
+                font-size: 1em;
+                line-height: 1.5em;
                 }
+            }
+            #test2:hover{
+                transform: scale(1.05);
             }
             /*section three testmonial section*/
             #test3{
                /* border: 1px solid black;/**/
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 0px  20px 0px 10px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin: 0px  20px 0px 10px;
+               background-color: #742904;
+               border-radius: 10px;
+               height: 100%;
+               padding-bottom: 2.5rem;
+               transition: all .5s ease;
                 img{
-                    width: 200px;
-                    height: 200px;
-                    margin-bottom:20px;
+                    width: 100px;
+                    height: 100px;
                     border: 1px solid brown;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center ;
+                    position:relative;
+                    top: -50px;
+                }
+                p{
+                    color: white;
+                    position: relative;
+                    top: -15px;
+                    font-family: sans-serif;
+                    font-size: 1.2rem;
+                    font-weight: bold;
                 }
                 blockquote {
-                    color: gray;
+                    color: white; 
                     text-align: center;
+                    font-family: sans-serif;
+                    font-size: 1em;
+                    line-height: 1.5em;
                 }
+            }
+            #test3:hover{
+                transform: scale(1.05);
             }
             #test4{
                /* border: 1px solid black;/**/
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 0px  20px 0px 10px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin: 0px  20px 0px 10px;
+               background-color: #742904;
+               border-radius: 10px;
+               height: 100%;
+               padding-bottom: 2.5rem;
+               transition: all .5s ease;
                 img{
-                    width: 200px;
-                    height: 200px;
-                    margin-bottom:20px;
+                    width: 100px;
+                    height: 100px;
                     border: 1px solid brown;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center ;
+                    position:relative;
+                    top: -50px;
+                }
+                p{
+                    color: white;
+                    position: relative;
+                    top: -15px;
+                    font-family: sans-serif;
+                    font-size: 1.2rem;
+                    font-weight: bold;
                 }
                 blockquote {
-                    color: gray;
+                    color: white; 
                     text-align: center;
+                    font-family: sans-serif;
+                    font-size: 1em;
+                    line-height: 1.5em;
                 }
+            }
+            #test4:hover{
+                transform: scale(1.05);
             }
 
         }

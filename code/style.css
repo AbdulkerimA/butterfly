@@ -394,7 +394,7 @@ main #sec4 .article1 header {
   align-items: center;
 }
 main #sec4 .article1 header h2 {
-  color: brown;
+  color: rgb(66, 1, 1);
   font-family: monospace;
   font-size: 5vh;
   margin: 20px 20px;
@@ -425,7 +425,7 @@ main #sec5 {
 main #sec5 .article1 {
   display: flex;
   justify-content: center;
-  color: #742904;
+  color: rgb(66, 1, 1);
 }
 main #sec5 .article1 .view {
   /* border: 1px solid black;/**/
@@ -483,14 +483,16 @@ main #sec6 header {
 }
 main #sec6 header h2 {
   font-family: monospace;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: brown;
+  color: rgb(66, 1, 1);
   align-items: center;
-  margin: 4rem 5rem;
+  margin-bottom: 8rem;
 }
 main #sec6 article {
   /*border: 1px solid black;/**/
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 10px;
   display: flex;
   justify-content: space-around;
@@ -502,20 +504,39 @@ main #sec6 article #test1 {
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
+  background-color: #742904;
+  border-radius: 10px;
+  height: 100%;
+  padding-bottom: 2.5rem;
+  transition: all 0.5s ease;
 }
 main #sec6 article #test1 img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
-  border: 1px solid brown;
+  width: 100px;
+  height: 100px;
+  /*margin-bottom:20px;/***/
+  border: 2px solid brown;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: -50px;
+}
+main #sec6 article #test1 p {
+  color: white;
+  position: relative;
+  top: -15px;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 main #sec6 article #test1 blockquote {
-  color: gray;
+  /*border: 1px solid black;/**/
+  color: white;
   text-align: center;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+main #sec6 article #test1:hover {
+  transform: scale(1.05);
 }
 main #sec6 article #test2 {
   /* border: 1px solid black;/**/
@@ -523,20 +544,37 @@ main #sec6 article #test2 {
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
+  background-color: #742904;
+  border-radius: 10px;
+  height: 100%;
+  padding-bottom: 2.5rem;
+  transition: all 0.5s ease;
 }
 main #sec6 article #test2 img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
   border: 1px solid brown;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: -50px;
+}
+main #sec6 article #test2 p {
+  color: white;
+  position: relative;
+  top: -15px;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 main #sec6 article #test2 blockquote {
-  color: gray;
+  color: white;
   text-align: center;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+main #sec6 article #test2:hover {
+  transform: scale(1.05);
 }
 main #sec6 article #test3 {
   /* border: 1px solid black;/**/
@@ -544,20 +582,37 @@ main #sec6 article #test3 {
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
+  background-color: #742904;
+  border-radius: 10px;
+  height: 100%;
+  padding-bottom: 2.5rem;
+  transition: all 0.5s ease;
 }
 main #sec6 article #test3 img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
   border: 1px solid brown;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: -50px;
+}
+main #sec6 article #test3 p {
+  color: white;
+  position: relative;
+  top: -15px;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 main #sec6 article #test3 blockquote {
-  color: gray;
+  color: white;
   text-align: center;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+main #sec6 article #test3:hover {
+  transform: scale(1.05);
 }
 main #sec6 article #test4 {
   /* border: 1px solid black;/**/
@@ -565,20 +620,37 @@ main #sec6 article #test4 {
   flex-direction: column;
   align-items: center;
   margin: 0px 20px 0px 10px;
+  background-color: #742904;
+  border-radius: 10px;
+  height: 100%;
+  padding-bottom: 2.5rem;
+  transition: all 0.5s ease;
 }
 main #sec6 article #test4 img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
   border: 1px solid brown;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: -50px;
+}
+main #sec6 article #test4 p {
+  color: white;
+  position: relative;
+  top: -15px;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 main #sec6 article #test4 blockquote {
-  color: gray;
+  color: white;
   text-align: center;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+main #sec6 article #test4:hover {
+  transform: scale(1.05);
 }
 main footer {
   background-color: #1a0900;
