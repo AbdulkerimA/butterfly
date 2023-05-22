@@ -22,12 +22,27 @@ window.addEventListener("scroll",reveal);
 let numberOfview = 200 ;
 let numberOfSell = 341;
 let numberOfProduct = 500;
-// function
 
 // appending to the html
-document.querySelector(".view").appendChild(document.createTextNode(numberOfview));
-document.querySelector(".sell").appendChild(document.createTextNode(numberOfSell));
-document.querySelector(".product").appendChild(document.createTextNode(numberOfProduct));
+
+//function 
+let i=100
+let numAnimation = () => {
+        if (i <= numberOfview)
+        document.querySelector(".view").innerHTML = i;
+        if (i <=numberOfSell)
+        document.querySelector(".sell").innerHTML = i;
+        if ( i <= numberOfProduct)
+        document.querySelector(".product").innerHTML = i;
+        i=i+5
+}
+let caller = () => {
+    setInterval(numAnimation,1);
+}
+
+let sec5 = document.getElementById("sec5");
+sec5.addEventListener("mouseover",caller);
+
 
 
 

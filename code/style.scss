@@ -382,7 +382,7 @@ main {
         /*section four brands section */
     #sec4{
       /*  border: 1px solid black;/**/
-        margin: 10rem 0rem;
+        margin: 10rem 0rem 5rem 0rem;
         .reveal{
             transform:translateY(10rem);
             opacity: 0;
@@ -432,9 +432,12 @@ main {
     /* section five numbers */
 
     #sec5{
-     /*   border: #1a0900 1px solid;/**/
+       /*border: #1a0900 1px solid;/**/
         position: relative;
-        margin: 10rem 0rem;
+        height: 70vh;
+        display: flex;
+        flex-direction:column ;
+        justify-content: center;
         .article1{
             display: flex;
             justify-content: center;
@@ -445,7 +448,7 @@ main {
                 font-family: sans-serif;
                 font-size: 10rem;
                 font-weight: normal;
-                
+            
             }
             .sell{
                 /*border: 1px solid black;/**/

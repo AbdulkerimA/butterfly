@@ -373,7 +373,7 @@ main #sec3 #article1 .reveal.active {
 }
 main #sec4 {
   /*  border: 1px solid black;/**/
-  margin: 10rem 0rem;
+  margin: 10rem 0rem 5rem 0rem;
 }
 main #sec4 .reveal {
   transform: translateY(10rem);
@@ -418,9 +418,12 @@ main #sec4 .article1 #logos img {
   }
 }
 main #sec5 {
-  /*   border: #1a0900 1px solid;/**/
+  /*border: #1a0900 1px solid;/**/
   position: relative;
-  margin: 10rem 0rem;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 main #sec5 .article1 {
   display: flex;
