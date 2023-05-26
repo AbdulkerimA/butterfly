@@ -54,7 +54,7 @@ main {
   /*section four brands section */
   /* animation for section three brand slide (horizontall scroll)*/
   /* section five numbers */
-  /*section six for testimonials section*/
+  /*section seven for testimonials section*/
   /*footer section*/
 }
 main #sec1 {
@@ -473,13 +473,343 @@ main #sec5 .article2 p:nth-child(3) {
   left: 50rem;
 }
 main #sec6 {
+  /*border: 1px solid black;/**/
+  display: flex;
+  flex-direction: column;
+  padding: 10px 3vw;
+}
+main #sec6 header h2 {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 10vh;
+  color: #1a0900;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  margin: 10vh 0px;
+}
+main #sec6 #box1 {
+  /*border: 1px solid black;/**/
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 5vh;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main #sec6 #box1 img {
+  border: 2px solid brown; /**/
+  border-radius: 1vw;
+  width: 20vw;
+  height: 40vh;
+}
+main #sec6 #box1 #img1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box1 #img1::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  bottom: 5px;
+  background-color: #1a0900;
+  border-radius: 0vw 0vw 1vw 1vw;
+  transition: all 0.5s ease-in-out;
+}
+main #sec6 #box1 #img1:hover:before {
+  height: 60%;
+}
+main #sec6 #box1 #img2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box1 #img2::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  bottom: 0px;
+  background-color: #1a0900;
+  transition: all 0.5s ease-in-out;
+}
+main #sec6 #box1 #img2:hover:before {
+  height: 60%;
+}
+main #sec6 #box1 #img3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box1 #img3::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  bottom: 0px;
+  background-color: #1a0900;
+  transition: all 0.5s ease-in-out;
+}
+main #sec6 #box1 #img3:hover:before {
+  height: 60%;
+}
+main #sec6 #box1 #img4 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box1 #img4::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  bottom: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box1 #img4:hover:before {
+  height: 60%;
+}
+main #sec6 #box2 {
+  /*border: 1px solid black;/**/
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5vh;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main #sec6 #box2 img {
+  border: 1px solid brown; /**/
+  border-radius: 10%;
+  width: 20vw;
+  height: 40vh;
+}
+main #sec6 #box2 #img1::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box2 #img1:hover:before {
+  height: 60%;
+}
+main #sec6 #box2 #img2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box2 #img2::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box2 #img3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box2 #img3::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box2 #img4 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box2 #img4::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box3 {
+  /*border: 1px solid black;/**/
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5vh;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main #sec6 #box3 img {
+  border: 1px solid brown; /**/
+  border-radius: 10%;
+  width: 20vw;
+  height: 40vh;
+}
+main #sec6 #box3 #img1::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box3 #img1:hover:before {
+  height: 60%;
+}
+main #sec6 #box3 #img2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box3 #img2::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box3 #img3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box3 #img3::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box3 #img4 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box3 #img4::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box4 {
+  /*border: 1px solid black;/**/
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5vh 0px;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main #sec6 #box4 img {
+  border: 1px solid brown; /**/
+  border-radius: 10%;
+  width: 20vw;
+  height: 40vh;
+}
+main #sec6 #box4 #img1::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box4 #img2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box4 #img2::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box4 #img3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box4 #img3::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec6 #box4 #img4 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+main #sec6 #box4 #img4::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #1a0900;
+}
+main #sec7 {
   margin: 100px 0px;
 }
-main #sec6 header {
+main #sec7 header {
   display: flex;
   justify-content: center;
 }
-main #sec6 header h2 {
+main #sec7 header h2 {
   font-family: monospace;
   font-size: 3rem;
   font-weight: bold;
@@ -487,7 +817,7 @@ main #sec6 header h2 {
   align-items: center;
   margin-bottom: 8rem;
 }
-main #sec6 article {
+main #sec7 article {
   /*border: 1px solid black;/**/
   height: -moz-fit-content;
   height: fit-content;
@@ -496,7 +826,7 @@ main #sec6 article {
   justify-content: space-around;
   /*section three testmonial section*/
 }
-main #sec6 article #test1 {
+main #sec7 article #test1 {
   /*border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
@@ -508,7 +838,7 @@ main #sec6 article #test1 {
   padding-bottom: 2.5rem;
   transition: all 0.5s ease;
 }
-main #sec6 article #test1 img {
+main #sec7 article #test1 img {
   width: 100px;
   height: 100px;
   /*margin-bottom:20px;/***/
@@ -517,7 +847,7 @@ main #sec6 article #test1 img {
   position: relative;
   top: -50px;
 }
-main #sec6 article #test1 p {
+main #sec7 article #test1 p {
   color: white;
   position: relative;
   top: -15px;
@@ -525,7 +855,7 @@ main #sec6 article #test1 p {
   font-size: 1.2rem;
   font-weight: bold;
 }
-main #sec6 article #test1 blockquote {
+main #sec7 article #test1 blockquote {
   /*border: 1px solid black;/**/
   color: white;
   text-align: center;
@@ -533,10 +863,10 @@ main #sec6 article #test1 blockquote {
   font-size: 1em;
   line-height: 1.5em;
 }
-main #sec6 article #test1:hover {
+main #sec7 article #test1:hover {
   transform: scale(1.05);
 }
-main #sec6 article #test2 {
+main #sec7 article #test2 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
@@ -548,7 +878,7 @@ main #sec6 article #test2 {
   padding-bottom: 2.5rem;
   transition: all 0.5s ease;
 }
-main #sec6 article #test2 img {
+main #sec7 article #test2 img {
   width: 100px;
   height: 100px;
   border: 1px solid brown;
@@ -556,7 +886,7 @@ main #sec6 article #test2 img {
   position: relative;
   top: -50px;
 }
-main #sec6 article #test2 p {
+main #sec7 article #test2 p {
   color: white;
   position: relative;
   top: -15px;
@@ -564,17 +894,17 @@ main #sec6 article #test2 p {
   font-size: 1.2rem;
   font-weight: bold;
 }
-main #sec6 article #test2 blockquote {
+main #sec7 article #test2 blockquote {
   color: white;
   text-align: center;
   font-family: sans-serif;
   font-size: 1em;
   line-height: 1.5em;
 }
-main #sec6 article #test2:hover {
+main #sec7 article #test2:hover {
   transform: scale(1.05);
 }
-main #sec6 article #test3 {
+main #sec7 article #test3 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
@@ -586,7 +916,7 @@ main #sec6 article #test3 {
   padding-bottom: 2.5rem;
   transition: all 0.5s ease;
 }
-main #sec6 article #test3 img {
+main #sec7 article #test3 img {
   width: 100px;
   height: 100px;
   border: 1px solid brown;
@@ -594,7 +924,7 @@ main #sec6 article #test3 img {
   position: relative;
   top: -50px;
 }
-main #sec6 article #test3 p {
+main #sec7 article #test3 p {
   color: white;
   position: relative;
   top: -15px;
@@ -602,17 +932,17 @@ main #sec6 article #test3 p {
   font-size: 1.2rem;
   font-weight: bold;
 }
-main #sec6 article #test3 blockquote {
+main #sec7 article #test3 blockquote {
   color: white;
   text-align: center;
   font-family: sans-serif;
   font-size: 1em;
   line-height: 1.5em;
 }
-main #sec6 article #test3:hover {
+main #sec7 article #test3:hover {
   transform: scale(1.05);
 }
-main #sec6 article #test4 {
+main #sec7 article #test4 {
   /* border: 1px solid black;/**/
   display: flex;
   flex-direction: column;
@@ -624,7 +954,7 @@ main #sec6 article #test4 {
   padding-bottom: 2.5rem;
   transition: all 0.5s ease;
 }
-main #sec6 article #test4 img {
+main #sec7 article #test4 img {
   width: 100px;
   height: 100px;
   border: 1px solid brown;
@@ -632,7 +962,7 @@ main #sec6 article #test4 img {
   position: relative;
   top: -50px;
 }
-main #sec6 article #test4 p {
+main #sec7 article #test4 p {
   color: white;
   position: relative;
   top: -15px;
@@ -640,14 +970,14 @@ main #sec6 article #test4 p {
   font-size: 1.2rem;
   font-weight: bold;
 }
-main #sec6 article #test4 blockquote {
+main #sec7 article #test4 blockquote {
   color: white;
   text-align: center;
   font-family: sans-serif;
   font-size: 1em;
   line-height: 1.5em;
 }
-main #sec6 article #test4:hover {
+main #sec7 article #test4:hover {
   transform: scale(1.05);
 }
 main footer {
