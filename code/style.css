@@ -488,7 +488,7 @@ main #sec6 header h2 {
   text-decoration: underline;
   margin: 10vh 0px;
 }
-main #sec6 #box1 {
+main #sec6 #box {
   /*border: 1px solid black;/**/
   display: flex;
   justify-content: space-evenly;
@@ -498,309 +498,61 @@ main #sec6 #box1 {
   height: -moz-fit-content;
   height: fit-content;
 }
-main #sec6 #box1 img {
+main #sec6 #box img {
   border: 2px solid brown; /**/
   border-radius: 1vw;
   width: 20vw;
   height: 40vh;
+  z-index: 0;
 }
-main #sec6 #box1 #img1 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+main #sec6 #box #img1 {
   position: relative;
 }
-main #sec6 #box1 #img1::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 0%;
-  bottom: 5px;
-  background-color: #1a0900;
-  border-radius: 0vw 0vw 1vw 1vw;
-  transition: all 0.5s ease-in-out;
-}
-main #sec6 #box1 #img1:hover:before {
-  height: 60%;
-}
-main #sec6 #box1 #img2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box1 #img2::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 0%;
-  bottom: 0px;
-  background-color: #1a0900;
-  transition: all 0.5s ease-in-out;
-}
-main #sec6 #box1 #img2:hover:before {
-  height: 60%;
-}
-main #sec6 #box1 #img3 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box1 #img3::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 0%;
-  bottom: 0px;
-  background-color: #1a0900;
-  transition: all 0.5s ease-in-out;
-}
-main #sec6 #box1 #img3:hover:before {
-  height: 60%;
-}
-main #sec6 #box1 #img4 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box1 #img4::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 0%;
-  bottom: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box1 #img4:hover:before {
-  height: 60%;
-}
-main #sec6 #box2 {
-  /*border: 1px solid black;/**/
-  display: flex;
-  justify-content: space-evenly;
-  margin: 5vh;
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-main #sec6 #box2 img {
-  border: 1px solid brown; /**/
-  border-radius: 10%;
+main #sec6 #box #img1 #discbox {
+  /*border: 1px solid green;/**/
+  border-radius: 0px 0px 1vw 1vw;
+  background-color: rgba(116, 41, 4, 0.5058823529);
   width: 20vw;
-  height: 40vh;
-}
-main #sec6 #box2 #img1::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
   height: 0%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box2 #img1:hover:before {
-  height: 60%;
-}
-main #sec6 #box2 #img2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box2 #img2::before {
-  content: " ";
+  opacity: 0; /**/
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box2 #img3 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box2 #img3::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box2 #img4 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box2 #img4::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box3 {
-  /*border: 1px solid black;/**/
+  bottom: 2px;
+  left: 2px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
-  margin: 5vh;
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  transition: 1s;
 }
-main #sec6 #box3 img {
-  border: 1px solid brown; /**/
-  border-radius: 10%;
-  width: 20vw;
-  height: 40vh;
+main #sec6 #box #img1 #discbox p {
+  width: 80%;
+  font-family: sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
+  word-spacing: 0.2vw;
 }
-main #sec6 #box3 #img1::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 0%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
+main #sec6 #box #img1 #discbox span {
+  font-family: sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
 }
-main #sec6 #box3 #img1:hover:before {
-  height: 60%;
+main #sec6 #box #img1 #discbox button {
+  font-family: sans-serif;
+  font-size: 2vh;
+  font-weight: bold;
+  color: white;
+  background-color: #742904;
+  border: 1px solid #742904;
+  border-radius: 0.5vh;
+  width: 50%;
+  height: 5vh;
 }
-main #sec6 #box3 #img2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box3 #img2::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box3 #img3 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box3 #img3::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box3 #img4 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box3 #img4::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box4 {
-  /*border: 1px solid black;/**/
-  display: flex;
-  justify-content: space-evenly;
-  margin: 5vh 0px;
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-main #sec6 #box4 img {
-  border: 1px solid brown; /**/
-  border-radius: 10%;
-  width: 20vw;
-  height: 40vh;
-}
-main #sec6 #box4 #img1::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box4 #img2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box4 #img2::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box4 #img3 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box4 #img3::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
-}
-main #sec6 #box4 #img4 {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-main #sec6 #box4 #img4::before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #1a0900;
+main #sec6 #box #img1 img:hover ~ #discbox,
+main #sec6 #box #img1 #discbox:hover {
+  height: 70%;
+  opacity: 1;
 }
 main #sec7 {
   margin: 100px 0px;
