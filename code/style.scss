@@ -8,14 +8,15 @@
 body{
     background-color:#fffefd ;
 }
-/*navigational part style */
+    /*navigational part style */
 nav {
     /*border: 1px solid black;/**/
+    z-index: 2;
     width: 100%;
-    margin:10px 0px ;
-    position: relative;
     display: flex;
-    overflow: hidden;
+    background-color: transparent;
+    position: absolute;
+    transition: .5s;
     #logo {
         width: 45%;
         img{
@@ -34,7 +35,7 @@ nav {
         margin-right:3vw;
         a{
             text-decoration: none;
-            color: brown;
+            color: white;
             margin: 0vh 1vw;
             font-family: sans-serif;
             font-weight: bold;
@@ -43,56 +44,65 @@ nav {
     }
 }
 
+ nav.active{
+    position: sticky;
+    top: -1px;
+    background-color: #1a0900;
+ }
+
 /* styling main section article*/
 
 main {
-    /* first section */
     overflow: hidden;
+     /* first section */
     #sec1 {
-        /*display: none;  you have to delete this part */
-        /*background-image: url(./../resource/pic/backgrounds/bg2.jpg);/**/
-        background-repeat: none;
-        background-size: contain;
+        z-index: 3;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        transition: all 1s;
+        /*background-image: url(./../resource/pic/backgrounds/bg7.jpg);/**/
         article {
-            
+            height: 100vh;
             /*how the article will be displayed*/
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            img {
-                width: 50%;
-                height:50vh ;
-                margin: 10vh 5vw;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: brown 2px solid;
+            position: relative;
+            &::before{
+                content: " ";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top:0px;
+                left: 0px;
+                background-color: #1a09008a;
+                z-index: 0;
             }
             header{
                 /*how the headers will be displayed */
-                
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                z-index: 1;
                 
                 h1{
                     /*box modeling */
-                    
                     /* styling the font of the header */
                     letter-spacing: 0.5em;
                     font-family: monospace;
-                    font-size: 6vh;
+                    font-size: 12vh;
                     font-weight: bolder;
-                    color: #742904;
+                    color: white;
                     
                 }
             }
             p{
                 position: relative;
                 font-family: sans-serif;
-                font-size: 1em;
+                font-size: 1.5em;
                 color: #ffa87d;
             }
         }
@@ -486,6 +496,9 @@ main {
             }
         }
     }
+
+    /*section six for produts */
+    
     #sec6{
         /*border: 1px solid black;/**/
         display: flex;
@@ -535,7 +548,7 @@ main {
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-evenly;
-                transition: 1s ;
+                transition: .5s ;
                 p{
                     width: 80%;
                     font-family: sans-serif;

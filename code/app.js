@@ -1,3 +1,54 @@
+// auto image changer for section 1
+let imges = [
+    './../resource/pic/backgrounds/bg1.jpg',
+    './../resource/pic/backgrounds/bg2.jpg',
+    './../resource/pic/backgrounds/bg3.jpg',
+    './../resource/pic/backgrounds/bg4.jpg',
+    './../resource/pic/backgrounds/bg5.jpg',
+    './../resource/pic/backgrounds/bg6.jpg',
+    './../resource/pic/backgrounds/bg7.jpg'
+];
+// selecting the element
+let section_one = document.getElementById("sec1");
+let index = 0 ;
+//fumction to change  images
+let changeImage = () => {
+    section_one.style.backgroundImage = "url('"+imges[index]+"')";
+    if(index >= 6)
+    index = 0;
+    else
+    index++;
+}
+
+// calling the function to change images in 1 sec
+setInterval(changeImage,3000);
+
+// function for nav bar to hide when scroll down
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+// to make the nav bar transparent when it's in the area of sec1
+
+let mainTop = document.querySelector(".main");
+let makeTransparent = () => {
+    if (mainTop.getBoundingClientRect().top < 0 ){
+        document.querySelector("nav").classList.add("active");
+    }
+    else{
+        document.querySelector("nav").classList.remove("active");
+    }
+}
+setInterval(makeTransparent,1000);
+
 // on scroll side reveal animation for section two elements
 
 let reveal = () => {

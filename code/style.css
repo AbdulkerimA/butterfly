@@ -13,11 +13,12 @@ body {
 /*navigational part style */
 nav {
   /*border: 1px solid black;/**/
+  z-index: 2;
   width: 100%;
-  margin: 10px 0px;
-  position: relative;
   display: flex;
-  overflow: hidden;
+  background-color: transparent;
+  position: absolute;
+  transition: 0.5s;
 }
 nav #logo {
   width: 45%;
@@ -38,46 +39,58 @@ nav #links {
 }
 nav #links a {
   text-decoration: none;
-  color: brown;
+  color: white;
   margin: 0vh 1vw;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 1.2em;
 }
 
+nav.active {
+  position: sticky;
+  top: -1px;
+  background-color: #1a0900;
+}
+
 /* styling main section article*/
 main {
-  /* first section */
   overflow: hidden;
+  /* first section */
   /* second section styling */
   /*section three for about section */
   /*section four brands section */
   /* animation for section three brand slide (horizontall scroll)*/
   /* section five numbers */
+  /*section six for produts */
   /*section seven for testimonials section*/
   /*footer section*/
 }
 main #sec1 {
-  /*display: none;  you have to delete this part */
-  /*background-image: url(./../resource/pic/backgrounds/bg2.jpg);/**/
-  background-repeat: none;
-  background-size: contain;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 1s;
+  /*background-image: url(./../resource/pic/backgrounds/bg7.jpg);/**/
 }
 main #sec1 article {
+  height: 100vh;
   /*how the article will be displayed*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-main #sec1 article img {
-  width: 50%;
-  height: 50vh;
-  margin: 10vh 5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: brown 2px solid;
+main #sec1 article::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(26, 9, 0, 0.5411764706);
+  z-index: 0;
 }
 main #sec1 article header {
   /*how the headers will be displayed */
@@ -85,20 +98,21 @@ main #sec1 article header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 main #sec1 article header h1 {
   /*box modeling */
   /* styling the font of the header */
   letter-spacing: 0.5em;
   font-family: monospace;
-  font-size: 6vh;
+  font-size: 12vh;
   font-weight: bolder;
-  color: #742904;
+  color: white;
 }
 main #sec1 article p {
   position: relative;
   font-family: sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   color: #ffa87d;
 }
 main #sec2 {
@@ -522,7 +536,7 @@ main #sec6 #box #img1 #discbox {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  transition: 1s;
+  transition: 0.5s;
 }
 main #sec6 #box #img1 #discbox p {
   width: 80%;
