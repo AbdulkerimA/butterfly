@@ -27,19 +27,24 @@ nav {
         }
     }
     #links{
-        /*border: 1px solid;/**/
+       /*border: 1px solid;/**/
         width: 55%;
+        padding-left: 10vw;
         display: flex;
         align-items: center;
-        justify-content: right;
+        justify-content: center;
         margin-right:3vw;
         a{
             text-decoration: none;
             color: white;
             margin: 0vh 1vw;
             font-family: sans-serif;
-            font-weight: bold;
+            font-weight: lighter;
             font-size: 1.2em;
+        }
+        #cart{
+            background-color: rgba(165, 42, 42, 0.692);
+            border-radius:30vw;
         }
     }
 }
@@ -111,7 +116,7 @@ main {
     #sec2 {
        /* border: 1px solid black;/**/
         width: 100%;
-        height: 200vh;
+        height: 215vh;
         padding: 10vh 10vw;
         position: relative;
         overflow-x:hidden ;
@@ -170,6 +175,32 @@ main {
                     padding-bottom: 3vh;
                     color: gray;
                 }
+                #price {
+                    /*border: 1px solid black;/**/
+                    width: 100%;
+                    padding-left: 10vw;
+                    margin-bottom: 5vh;
+                    #old {
+                        color: grey;
+                        margin-right:50px;
+                        font-family: cursive;
+                        font-size: 1.5em;
+                        position: relative;
+                        padding-left: 5px;
+                        hr{
+                            display: inline;
+                            width: 40px;
+                            position: absolute;
+                            left: 0px;
+                            bottom: 35%;
+                            transform: rotate(-35deg);
+                        }
+                    }
+                    #new {
+                        font-family: cursive;
+                        font-size: 3em;
+                    }
+                }
                 button{
                     border-radius: 10px;
                     width: 15vw;
@@ -220,7 +251,7 @@ main {
                 opacity: 1;
             }
             .disc2{
-                width: 30%;
+                width: 35%;
                 height: fit-content;
                 padding:0vw 2vh;
                 position: absolute;
@@ -243,6 +274,32 @@ main {
                     padding-bottom: 3vh;
                     text-align: right;
                     color: gray;
+                }
+                #price {
+                   /* border: 1px solid black;/**/
+                    width: 100%;
+                    padding-left: 10vw;
+                    margin-bottom: 5vh;
+                    #old {
+                        color: grey;
+                        margin-right:50px;
+                        font-family: cursive;
+                        font-size: 1.5em;
+                        position: relative;
+                        padding-left: 5px;
+                        hr{
+                            display: inline;
+                            width: 40px;
+                            position: absolute;
+                            left: 0px;
+                            bottom: 35%;
+                            transform: rotate(-35deg);
+                        }
+                    }
+                    #new {
+                        font-family: cursive;
+                        font-size: 3em;
+                    }
                 }
                 button{
                     border-radius: 10px;
@@ -316,6 +373,32 @@ main {
                     padding-bottom: 3vh;
                     color: gray;
                 }
+                #price {
+                    /*border: 1px solid black;/**/
+                    width: 100%;
+                    padding-left: 10vw;
+                    margin-bottom: 5vh;
+                    #old {
+                        color: grey;
+                        margin-right:50px;
+                        font-family: cursive;
+                        font-size: 1.5em;
+                        position: relative;
+                        padding-left: 5px;
+                        hr{
+                            display: inline;
+                            width: 40px;
+                            position: absolute;
+                            left: 0px;
+                            bottom: 35%;
+                            transform: rotate(-35deg);
+                        }
+                    }
+                    #new {
+                        font-family: cursive;
+                        font-size: 3em;
+                    }
+                }
                 button{
                     border-radius: 10px;
                     width: 15vw;
@@ -334,6 +417,7 @@ main {
             }
         }
     }
+
     /*section three for about section */
     #sec3{
         padding: 20px;

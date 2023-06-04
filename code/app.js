@@ -20,6 +20,16 @@ let changeImage = () => {
     index++;
 }
 
+// add to cart function
+
+let prodNum = 0 // number of product added to the cart
+
+let addToCart = () => {
+    prodNum++;
+    document.getElementById("num").innerHTML = prodNum;
+}
+
+
 // calling the function to change images in 1 sec
 setInterval(changeImage,3000);
 

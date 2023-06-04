@@ -22,18 +22,19 @@
         <!-- navigational links -->
         <div id="links">    
             <a href="" id=""> home </a>
-            <a href="" id="">products </a>
-            <a href="" id=""> offers </a>
+            <a href="" id=""> about </a>
+            <a href="" id="">products</a>
+            <a href="" id=""> discount </a>
             <a href="" id=""> contact </a>
-            <a href="" id=""> offers </a>
-            <a href="" id="car">
-                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </a>
+            <div id="cart">
+                <a href="" id="car">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span id="num">0</span>
+               </a>
+            </div>
         </div>
         
     </nav>
-        <div id="cont">
-               </div>
 
     <!-- main tag-->
     <main class="main">
@@ -60,25 +61,23 @@
                     <img src="./../resource/pic/pic4.jpg" alt="product1"> 
                     <!-- product picture or ilustration -->
                 </div>
-                <div class ="disc1 reveal">
+                <div id="Dove" class ="disc1 reveal">
                     <header>
                         <h1> Dove </h1>
                     </header>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        <br>
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        <br>
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        <br>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        <br>
-                        Excepteur sint occaecat cupidatat non proident, 
-                        <br>
-                        sunt in culpa qui officia deserunt mollit anim id est laborum 
+                        Dove Chocolate is a premium chocolate brand that offers a luxurious and indulgent experience for chocolate lovers. 
+                        Made with the finest cocoa beans, Dove Chocolate has a smooth and creamy texture that melts in your mouth, leaving a rich and velvety taste that lingers. 
+                        The brand offers a wide range of flavors, from classic milk chocolate to dark chocolate with sea salt, almond, and raspberry. 
+                         
                     </p>
-                    <button>
-                        <a href=""> Order Now </a>
+                    <div id="price">
+                        <span id="old"> $5 <hr> </span> 
+                        <span id="new"> $3.45</span>
+                    </div>
+
+                    <button onclick="addToCart()">
+                        <a href="#"> add to cart </a> 
                     </button>
                 </div>
             </article>
@@ -94,28 +93,24 @@
                         <h1> ferrero rocher</h1>
                     </header>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        <br>
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        <br>
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        <br>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        <br>
-                        Excepteur sint occaecat cupidatat non proident, 
-                        <br>
-                        sunt in culpa qui officia deserunt mollit anim id est laborum 
+                        Ferrero Rocher is a luxurious chocolate brand that offers an exquisite and sophisticated taste experience. 
+                        Made with the finest ingredients, including roasted hazelnuts, smooth chocolate, and a crispy wafer shell, Ferrero Rocher has a unique and irresistible texture that is sure to delight your taste buds. 
+                        The brand offers a range of flavors, from classic milk chocolate to dark chocolate with coconut and almond. 
+                        Each piece of Ferrero Rocher is individually wrapped, making it perfect for sharing or enjoying as a personal treat. 
                     </p>
 
-                    <button>
-                        <a href=""> Order Now </a>
+                    <div id="price">
+                        <span id="old"> $10 <hr> </span> 
+                        <span id="new"> $7.30</span>
+                    </div>
+
+                    <button onclick="addToCart()">
+                        <a href="#"> add to cart</a>
                     </button>
                 </div>
             </article>
 
             <!-- article three of this section -->
-            
-            <!-- second article in this section -->
             
             <article id="article3">
                 <div class="image reveal">
@@ -126,21 +121,18 @@
                         <h1> silk </h1>
                     </header>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        <br>
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        <br>
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        <br>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        <br>
-                        Excepteur sint occaecat cupidatat non proident, 
-                        <br>
-                        sunt in culpa qui officia deserunt mollit anim id est laborum 
+                        Silk Chocolate is a luxurious chocolate brand that offers a silky and smooth taste experience. 
+                        Made with the finest ingredients, including rich cocoa, creamy milk, and a delicate blend of flavors, Silk Chocolate has a unique and irresistible texture that is sure to delight your taste buds. 
+                        The brand offers a range of flavors, from classic milk chocolate to dark chocolate with sea salt and caramel.  
                     </p>
 
-                    <button>
-                        <a href=""> Order Now </a>
+                    <div id="price">
+                        <span id="old"> $7 <hr> </span> 
+                        <span id="new"> $4.50</span>
+                    </div>
+
+                    <button onclick="addToCart()">
+                        <a href="#"> add to cart </a>
                     </button>
                 </div>
             </article>
@@ -226,6 +218,8 @@
             </article>
         </section>
 
+        <!-- product section -->
+
         <section id="sec6">
             <header>
                 <h2>
@@ -239,7 +233,7 @@
                 <div id="discbox">
                     <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                     <span>$4</span>
-                    <button>Add to cart</button>
+                    <button onclick="addToCart()">Add to cart</button>
                 </div>
             </div>
                 <div id="img1">
@@ -247,7 +241,7 @@
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$10.56</span>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart()">Add to cart</button>
                     </div>
                  </div>
  
@@ -256,7 +250,7 @@
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$8.49</span>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart()">Add to cart</button>
                     </div>
                  </div>            
  
@@ -265,7 +259,7 @@
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$3.00</span>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart()">Add to cart</button>
                     </div>
                  </div> 
 
@@ -277,7 +271,7 @@
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$4</span>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart()">Add to cart</button>
                     </div>
                 </div>
                     <div id="img1">
@@ -285,7 +279,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$10.56</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div>
      
@@ -294,7 +288,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$8.49</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div>            
      
@@ -303,7 +297,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$3.00</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div> 
              
@@ -315,7 +309,7 @@
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$4</span>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart()">Add to cart</button>
                     </div>
                 </div>
                     <div id="img1">
@@ -323,7 +317,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$10.56</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div>
      
@@ -332,7 +326,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$8.49</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div>            
      
@@ -341,7 +335,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$3.00</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div> 
 
@@ -353,7 +347,7 @@
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$4</span>
-                        <button>Add to cart</button>
+                        <button onclick="addToCart()">Add to cart</button>
                     </div>
                 </div>
                     <div id="img1">
@@ -361,7 +355,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$10.56</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div>
      
@@ -370,7 +364,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$8.49</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div>            
      
@@ -379,7 +373,7 @@
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$3.00</span>
-                            <button>Add to cart</button>
+                            <button onclick="addToCart()">Add to cart</button>
                         </div>
                      </div> 
 
