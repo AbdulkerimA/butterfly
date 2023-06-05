@@ -19,19 +19,29 @@ let changeImage = () => {
     else
     index++;
 }
+// calling the function to change images in 3 sec
+setInterval(changeImage,3000);
 
 // add to cart function
 
-let prodNum = 0 // number of product added to the cart
+let prodNum = sessionStorage.getItem("prodamount"); // number of product added to the cart
 
-let addToCart = () => {
+let addToCart = () => { 
     prodNum++;
+    sessionStorage.setItem("prodamount",prodNum);
     document.getElementById("num").innerHTML = prodNum;
 }
 
+// chacking for number of product on  session storage 
 
-// calling the function to change images in 1 sec
-setInterval(changeImage,3000);
+window.addEventListener("load", () => {
+    prodNum = sessionStorage.getItem("prodamount");
+    if (prodNum == null)
+    document.getElementById("num").innerHTML = 0;
+    else
+    document.getElementById("num").innerHTML = prodNum;
+});
+
 
 // function for nav bar to hide when scroll down
 
