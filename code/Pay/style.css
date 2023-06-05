@@ -81,6 +81,7 @@ body{
   border: 1px solid #00000033;
   border-right: none;
 }
+.name:valid + .icon,
 .name:focus + .icon{
   background-color:  rgb(122, 2, 2);
   color: #fff;
