@@ -87,8 +87,7 @@ nav #links #search input {
   font-size: 2vh;
   color: gray;
 }
-nav #links #search input:active {
-  border: none;
+nav #links #search input:focus {
   outline: none;
 }
 
@@ -177,14 +176,14 @@ main #prosec #box #img1 #discbox:hover {
 }
 main #cartsec {
   border: 3px solid #a87b1a;
-  position: relative;
   width: 25%;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 7vh;
+  position: sticky;
+  top: 9vh;
 }
 main #cartsec header {
-  position: absolute;
-  top: 0px;
-  left: 0px;
   width: 100%;
   height: 8vh;
   background-color: #a87b1a;

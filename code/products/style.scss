@@ -79,11 +79,11 @@ nav {
                 font-family: sans-serif;
                 font-size: 2vh;
                 color: gray;
+                &:focus{
+                    outline: none;
+                }
             }
-            input:active{
-                border: none;
-                outline: none;
-            }
+
         }
         /*#cart{
             background-color: rgba(165, 42, 42, 0.692);
@@ -176,13 +176,12 @@ nav {
     }
     #cartsec{
         border: 3px solid #a87b1a;
-        position: relative;
         width: 25%;
+        height: fit-content;
         margin-top: 7vh;
-        header {
-            position: absolute;
-            top: 0px;
-            left: 0px;
+        position: sticky;
+        top: 9vh;
+        header {  
             width: 100%;
             height: 8vh;
             background-color: #a87b1a;
