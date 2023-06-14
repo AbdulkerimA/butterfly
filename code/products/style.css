@@ -66,6 +66,7 @@ main #prosec #box {
   justify-content: space-evenly;
   position: relative;
   margin: 5vh;
+  margin-left: 0px;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
@@ -74,7 +75,7 @@ main #prosec #box img {
   border: 2px solid brown; /**/
   border-radius: 1vw;
   width: 15vw;
-  height: 40vh;
+  height: 30vh;
   z-index: 0;
 }
 main #prosec #box #img1 {
@@ -99,7 +100,7 @@ main #prosec #box #img1 #discbox {
 main #prosec #box #img1 #discbox p {
   width: 80%;
   font-family: sans-serif;
-  font-size: 3vh;
+  font-size: 2vh;
   font-weight: bold;
   color: white;
   word-spacing: 0.2vw;
