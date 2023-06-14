@@ -8,7 +8,7 @@ nav {
   z-index: 2;
   width: 100%;
   display: flex;
-  background-color: rgb(77, 36, 3);
+  background-color: burlywood;
   position: sticky;
   top: -1px;
   transition: 0.5s;
@@ -24,24 +24,72 @@ nav #logo img {
 }
 nav #links {
   /*border: 1px solid;/**/
-  width: 55%;
-  padding-left: 10vw;
+  width: 65%;
+  position: relative;
+  right: 10vw;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-right: 3vw;
+  /*#cart{
+      background-color: rgba(165, 42, 42, 0.692);
+      border-radius:30vw;
+  }*/
 }
 nav #links a {
   text-decoration: none;
   color: white;
-  margin: 0vh 1vw;
+  margin: 0vh 2vw;
   font-family: sans-serif;
   font-weight: lighter;
   font-size: 1.2em;
 }
-nav #links #cart {
-  background-color: rgba(165, 42, 42, 0.692);
-  border-radius: 30vw;
+nav #links select {
+  width: 8vw;
+  height: 2vh;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 2vh;
+}
+nav #links select option {
+  background-color: burlywood;
+}
+nav #links #search {
+  width: 23vw;
+  /* border: 1px solid;/**/
+  position: relative;
+}
+nav #links #search i {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: burlywood;
+  border-radius: 2vh 0px 0vh 2vh;
+}
+nav #links #search input {
+  border: none;
+  border-radius: 0vh 2vh 2vh 0vh;
+  position: relative;
+  width: 90%;
+  height: 3vh;
+  padding-left: 0.5vw;
+  left: 10%;
+  top: 0px;
+  font-family: sans-serif;
+  font-size: 2vh;
+  color: gray;
+}
+nav #links #search input:active {
+  border: none;
+  outline: none;
 }
 
 nav.active {
