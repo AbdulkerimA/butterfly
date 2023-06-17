@@ -180,8 +180,9 @@ main #cartsec {
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 7vh;
-  position: sticky;
-  top: 9vh;
+  position: relative;
+  right: 1vw;
+  border-radius: 1vh;
 }
 main #cartsec header {
   width: 100%;
@@ -196,4 +197,39 @@ main #cartsec header h2 {
   font-weight: bold;
   font-size: 5vh;
   color: #fff;
+}
+main #cartsec .box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2vh;
+  border: 2px solid burlywood;
+  font-family: sans-serif;
+  font-size: 2vh;
+  color: gray;
+}
+main #cartsec .box img {
+  width: 5vw;
+  height: 5vw;
+}
+main #cartsec button {
+  position: absolute;
+  bottom: -58px;
+  left: 0px;
+  width: 100%;
+  height: 8vh;
+  background-color: #a87b1a;
+  font-family: sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  border: none;
+  border-radius: 1vh;
+  color: white;
+}
+main #cartsec button a {
+  color: white;
+  text-decoration: none;
+}
+main #cartsec button:hover {
+  background-color: #cfa54a;
 }/*# sourceMappingURL=style.css.map */
