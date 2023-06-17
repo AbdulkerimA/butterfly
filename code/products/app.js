@@ -8,6 +8,13 @@ let products = [
     "verkade","quality street","toblerone","twirl"
 ]; // a list of products name 
 
+const price = [
+    4,10.56,8.49,3,
+    4,10.56,8.49,3,
+    4,10.56,8.49,3,
+    4,10.56,8.49,3
+]; // list of price for eqch products
+
 let imgsrc = [
     "./../../resource/pic/products/1.jpg",
     "./../../resource/pic/products/caramels.jpg",
@@ -29,12 +36,16 @@ let imgsrc = [
 
 let addToCartButt = document.querySelectorAll("#addToCart"); // getting all the buttons on the prod page
 let prodOnCart = sessionStorage.getItem("prodnum"); // number of product selected
-
+let totalprice = sessionStorage.getItem("totalP");
 // function to display nuber of added products in the cart 
 
-let addToCart = ( ) => {
+let addToCart = ( prodprice ) => {
     prodOnCart++;
+    totalprice += prodprice;
+
+    sessionStorage.setItem("totalP",totalprice);
     sessionStorage.setItem("prodnum",prodOnCart);
+    
     document.getElementById("prodnum").innerHTML = prodOnCart;
 
 }
@@ -42,18 +53,25 @@ let addToCart = ( ) => {
 // function to create the replica of an added produnct
 
 let addpro = ( productName,img) => {
+    
     let box = document.createElement("div"); // 
-    box.classList.add("box");
     let pname = document.createTextNode(productName);
     let imgNode = document.createElement("img");
+    let Total
+
     imgNode.src = img;
+
+    box.classList.add("box");
     box.appendChild(imgNode);
     box.appendChild(pname);
+
     document.getElementById("cartsec").appendChild(box);
 }
 
- // onload event to inisilize the sessionStorage or prodOnCart
-window.addEventListener("load",() => {
+
+// onload event to inisilize the sessionStorage or prodOnCart
+
+ window.addEventListener("load",() => {
     prodOnCart = sessionStorage.getItem("prodnum");
 
     if (prodOnCart == null || prodOnCart == "NaN" ) {
@@ -65,10 +83,12 @@ window.addEventListener("load",() => {
     document.getElementById("prodnum").innerHTML = prodOnCart;
 });
 
+
 // loop to identify which product is selected and to listen for an event on all add to cart buttons 
+
 for (let i=0 ; i<addToCartButt.length; i++){
     addToCartButt[i].addEventListener("click",() => {
         addpro(products[i],imgsrc[i]);
-        addToCart();
+        addToCart(price[i]);
     });
 }

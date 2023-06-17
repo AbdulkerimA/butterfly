@@ -30,28 +30,24 @@ nav #links {
   display: flex;
   align-items: center;
   margin-right: 3vw;
-  /*#cart{
-      background-color: rgba(165, 42, 42, 0.692);
-      border-radius:30vw;
-  }*/
 }
 nav #links a {
   text-decoration: none;
   color: white;
-  margin: 0vh 2vw;
+  margin: 0vh 3vw;
   font-family: sans-serif;
   font-weight: lighter;
   font-size: 1.2em;
 }
 nav #links select {
-  width: 8vw;
-  height: 2vh;
+  width: 12vw;
+  height: 5vh;
   outline: none;
   border: none;
   background-color: transparent;
   color: white;
   font-family: sans-serif;
-  font-size: 2vh;
+  font-size: 1.2em;
 }
 nav #links select option {
   background-color: burlywood;
@@ -89,12 +85,6 @@ nav #links #search input {
 }
 nav #links #search input:focus {
   outline: none;
-}
-
-nav.active {
-  position: sticky;
-  top: -1px;
-  background-color: rgba(26, 9, 0, 0.6980392157);
 }
 
 main {
@@ -205,7 +195,7 @@ main #cartsec .box {
   margin-bottom: 2vh;
   border: 2px solid burlywood;
   font-family: sans-serif;
-  font-size: 2vh;
+  font-size: 1.3em;
   color: gray;
 }
 main #cartsec .box img {

@@ -1,9 +1,8 @@
 
-let price = 10;
 let priceFild = document.getElementById("price");
 
 let showPrice = () => {
-    priceFild.innerHTML = "total price $" + price*sessionStorage.getItem("prodamount");
+    priceFild.innerHTML = "total price $" + sessionStorage.getItem("totalP");
 }
 window.addEventListener("load",showPrice);
 
