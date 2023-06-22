@@ -32,7 +32,7 @@ let imgsrc = [
     "./../../resource/pic/products/shopping4.png",
     "./../../resource/pic/products/super-toblerone-giant-chocolate.jpg",
     "./../../resource/pic/products/twirlorangeresized.png"
-];
+]; // list of product images
 
 let addToCartButt = document.querySelectorAll("#addToCart"); // getting all the buttons on the prod page
 let prodOnCart = sessionStorage.getItem("prodnum"); // number of product selected
@@ -41,14 +41,14 @@ let totalprice = sessionStorage.getItem("totalP");
 
 let addToCart = ( prodprice ) => {
     prodOnCart++;
-    totalprice += prodprice;
+    totalprice += prodprice; // price of added products
 
     sessionStorage.setItem("totalP",totalprice);
     sessionStorage.setItem("prodnum",prodOnCart);
     
     document.getElementById("prodnum").innerHTML = prodOnCart;
 
-}
+}// this func only affects the session storage and the header on cart sec
 
 // function to create the replica of an added produnct
 
@@ -57,13 +57,20 @@ let addpro = ( productName,img) => {
     let box = document.createElement("div"); // 
     let pname = document.createTextNode(productName);
     let imgNode = document.createElement("img");
-    let Total
+    let cancel = document.createElement("div");
+
 
     imgNode.src = img;
 
     box.classList.add("box");
+    cancel.classList.add("cancelbutt");
+
+    cancel.innerHTML = "<span>X</span>"
+
     box.appendChild(imgNode);
     box.appendChild(pname);
+    box.appendChild(cancel);
+
 
     document.getElementById("cartsec").appendChild(box);
 }
