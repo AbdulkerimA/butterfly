@@ -35,6 +35,7 @@ let imgsrc = [
 ]; // list of product images
 
 let addToCartButt = document.querySelectorAll("#addToCart"); // getting all the buttons on the prod page
+let deleteFromCartB ;
 let prodOnCart = sessionStorage.getItem("prodnum"); // number of product selected
 let totalprice = sessionStorage.getItem("totalP");
 // function to display nuber of added products in the cart 
@@ -58,20 +59,31 @@ let addpro = ( productName,img) => {
     let box = document.createElement("div"); // 
     let pname = document.createTextNode(productName);
     let imgNode = document.createElement("img");
-
+    let cancel = document.createElement("div");
     imgNode.src = img;
 
     box.classList.add("box");
-   // cancel.classList.add("cancelbutt");
 
-   // cancel.innerHTML = "<span>X</span>"
+    cancel.innerHTML = "<i id=\"deleteElement\" class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"
 
     box.appendChild(imgNode);
     box.appendChild(pname);
-    //box.appendChild(cancel);
+    box.appendChild(cancel);
 
 
     document.getElementById("cartsec").appendChild(box);
+}
+
+ // deleting an item from car tlist 
+
+let deletepro = ( element ) => {
+    // making the element disapear 
+    element.parentElement.parentElement.remove();
+
+    // decreaing number of pro
+    prodOnCart--;
+    sessionStorage.setItem("prodnum",prodOnCart);
+    document.getElementById("prodnum").innerHTML = prodOnCart;
 }
 
 
@@ -98,11 +110,29 @@ let addpro = ( productName,img) => {
 });
 
 
+
+let checkingCartList = () => {
+    
+    deleteFromCartB = document.querySelectorAll("#deleteElement");
+
+   for (let i=0 ; i<deleteFromCartB.length; i++){
+       deleteFromCartB[i].addEventListener("click",() => {
+           deletepro(deleteFromCartB[i]);
+       });
+   }
+}
+
+
 // loop to identify which product is selected and to listen for an event on all add to cart buttons 
 
 for (let i=0 ; i<addToCartButt.length; i++){
     addToCartButt[i].addEventListener("click",() => {
         addpro(products[i],imgsrc[i]);
         addToCart(price[i]);
+        checkingCartList();
     });
 }
+
+
+
+//setInterval(checkingCartList,1000);
