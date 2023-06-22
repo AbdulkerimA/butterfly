@@ -47,6 +47,7 @@ let addToCart = ( prodprice ) => {
     sessionStorage.setItem("prodnum",prodOnCart);
     
     document.getElementById("prodnum").innerHTML = prodOnCart;
+    document.getElementById("pay").innerHTML = "Total $ " + sessionStorage.getItem("totalP");
 
 }// this func only affects the session storage and the header on cart sec
 
@@ -57,8 +58,6 @@ let addpro = ( productName,img) => {
     let box = document.createElement("div"); // 
     let pname = document.createTextNode(productName);
     let imgNode = document.createElement("img");
-    let cancel = document.createElement("div");
-
 
     imgNode.src = img;
 
@@ -80,6 +79,7 @@ let addpro = ( productName,img) => {
 
  window.addEventListener("load",() => {
     prodOnCart = sessionStorage.getItem("prodnum");
+    totalprice = sessionStorage.getItem("totalP");
 
     if (prodOnCart == null || prodOnCart == "NaN" ) {
         prodOnCart = 0;
@@ -88,6 +88,13 @@ let addpro = ( productName,img) => {
     
     else
     document.getElementById("prodnum").innerHTML = prodOnCart;
+
+    // chaking if there is an order that is not payed 
+    if (totalprice != null )
+    document.getElementById("pay").innerHTML = "total $ "+ totalprice;
+    else
+    document.getElementById("pay").innerHTML = "total $ "+ 0;
+
 });
 
 
