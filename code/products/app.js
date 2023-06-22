@@ -62,13 +62,13 @@ let addpro = ( productName,img) => {
     imgNode.src = img;
 
     box.classList.add("box");
-    cancel.classList.add("cancelbutt");
+   // cancel.classList.add("cancelbutt");
 
-    cancel.innerHTML = "<span>X</span>"
+   // cancel.innerHTML = "<span>X</span>"
 
     box.appendChild(imgNode);
     box.appendChild(pname);
-    box.appendChild(cancel);
+    //box.appendChild(cancel);
 
 
     document.getElementById("cartsec").appendChild(box);
