@@ -9,10 +9,10 @@ let products = [
 ]; // a list of products name 
 
 const price = [
-    4,10.56,8.49,3,
-    4,10.56,8.49,3,
-    4,10.56,8.49,3,
-    4,10.56,8.49,3
+    4,10.5,8.5,3,
+    4,10.5,8.5,3,
+    4,10.5,8.5,3,
+    4,10.5,8.5,3
 ]; // list of price for eqch products
 
 let imgsrc = [
@@ -47,8 +47,8 @@ let addToCart = ( prodprice ) => {
     sessionStorage.setItem("totalP",totalprice);
     sessionStorage.setItem("prodnum",prodOnCart);
     
-    document.getElementById("prodnum").innerHTML = prodOnCart;
-    document.getElementById("pay").innerHTML = "Total $ " + sessionStorage.getItem("totalP");
+    //document.getElementById("prodnum").innerHTML = prodOnCart;
+    document.getElementById("pay").innerHTML = "Total $ " + totalprice;
 
 }// this func only affects the session storage and the header on cart sec
 
@@ -75,24 +75,27 @@ let addpro = ( productName,img) => {
 }
 
  // deleting an item from car tlist 
-
+ 
 let deletepro = ( element ) => {
     // making the element disapear 
     element.parentElement.parentElement.remove();
 
+    /*
     // decreaing number of pro
     prodOnCart--;
     sessionStorage.setItem("prodnum",prodOnCart);
     document.getElementById("prodnum").innerHTML = prodOnCart;
+
+    // decrising total amount of price */
 }
 
 
 // onload event to inisilize the sessionStorage or prodOnCart
 
  window.addEventListener("load",() => {
-    prodOnCart = sessionStorage.getItem("prodnum");
+    //prodOnCart = sessionStorage.getItem("prodnum");
     totalprice = sessionStorage.getItem("totalP");
-
+/*
     if (prodOnCart == null || prodOnCart == "NaN" ) {
         prodOnCart = 0;
         document.getElementById("prodnum").innerHTML = prodOnCart;
@@ -100,7 +103,7 @@ let deletepro = ( element ) => {
     
     else
     document.getElementById("prodnum").innerHTML = prodOnCart;
-
+*/
     // chaking if there is an order that is not payed 
     if (totalprice != null )
     document.getElementById("pay").innerHTML = "total $ "+ totalprice;
