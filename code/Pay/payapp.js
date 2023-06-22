@@ -1,8 +1,8 @@
 
-let priceFild = document.getElementById("price");
+//let priceFild = document.getElementById("price");
 
 // showing the amount of price that we are going to pay
-
+/*
 let showPrice = () => {
 
     if(sessionStorage.getItem("totalP") != null)
@@ -13,7 +13,7 @@ let showPrice = () => {
 
 window.addEventListener("load", () => {
     showPrice();
-});
+});*/
 
 let pay = document.getElementById("pay");
 
