@@ -1,12 +1,12 @@
 // auto image changer for section 1
 let imges = [
-    './../resource/pic/backgrounds/bg1.jpg',
-    './../resource/pic/backgrounds/bg2.jpg',
-    './../resource/pic/backgrounds/bg3.jpg',
-    './../resource/pic/backgrounds/bg4.jpg',
-    './../resource/pic/backgrounds/bg5.jpg',
-    './../resource/pic/backgrounds/bg6.jpg',
-    './../resource/pic/backgrounds/bg7.jpg'
+    './resource/pic/backgrounds/bg1.jpg',
+    './resource/pic/backgrounds/bg2.jpg',
+    './resource/pic/backgrounds/bg3.jpg',
+    './resource/pic/backgrounds/bg4.jpg',
+    './resource/pic/backgrounds/bg5.jpg',
+    './resource/pic/backgrounds/bg6.jpg',
+    './resource/pic/backgrounds/bg7.jpg'
 ];
 // selecting the element
 let section_one = document.getElementById("sec1");
