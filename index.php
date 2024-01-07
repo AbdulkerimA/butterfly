@@ -1,3 +1,9 @@
+<?php
+// when obj is created automatically its class will be included
+include "inc/includes.inc.php";
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +33,7 @@
             <a href="#sec2" id=""> discount </a>
             <a href="#sec7" id=""> contact </a>
             <div id="cart">
-                <a href="./Pay/Payment.html" id="car">
+                <a href="#" id="car">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <span id="num">0</span>
                </a>
