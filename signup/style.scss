@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    position: relative;
+    #cont{
+        position: relative;
+        border: 10px solid green;
+        #noerror{
+            display: none;
+        }
+        #error{
+            position: absolute;
+            left: 35%;
+            top: 35%;
+            width: fit-content;
+            height: 12em;
+            padding: 0px 2vw;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(247, 162, 162);
+            color: white;
+            font-family: monospace;
+            font-size: 1.2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1em 2em 5em rgb(252, 203, 203);
+            button{
+                width: 5em;
+                height: 2em;
+                position: relative;
+                top: 3vh;
+            }
+        }
+    }
+}

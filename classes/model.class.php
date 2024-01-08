@@ -12,4 +12,18 @@ class Model extends Db{
         }
 
     }
+
+    // user registration 
+
+    protected function setUser($Rname,$Rpass,$Remail,$Rtel){
+        $sqlstmt = "insert into customers_information (userName,email,password,tel) 
+        values('$Rname','$Remail','$Rpass','$Rtel')";
+
+        if ($result = $this->conn()->query($sqlstmt)){
+            return $result;
+        }
+        else {
+            return "query error";
+        }
+    }
 }
