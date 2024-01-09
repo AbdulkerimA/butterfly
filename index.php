@@ -20,7 +20,8 @@ session_start();
 </head>
 
 <body>
-    <nav id="navbar" class="section1">
+    <?php
+    /*<nav id="navbar" class="section1">
         <!-- Logo -->
         <div id="logo">
             <img src="./resource/pic/logos/Iconsmind-Outline-Butterfly.512.png" alt="LOGO">
@@ -40,7 +41,9 @@ session_start();
             </div>
         </div>
         
-    </nav>
+    </nav>*/
+    include 'navbar.php'
+    ?>
 
     <!-- main tag-->
     <main class="main">
@@ -447,6 +450,8 @@ session_start();
 
         <!-- footer section-->
         <footer>
+        <?php
+        /*
             <div id="top">
                 <div id="contact">
                     <h3>contuct us</h3>
@@ -482,7 +487,9 @@ session_start();
 
             <div id="bottom">
                 <p>&copy copy right reserved by butterfly</p>
-            </div>
+            </div>*/
+            include "footer.php";
+        ?>
         </footer>
     </main>
     <!-- javascript-->
