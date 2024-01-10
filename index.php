@@ -13,7 +13,7 @@ session_start();
     <title>BUTTERFLY </title>
 
     <!-- linking to the style file -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./asset/style/index.style.scss">
     <!-- fafa icons link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -24,7 +24,7 @@ session_start();
     /*<nav id="navbar" class="section1">
         <!-- Logo -->
         <div id="logo">
-            <img src="./resource/pic/logos/Iconsmind-Outline-Butterfly.512.png" alt="LOGO">
+            <img src="./asset/pic/logos/Iconsmind-Outline-Butterfly.512.png" alt="LOGO">
         </div>
         <!-- navigational links -->
         <div id="links">    
@@ -67,7 +67,7 @@ session_start();
             <!-- first article -->
             <article class ="article1 ">
                 <div class="image reveal">
-                    <img src="./resource/pic/pic4.jpg" alt="product1"> 
+                    <img src="./asset/pic/pic4.jpg" alt="product1"> 
                     <!-- product picture or ilustration -->
                 </div>
                 <div id="Dove" class ="disc1 reveal">
@@ -95,7 +95,7 @@ session_start();
             
             <article id="article2">
                 <div class="image reveal">
-                    <img src="./resource/pic/Screenshot (67).png" alt=" fererro roches">
+                    <img src="./asset/pic/Screenshot (67).png" alt=" fererro roches">
                 </div>
                 <div class ="disc2 reveal">
                     <header>
@@ -123,7 +123,7 @@ session_start();
             
             <article id="article3">
                 <div class="image reveal">
-                    <img src="./resource/pic/Screenshot (71).png" alt=" fererro roches">
+                    <img src="./asset/pic/Screenshot (71).png" alt=" fererro roches">
                 </div>
                 <div class ="disc3 reveal">
                     <header>
@@ -188,25 +188,25 @@ session_start();
                     <hr width="200px" color="brown">
                 </header>
                 <div id="logos">
-                    <img src="./resource/pic/brands/Dove.png" alt="dove" id="img1">
-                    <img src="./resource/pic/brands/Galaxy.png" alt="Galaxy" id="img2">
-                    <img src="./resource/pic/brands/Ferrero-Rocher.png" alt="fererro" id="img3">
-                    <img src="./resource/pic/brands/Kit-Kat.png" alt="" id="img4">
-                    <img src="./resource/pic/brands/Hersheys.png" alt="" id="img5">
-                    <img src="./resource/pic/brands/Lindt.png" alt="Lindt" id="img6">
-                    <img src="./resource/pic/brands/Cadbury-1.png" alt="" id="img7">
-                    <img src="./resource/pic/brands/Jacques-Torres-Chocolate.png" alt="" id="img8">
+                    <img src="./asset/pic/brands/Dove.png" alt="dove" id="img1">
+                    <img src="./asset/pic/brands/Galaxy.png" alt="Galaxy" id="img2">
+                    <img src="./asset/pic/brands/Ferrero-Rocher.png" alt="fererro" id="img3">
+                    <img src="./asset/pic/brands/Kit-Kat.png" alt="" id="img4">
+                    <img src="./asset/pic/brands/Hersheys.png" alt="" id="img5">
+                    <img src="./asset/pic/brands/Lindt.png" alt="Lindt" id="img6">
+                    <img src="./asset/pic/brands/Cadbury-1.png" alt="" id="img7">
+                    <img src="./asset/pic/brands/Jacques-Torres-Chocolate.png" alt="" id="img8">
                 </div>
                 
                 <div id="logos">
-                    <img src="./resource/pic/brands/Dove.png" alt="dove" id="img1">
-                    <img src="./resource/pic/brands/Galaxy.png" alt="Galaxy" id="img2">
-                    <img src="./resource/pic/brands/Ferrero-Rocher.png" alt="fererro" id="img3">
-                    <img src="./resource/pic/brands/Kit-Kat.png" alt="" id="img4">
-                    <img src="./resource/pic/brands/Hersheys.png" alt="" id="img5">
-                    <img src="./resource/pic/brands/Lindt.png" alt="Lindt" id="img6">
-                    <img src="./resource/pic/brands/Cadbury-1.png" alt="" id="img7">
-                    <img src="./resource/pic/brands/Jacques-Torres-Chocolate.png" alt="" id="img8">
+                    <img src="./asset/pic/brands/Dove.png" alt="dove" id="img1">
+                    <img src="./asset/pic/brands/Galaxy.png" alt="Galaxy" id="img2">
+                    <img src="./asset/pic/brands/Ferrero-Rocher.png" alt="fererro" id="img3">
+                    <img src="./asset/pic/brands/Kit-Kat.png" alt="" id="img4">
+                    <img src="./asset/pic/brands/Hersheys.png" alt="" id="img5">
+                    <img src="./asset/pic/brands/Lindt.png" alt="Lindt" id="img6">
+                    <img src="./asset/pic/brands/Cadbury-1.png" alt="" id="img7">
+                    <img src="./asset/pic/brands/Jacques-Torres-Chocolate.png" alt="" id="img8">
                 </div>
                 
             </article>
@@ -238,7 +238,7 @@ session_start();
 
             <div id="box">
              <div id="img1">
-                <img src="./resource/pic/products/1.jpg" alt="">
+                <img src="./asset/pic/products/1.jpg" alt="">
                 <div id="discbox">
                     <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                     <span>$4</span>
@@ -246,7 +246,7 @@ session_start();
                 </div>
             </div>
                 <div id="img1">
-                    <img src="./resource/pic/products/caramels.jpg" alt="">
+                    <img src="./asset/pic/products/caramels.jpg" alt="">
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$10.56</span>
@@ -255,7 +255,7 @@ session_start();
                  </div>
  
                  <div id="img1">
-                    <img src="./resource/pic/products/create-your-own-6-bar-letterbox-selection-450x450.jpg" alt="">
+                    <img src="./asset/pic/products/create-your-own-6-bar-letterbox-selection-450x450.jpg" alt="">
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$8.49</span>
@@ -264,7 +264,7 @@ session_start();
                  </div>            
  
                  <div id="img1">
-                    <img src="./resource/pic/products/darkmaltesers.jpg" alt="">
+                    <img src="./asset/pic/products/darkmaltesers.jpg" alt="">
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$3.00</span>
@@ -276,7 +276,7 @@ session_start();
 
             <div id="box">
                 <div id="img1">
-                    <img src="./resource/pic/products/ferrerorochertjpg.jpg" alt="">
+                    <img src="./asset/pic/products/ferrerorochertjpg.jpg" alt="">
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$4</span>
@@ -284,7 +284,7 @@ session_start();
                     </div>
                 </div>
                     <div id="img1">
-                        <img src="./resource/pic/products/kitkat.jpg" alt="">
+                        <img src="./asset/pic/products/kitkat.jpg" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$10.56</span>
@@ -293,7 +293,7 @@ session_start();
                      </div>
      
                      <div id="img1">
-                        <img src="./resource/pic/products/maltesers.jpg" alt="">
+                        <img src="./asset/pic/products/maltesers.jpg" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$8.49</span>
@@ -302,7 +302,7 @@ session_start();
                      </div>            
      
                      <div id="img1">
-                        <img src="./resource/pic/products/mandmprotein.jpg" alt="">
+                        <img src="./asset/pic/products/mandmprotein.jpg" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$3.00</span>
@@ -314,7 +314,7 @@ session_start();
 
             <div id="box">
                 <div id="img1">
-                    <img src="./resource/pic/products/Milk-Chocolate-Bar.jpg" alt="">
+                    <img src="./asset/pic/products/Milk-Chocolate-Bar.jpg" alt="">
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$4</span>
@@ -322,7 +322,7 @@ session_start();
                     </div>
                 </div>
                     <div id="img1">
-                        <img src="./resource/pic/products/kitkat.jpg" alt="">
+                        <img src="./asset/pic/products/kitkat.jpg" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$10.56</span>
@@ -331,7 +331,7 @@ session_start();
                      </div>
      
                      <div id="img1">
-                        <img src="./resource/pic/products/shopping.png" alt="">
+                        <img src="./asset/pic/products/shopping.png" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$8.49</span>
@@ -340,7 +340,7 @@ session_start();
                      </div>            
      
                      <div id="img1">
-                        <img src="./resource/pic/products/shopping2.png" alt="">
+                        <img src="./asset/pic/products/shopping2.png" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$3.00</span>
@@ -352,7 +352,7 @@ session_start();
 
             <div id="box">
                 <div id="img1">
-                    <img src="./resource/pic/products/shopping3.png" alt="">
+                    <img src="./asset/pic/products/shopping3.png" alt="">
                     <div id="discbox">
                         <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         <span>$4</span>
@@ -360,7 +360,7 @@ session_start();
                     </div>
                 </div>
                     <div id="img1">
-                        <img src="./resource/pic/products/shopping4.png" alt="">
+                        <img src="./asset/pic/products/shopping4.png" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$10.56</span>
@@ -369,7 +369,7 @@ session_start();
                      </div>
      
                      <div id="img1">
-                        <img src="./resource/pic/products/super-toblerone-giant-chocolate.jpg" alt="">
+                        <img src="./asset/pic/products/super-toblerone-giant-chocolate.jpg" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$8.49</span>
@@ -378,7 +378,7 @@ session_start();
                      </div>            
      
                      <div id="img1">
-                        <img src="./resource/pic/products/twirlorangeresized.png" alt="">
+                        <img src="./asset/pic/products/twirlorangeresized.png" alt="">
                         <div id="discbox">
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                             <span>$3.00</span>
@@ -401,7 +401,7 @@ session_start();
             <article>
 
                 <div id="test1">
-                    <img src="./resource/pic/users/user2.jpg" alt="abdulmalik">
+                    <img src="./asset/pic/users/user2.jpg" alt="abdulmalik">
                     <p> Abdulmalik Mubarek</p>
                     <blockquote>
                         <i>
@@ -412,7 +412,7 @@ session_start();
                     </blockquote>
                 </div>
                 <div id="test2">
-                    <img src="./resource/pic/users/user9.jpg" alt="yonatan">
+                    <img src="./asset/pic/users/user9.jpg" alt="yonatan">
                     <p> marry </p>
                     <blockquote>
                         <i>
@@ -423,7 +423,7 @@ session_start();
                     </blockquote>
                 </div>
                 <div id="test3">
-                    <img src="./resource/pic/users/user3.jpg" alt="semira">
+                    <img src="./asset/pic/users/user3.jpg" alt="semira">
                     <p> john </p>
                     <blockquote>
                         <i>
@@ -435,7 +435,7 @@ session_start();
                 </div>
 
                 <div id="test4">
-                    <img src="./resource/pic/users/user4.jpg" alt="bilen">
+                    <img src="./asset/pic/users/user4.jpg" alt="bilen">
                     <p> malissa </p>
                     <blockquote>
                         <i>
@@ -493,7 +493,7 @@ session_start();
         </footer>
     </main>
     <!-- javascript-->
-    <script src="./app.js">
+    <script src="./asset/js/index.app.js">
 
     </script>
 </body>

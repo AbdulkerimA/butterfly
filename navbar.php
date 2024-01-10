@@ -5,7 +5,7 @@ $navigation = ['Home','about','products','discount','contact'];
 <nav id="navbar" class="section1">
     <!-- Logo -->
     <div id="logo">
-        <img src="./resource/pic/logos/Iconsmind-Outline-Butterfly.512.png" alt="LOGO">
+        <img src="./asset/pic/logos/Iconsmind-Outline-Butterfly.512.png" alt="LOGO">
     </div>
     <!-- navigational links -->
     <div id="links">    
