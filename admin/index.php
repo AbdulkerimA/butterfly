@@ -1,4 +1,6 @@
 <?php
+include "../inc/includes.inc.php";
+session_start();
 /*if (isset($_SESSION['islogedin'])){
     if ($_SESSION['user'] != 'admin'){
         header("Location:../login.php");
@@ -7,6 +9,41 @@
 else{
     header("Location:../login.php");
 }*/
+$error = null;
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if (empty($_POST['name'])|| empty($_POST['price'])){
+        echo "<script>alert('pleas fill all of the informations')</script>";
+    }
+    else {
+        upload_image();
+
+        // connect the controller and upload all the data
+    }
+}
+function upload_image() {
+    if (isset($_FILES['file'])){
+        $file = $_FILES['file'];
+        $path = "../asset/pic/";
+        $file_to_be_uploaded = $path.basename($file['name']);
+        // check if the file is actual image then upload
+
+        $upload_status=move_uploaded_file($file['tmp_name'],$file_to_be_uploaded);
+
+        // display a message if the file is uploaded successfuly 
+        if ($upload_status) {
+            echo "<script>alert('File uploaded successfully')</script>";
+        }
+        else {
+            echo "<script>alert('insert an image uplod error".$file['error']."')</script>";
+        }
+    }
+    else{
+        // if the pic is not inserted
+        $error = "insert a picture";
+        echo "<script>alert('".$error."')</script>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -116,20 +153,25 @@ else{
             <article>
               <div id="container">
                     <!-- image of the product to be uploaded -->
-                    <img src="<?php if(isset($_POST['img'])){echo "../asset/pic/";}?>" alt="product pic">
+                    <img src="" alt="product pic" id="image_preview">
                     
-                    <form action="./index.php" method="post">
-                        <input type="file" id="upload-file" hidden />
+                    <form action="./index.php" method="post" enctype="multipart/form-data">
+                        <input type="file" name="file" id="upload-file"  onchange="preview()" hidden />
+                        
                         <label class="btn-up" for="upload-file">Upload</label>
+                        
                         <div id="amount">
-                            <span id="minus">-</span>
-                            <span id="pnumber">10</span>
-                            <span id="plus">+</span>
+                            <div id="minus" onclick>-</div>
+                            <span id="pnumber"  contenteditable="true">0</span>
+                            <div id="plus">+</div>
                         </div>
+                        
                         <input type="text" name="name" id="name" placeholder="product name">
-                        <textarea name="dic" id="dic" cols="30" rows="10">product discription</textarea>
+                        <input type="text" name="price" id="price" placeholder="price $0">
+                        
+                        <textarea name="dic" id="dic" cols="30" rows="10">product description</textarea>
                           <!-- ADD THE  product to the db -->
-                         <button type="submit"> add product</button>
+                        <button type="submit"> add product</button>
                     </form>
 
                 </div>
@@ -139,5 +181,17 @@ else{
 
     <!-- js -->
     <script src="../asset/js/admin.app.js"></script>
+    <script language = "javascript">
+        // sending the pamount  and the pdiscription data to the $_POST variable 
+        // when the submit button is clicled 
+        let send = () => {
+            let pamount = document.getElementById("pnumber").textContent;
+            let pdisc = document.getElementById("dic").textContent;
+            // assign them to php
+            
+            
+           // ?>
+        }
+    </script>
 </body>
 </html>

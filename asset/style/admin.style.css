@@ -7,6 +7,7 @@
 body {
   display: flex;
   background-color: #ffeedf;
+  overflow: hidden;
 }
 body nav {
   position: relative;
@@ -69,6 +70,9 @@ body nav #options button:hover {
 body nav #options #setting {
   position: relative;
   top: 18vh;
+}
+body main {
+  overflow-y: scroll;
 }
 body main #sec1 {
   position: relative;
@@ -249,18 +253,35 @@ body main #sec6 article #container #amount span {
   padding: 0vh 0.5vw;
   font-size: 1.5em;
 }
+body main #sec6 article #container #amount span:focus {
+  height: 3.3vh;
+  outline: none;
+  border: 1px solid white;
+}
+body main #sec6 article #container #amount #minus, body main #sec6 article #container #amount #plus {
+  border: 1px solid white;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  padding: 0vh 0.5vw;
+  font-size: 1.5em;
+  cursor: pointer;
+}
 body main #sec6 article #container #amount #pnumber {
   width: 10vw;
   display: flex;
   justify-content: center;
 }
-body main #sec6 article #container #name, body main #sec6 article #container #dic {
+body main #sec6 article #container #name, body main #sec6 article #container #dic, body main #sec6 article #container #price {
   outline: none;
   border: none;
   width: 20vw;
   padding: 1vh 0px;
   margin: 1px 2vw;
   color: gray;
+}
+body main #sec6 article #container textarea {
+  height: 10vh;
 }
 body main #sec6 article #container button {
   outline: none;
