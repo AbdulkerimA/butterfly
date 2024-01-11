@@ -7,7 +7,9 @@
 body{
     display: flex;
     background-color: #ffeedf;
-    overflow:hidden ;
+    overflow-y:hidden ;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
     nav{
         position: relative;
         top: 2vh;
@@ -72,7 +74,7 @@ body{
     
     // the main section
     main{
-        overflow-y:scroll;
+        //overflow-y:scroll;
         // dsection one 
         #sec1{
             position: relative;
@@ -316,6 +318,75 @@ body{
             }
         }
         //end of section 6
+
+        // section 7 dump products
+        #sec7{
+            article{
+                display: flex;
+                justify-content: center;
+                padding: 2vh 2vw;
+                margin-top: 2vh;
+                background-color: #a78a7f;
+                position: relative;
+                right:2vw;
+                z-index: -1;
+                header{
+                    font-family: monospace;
+                    font-size: 2em;
+                    color: white;
+                }
+            }
+            
+            #container2{
+                margin: 3vh 2vw;
+                //border: 1px solid gray;
+                display: flex;
+                flex-wrap: wrap;
+                overflow-y: auto;
+
+                #product{
+                    border: 1px solid gold;
+                    border-radius: 10px;
+                    padding: 1vh 1vw ;
+                    margin-right:.5vw;
+                    position: relative;
+                    #del{
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family:Arial, Helvetica, sans-serif;
+                        color: white;
+                        background-color: red;
+                    }
+                    img{
+                        border: 1px solid gold;
+                        width: 150px;
+                        height: 150px;
+                        margin: 1vh 0vw;
+                        border-radius: 10px;
+                    }
+                    p{
+                        background-color: #735751;
+                        font-family: monospace;
+                        font-size: 1.5em;
+                        color: white;
+                        text-align: center;
+                        padding: 1vh 0px;
+                        border-radius: 10px;
+                    }
+                }
+                #product:hover{
+                    box-shadow: 2em 2em 15em #a78a7f;
+                }
+            }
+        }
+        // end of section 7
     }
     // end of main
 }

@@ -7,7 +7,9 @@
 body {
   display: flex;
   background-color: #ffeedf;
-  overflow: hidden;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 body nav {
   position: relative;
@@ -70,9 +72,6 @@ body nav #options button:hover {
 body nav #options #setting {
   position: relative;
   top: 18vh;
-}
-body main {
-  overflow-y: scroll;
 }
 body main #sec1 {
   position: relative;
@@ -293,4 +292,65 @@ body main #sec6 article #container button {
   background-color: #a78a7f;
   color: #fff;
   font-size: 1.2em;
+}
+body main #sec7 article {
+  display: flex;
+  justify-content: center;
+  padding: 2vh 2vw;
+  margin-top: 2vh;
+  background-color: #a78a7f;
+  position: relative;
+  right: 2vw;
+  z-index: -1;
+}
+body main #sec7 article header {
+  font-family: monospace;
+  font-size: 2em;
+  color: white;
+}
+body main #sec7 #container2 {
+  margin: 3vh 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+body main #sec7 #container2 #product {
+  border: 1px solid gold;
+  border-radius: 10px;
+  padding: 1vh 1vw;
+  margin-right: 0.5vw;
+  position: relative;
+}
+body main #sec7 #container2 #product #del {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: red;
+}
+body main #sec7 #container2 #product img {
+  border: 1px solid gold;
+  width: 150px;
+  height: 150px;
+  margin: 1vh 0vw;
+  border-radius: 10px;
+}
+body main #sec7 #container2 #product p {
+  background-color: #735751;
+  font-family: monospace;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  padding: 1vh 0px;
+  border-radius: 10px;
+}
+body main #sec7 #container2 #product:hover {
+  box-shadow: 2em 2em 15em #a78a7f;
 }/*# sourceMappingURL=admin.style.css.map */

@@ -141,6 +141,8 @@ function upload_image() {
 */         
         ?>
         <!-- section five add products  -->
+        <?php 
+        /*
         <section id="sec5">
             <article>
                 <header>
@@ -177,21 +179,38 @@ function upload_image() {
                 </div>
             </article>
         </section>
+        */
+        ?>
+
+        <!-- section 7 dump products section --> 
+        <section id="sec7">
+            <article id="artic7">
+                <header>
+                    Delet products 
+                </header>
+            </article>
+            <!-- products -->
+            <div id="container2">
+                <!-- list of all product -->
+                <?php 
+                    for ($i=1; $i<=20;$i++){
+                ?>
+                <div id="product">
+                    <span id="del">X</span>
+                    <img src="../asset/pic/chocolate-oblivion-cake-.jpg" alt="product">
+                    <!-- product name -->
+                    <p id="product_name">Dove</p>
+                </div>
+                <?php
+                    }
+                ?>
+            </div>
+        </section>
+
     </main>
 
     <!-- js -->
     <script src="../asset/js/admin.app.js"></script>
-    <script language = "javascript">
-        // sending the pamount  and the pdiscription data to the $_POST variable 
-        // when the submit button is clicled 
-        let send = () => {
-            let pamount = document.getElementById("pnumber").textContent;
-            let pdisc = document.getElementById("dic").textContent;
-            // assign them to php
-            
-            
-           // ?>
-        }
-    </script>
+    <script language = "javascript" src="../asset/js/products.admin.app.js"></script>
 </body>
 </html>
