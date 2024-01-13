@@ -353,4 +353,73 @@ body main #sec7 #container2 #product p {
 }
 body main #sec7 #container2 #product:hover {
   box-shadow: 2em 2em 15em #a78a7f;
+}
+body main #sec8 article {
+  display: flex;
+  justify-content: center;
+  padding: 2vh 2vw;
+  margin-top: 2vh;
+  background-color: #a78a7f;
+  position: relative;
+  right: 2vw;
+  z-index: -1;
+}
+body main #sec8 article header {
+  font-family: monospace;
+  font-size: 2em;
+  color: white;
+}
+body main #sec8 #container3 {
+  overflow-y: scroll;
+}
+body main #sec8 #container3 table {
+  margin-left: 1vw;
+  margin-top: 2vh;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid #a78a7f;
+  font-family: monospace;
+  font-size: 1.1em;
+  color: white;
+}
+body main #sec8 #container3 table thead {
+  background-color: #735751;
+}
+body main #sec8 #container3 table thead tr {
+  margin: 1vh 0px;
+}
+body main #sec8 #container3 table thead tr th {
+  width: 3vw;
+  border: 1px solid #735751;
+  border-collapse: collapse;
+}
+body main #sec8 #container3 table thead tr th:nth-child(1) {
+  width: 0.5vw;
+}
+body main #sec8 #container3 table thead tr th:nth-child(2) {
+  width: 2vw;
+}
+body main #sec8 #container3 table thead tr th:nth-child(3) {
+  width: 3vw;
+}
+body main #sec8 #container3 table thead tr th:nth-child(4) {
+  width: 1vw;
+}
+body main #sec8 #container3 table thead tr th:nth-child(5) {
+  width: 2vw;
+}
+body main #sec8 #container3 table tbody tr {
+  margin: 1vh 0px;
+}
+body main #sec8 #container3 table tbody tr td {
+  padding-top: 1vh;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #735751;
+}
+body main #sec8 #container3 table tbody tr:nth-child(odd) {
+  background-color: #b19990;
+}
+body main #sec8 #container3 table tbody tr:nth-child(even) {
+  background-color: #a78a7f;
 }/*# sourceMappingURL=admin.style.css.map */

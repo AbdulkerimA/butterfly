@@ -387,6 +387,84 @@ body{
             }
         }
         // end of section 7
+
+        // section 8 users section 
+        #sec8{
+            article{
+                display: flex;
+                justify-content: center;
+                padding: 2vh 2vw;
+                margin-top: 2vh;
+                background-color: #a78a7f;
+                position: relative;
+                right:2vw;
+                z-index: -1;
+                header{
+                    font-family: monospace;
+                    font-size: 2em;
+                    color: white;
+                }
+            } //end of article 8
+            #container3{
+                overflow-y: scroll;
+                table{
+                    margin-left: 1vw;
+                    margin-top: 2vh;
+                    table-layout:fixed;
+                    border-collapse: collapse;
+                    border: 1px solid #a78a7f;
+                    font-family: monospace;
+                    font-size: 1.1em;
+                    color: white;
+                    thead{
+                        background-color: #735751;
+                        tr{
+                            margin: 1vh 0px;
+                            th{
+                                width: 3vw;
+                                border: 1px solid #735751;
+                                border-collapse: collapse;
+                            }
+                            th:nth-child(1){
+                                width:.5vw;
+                            }
+                            // name
+                            th:nth-child(2){
+                                width:2vw;
+                            }
+                            // email
+                            th:nth-child(3){
+                                width:3vw;
+                            }
+                            th:nth-child(4){
+                                width:1vw;
+                            }
+                            th:nth-child(5){
+                                width:2vw;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            margin: 1vh 0px;
+                            td{
+                                padding-top: 1vh;
+                                text-align: center;
+                                border-collapse: collapse;
+                                border: 1px solid #735751;
+                            }
+                        }
+                        tr:nth-child(odd) {
+                            background-color: #b19990;
+                          }
+                          
+                        tr:nth-child(even) {
+                            background-color: #a78a7f;
+                          }
+                    }
+                } // end of teble 
+            } // end of cont
+        }
     }
     // end of main
 }

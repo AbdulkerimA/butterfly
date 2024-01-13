@@ -10,7 +10,7 @@ else{
     header("Location:../login.php");
 }*/
 $error = null;
-
+/*
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     if (empty($_POST['name'])|| empty($_POST['price'])){
         echo "<script>alert('pleas fill all of the informations')</script>";
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         // connect the controller and upload all the data
     }
-}
+}*/
 function upload_image() {
     if (isset($_FILES['file'])){
         $file = $_FILES['file'];
@@ -65,23 +65,24 @@ function upload_image() {
         <h3>Dashboard</h3>
         </div>   
         <div id="options">
+            <form action="./index.php" method="get" id="options">
             <!-- buton one -->
-            <button id="selles" type="button">
+            <button id="sales" type="submit" name="load" value="sales">
                 <i class="fa fa-bar-chart" aria-hidden="true"></i>
                 sales
             </button>
             <!-- buton one -->
-            <button>
+            <button id="addp" type="submit" name="load" value="addProduct">
                 <i class="fa fa-plus-square-o" aria-hidden="true"></i>
                 add products
             </button>
             <!-- buton two -->
-            <button>
+            <button id="dumppro" type="submit" name="load" value="dump">
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                 dump products
-            </button>
+            </button >
             <!-- buton three -->
-            <button>
+            <button id="sub" type="submit" name="load" value="userslist">
                 <i class="fa fa-user-o" aria-hidden="true"></i>
                 subscribers 
             </button>
@@ -90,99 +91,26 @@ function upload_image() {
                 <i class="fa fa-cog" aria-hidden="true"></i>
                 setting
             </button>
+            </form>
         </div>
     </nav>
 
     <main>
-        <?php /*
-                <!-- salse section -->
-                <!-- tiltle section -->
-                <section id="sec1">
-                    <article>
-                      weekly sales summery 
-                    </article>
-                </section>
-                <!-- section two for percent growth display -->
-                <section id="sec2">
-                    <article>
-                        weekly growth rate in percent
-                        <div id="percent">
-                            <span id="number"><span id="num">50</span>%</span>
-                        </div>
-                         100 sold chocolates this week
-                    </article>
-                </section>
-                <!-- section three for piechart of sold items -->
-                <section id="sec3">
-                    <article>
-                        most sold chocolates this week
-                        <div id="piechart">
-                            <br> <br>
-                            <span id="squer"> x</span>
-                            fererrorocher 30 item 
-                            <br> <br>
-                            <span id="squer"> x</span>
-                            fererrorocher 30 item 
-                            <br> <br>
-                            <span id="squer"> x</span>
-                            fererrorocher 30 item 
-                            <br> <br>
-        
-                        </div>
-                    </article>
-                </section>
-        
-                <!-- section four bargraph -->
-                <section id="sec4">
-                    <article>
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                    </article>
-                </section>
-*/         
+        <?php
+        if (isset($_GET['load'])){
+            $page = $_GET["load"] . ".index.php";
+            //echo "<script> alert('".$page."')</script>";
+            include($page);
+        }
         ?>
         <!-- section five add products  -->
         <?php 
-        /*
-        <section id="sec5">
-            <article>
-                <header>
-                    Add products
-                </header>
-            </article>
-        </section>
-        <!-- upload section 6-->
-        <section  id="sec6">
-            <article>
-              <div id="container">
-                    <!-- image of the product to be uploaded -->
-                    <img src="" alt="product pic" id="image_preview">
-                    
-                    <form action="./index.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="file" id="upload-file"  onchange="preview()" hidden />
-                        
-                        <label class="btn-up" for="upload-file">Upload</label>
-                        
-                        <div id="amount">
-                            <div id="minus" onclick>-</div>
-                            <span id="pnumber"  contenteditable="true">0</span>
-                            <div id="plus">+</div>
-                        </div>
-                        
-                        <input type="text" name="name" id="name" placeholder="product name">
-                        <input type="text" name="price" id="price" placeholder="price $0">
-                        
-                        <textarea name="dic" id="dic" cols="30" rows="10">product description</textarea>
-                          <!-- ADD THE  product to the db -->
-                        <button type="submit"> add product</button>
-                    </form>
 
-                </div>
-            </article>
-        </section>
-        */
         ?>
 
         <!-- section 7 dump products section --> 
+        <?php
+        /*
         <section id="sec7">
             <article id="artic7">
                 <header>
@@ -206,11 +134,54 @@ function upload_image() {
                 ?>
             </div>
         </section>
+        
 
+        <!-- section 8 users section -->
+        <section id="sec8">
+            <article id="artic8">
+                <header>
+                    list of subscribed users
+                </header>
+            </article>
+            <div id="container3">
+                <table id="table">
+                    <!-- The heading for table -->
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Number of items he/she buys</th>
+                        </tr>
+                    </thead>
+
+                    <!-- data of the table-->
+                   <tbody>
+                   <?php 
+                        for ($i=1; $i<=30;$i++){
+                    ?>
+                    <tr>
+                            <td><?php echo $i ?></td>
+                            <td>Abdulkerim</td>
+                            <td>abdulkerimademrcdf@gmail.com</td>
+                            <td>+251904004053</td>
+                            <td>10</td>
+                    </tr>
+                    <?php
+                      }
+                    ?>
+                   </tbody>
+                </table>
+            </div>
+        </section> 
+        */
+        ?> 
     </main>
 
     <!-- js -->
-    <script src="../asset/js/admin.app.js"></script>
-    <script language = "javascript" src="../asset/js/products.admin.app.js"></script>
+    <script src="../asset/js/admin.app.js"></script> 
+    <!--  -->
+    <!--  -->
 </body>
 </html>
