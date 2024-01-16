@@ -91,8 +91,11 @@ body{
                 font-size: 2em;
             }
         }
-        // section two percent growth view
-        #sec2{
+       #container1{
+        position: relative;
+        overflow-y: scroll;
+         // section two percent growth view
+         #sec2{
             article{
                 position: relative;
                 left: 3vw;
@@ -191,6 +194,7 @@ body{
             }
         }
         // end of section 4
+       }
 
         // section 5 add products 
         #sec5{
@@ -344,13 +348,13 @@ body{
                 flex-wrap: wrap;
                 overflow-y: auto;
 
-                #product{
+                .product{
                     border: 1px solid gold;
                     border-radius: 10px;
                     padding: 1vh 1vw ;
                     margin-right:.5vw;
                     position: relative;
-                    #del{
+                    .del{
                         position: absolute;
                         top: 0px;
                         left: 0px;
@@ -378,10 +382,11 @@ body{
                         color: white;
                         text-align: center;
                         padding: 1vh 0px;
-                        border-radius: 10px;
+                        margin: .5vh;
+                        border-radius: 1vw;
                     }
                 }
-                #product:hover{
+                .product:hover{
                     box-shadow: 2em 2em 15em #a78a7f;
                 }
             }

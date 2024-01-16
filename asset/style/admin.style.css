@@ -88,7 +88,11 @@ body main #sec1 article {
   font-family: monospace;
   font-size: 2em;
 }
-body main #sec2 article {
+body main #container1 {
+  position: relative;
+  overflow-y: scroll;
+}
+body main #container1 #sec2 article {
   position: relative;
   left: 3vw;
   top: 5vh;
@@ -106,7 +110,7 @@ body main #sec2 article {
   color: white;
   box-shadow: 2em 2em 10em #b19990;
 }
-body main #sec2 article #percent {
+body main #container1 #sec2 article #percent {
   margin: 2vh 0vw;
   display: flex;
   justify-content: center;
@@ -116,11 +120,11 @@ body main #sec2 article #percent {
   border: 1px solid burlywood;
   border-radius: 50%;
 }
-body main #sec2 article #percent #number {
+body main #container1 #sec2 article #percent #number {
   position: relative;
   font-size: 2em;
 }
-body main #sec2 article #percent::before {
+body main #container1 #sec2 article #percent::before {
   content: "";
   position: absolute;
   width: 7.5em;
@@ -128,7 +132,7 @@ body main #sec2 article #percent::before {
   background-color: #a78a7f;
   border-radius: 50%;
 }
-body main #sec3 article {
+body main #container1 #sec3 article {
   position: relative;
   left: 35vw;
   bottom: 30vh;
@@ -146,13 +150,13 @@ body main #sec3 article {
   color: white;
   box-shadow: 2em 2em 10em #b19990;
 }
-body main #sec3 article #piechart #squer {
+body main #container1 #sec3 article #piechart #squer {
   color: #264653;
   width: 2vw;
   height: 2vh;
   background-color: #264653;
 }
-body main #sec4 article {
+body main #container1 #sec4 article {
   position: relative;
   left: 3vw;
   bottom: 10vh;
@@ -170,7 +174,7 @@ body main #sec4 article {
   color: white;
   box-shadow: 2em 2em 10em #b19990;
 }
-body main #sec4 article i {
+body main #container1 #sec4 article i {
   color: #ffeedf;
   font-size: 20vw;
 }
@@ -314,14 +318,14 @@ body main #sec7 #container2 {
   flex-wrap: wrap;
   overflow-y: auto;
 }
-body main #sec7 #container2 #product {
+body main #sec7 #container2 .product {
   border: 1px solid gold;
   border-radius: 10px;
   padding: 1vh 1vw;
   margin-right: 0.5vw;
   position: relative;
 }
-body main #sec7 #container2 #product #del {
+body main #sec7 #container2 .product .del {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -335,23 +339,24 @@ body main #sec7 #container2 #product #del {
   color: white;
   background-color: red;
 }
-body main #sec7 #container2 #product img {
+body main #sec7 #container2 .product img {
   border: 1px solid gold;
   width: 150px;
   height: 150px;
   margin: 1vh 0vw;
   border-radius: 10px;
 }
-body main #sec7 #container2 #product p {
+body main #sec7 #container2 .product p {
   background-color: #735751;
   font-family: monospace;
   font-size: 1.5em;
   color: white;
   text-align: center;
   padding: 1vh 0px;
-  border-radius: 10px;
+  margin: 0.5vh;
+  border-radius: 1vw;
 }
-body main #sec7 #container2 #product:hover {
+body main #sec7 #container2 .product:hover {
   box-shadow: 2em 2em 15em #a78a7f;
 }
 body main #sec8 article {

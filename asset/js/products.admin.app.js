@@ -15,3 +15,19 @@ let dump_product_sec_width_height = () => {
 }
 
 setInterval(dump_product_sec_width_height,100);
+
+let del = document.getElementsByClassName("del");
+
+for (let i=0; i < del.length ; i++){
+    del[i].addEventListener('click',()=>{
+        if(document.getElementsByClassName("amount")[i].textContent >= 1)
+         --(document.getElementsByClassName("amount")[i].textContent);
+        else
+        {
+            document.getElementsByClassName("product")[i].remove();
+        } 
+        
+       });
+}
+
+// function to remove an element 

@@ -2,12 +2,38 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     if (empty($_POST['name'])|| empty($_POST['price'])){
+        header("Location:index.php?load=addProduct&&error=infomiss");
         echo "<script>alert('pleas fill all of the informations')</script>";
     }
     else {
         upload_image();
-
         // connect the controller and upload all the data
+    }
+}
+
+function upload_image() {
+    if (isset($_FILES['file'])){
+        $file = $_FILES['file'];
+        $path = "../asset/pic/";
+        $file_to_be_uploaded = $path.basename($file['name']);
+        // check if the file is actual image then upload
+
+        $upload_status=move_uploaded_file($file['tmp_name'],$file_to_be_uploaded);
+
+        // display a message if the file is uploaded successfuly 
+        if ($upload_status) {
+            header("Location:index.php?load=addProduct");
+            echo "<script>alert('File uploaded successfully')</script>";
+        }
+        else {
+            header("Location:index.php?load=addProduct");
+            echo "<script>alert('insert an image uplod error".$file['error']."')</script>";
+        }
+    }
+    else{
+        // if the pic is not inserted
+        $error = "insert a picture";
+        echo "<script>alert('".$error."')</script>";
     }
 }
 ?>
@@ -33,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                         
                         <div id="amount">
                             <div id="minus" onclick>-</div>
-                            <span id="pnumber"  contenteditable="true">0</span>
+                            <span id="pnumber"  contenteditable="true">1</span>
                             <div id="plus">+</div>
                         </div>
                         

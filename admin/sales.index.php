@@ -1,13 +1,14 @@
 <?php
 ?>
     <!-- salse section -->
-    <!-- tiltle section -->
+    <!-- tiltle section --> 
     <section id="sec1">
         <article>
             weekly sales summery 
         </article>
     </section>
     <!-- section two for percent growth display -->
+    <div id="container1">
     <section id="sec2">
         <article>
             weekly growth rate in percent
@@ -43,4 +44,5 @@
         <i class="fa fa-bar-chart" aria-hidden="true"></i>
         </article>
     </section>
+    </div>
     <script src="../asset/js/sales.admin.app.js"></script>

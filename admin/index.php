@@ -10,40 +10,7 @@ else{
     header("Location:../login.php");
 }*/
 $error = null;
-/*
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if (empty($_POST['name'])|| empty($_POST['price'])){
-        echo "<script>alert('pleas fill all of the informations')</script>";
-    }
-    else {
-        upload_image();
 
-        // connect the controller and upload all the data
-    }
-}*/
-function upload_image() {
-    if (isset($_FILES['file'])){
-        $file = $_FILES['file'];
-        $path = "../asset/pic/";
-        $file_to_be_uploaded = $path.basename($file['name']);
-        // check if the file is actual image then upload
-
-        $upload_status=move_uploaded_file($file['tmp_name'],$file_to_be_uploaded);
-
-        // display a message if the file is uploaded successfuly 
-        if ($upload_status) {
-            echo "<script>alert('File uploaded successfully')</script>";
-        }
-        else {
-            echo "<script>alert('insert an image uplod error".$file['error']."')</script>";
-        }
-    }
-    else{
-        // if the pic is not inserted
-        $error = "insert a picture";
-        echo "<script>alert('".$error."')</script>";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -103,85 +70,10 @@ function upload_image() {
             include($page);
         }
         ?>
-        <!-- section five add products  -->
-        <?php 
-
-        ?>
-
-        <!-- section 7 dump products section --> 
-        <?php
-        /*
-        <section id="sec7">
-            <article id="artic7">
-                <header>
-                    Delet products 
-                </header>
-            </article>
-            <!-- products -->
-            <div id="container2">
-                <!-- list of all product -->
-                <?php 
-                    for ($i=1; $i<=20;$i++){
-                ?>
-                <div id="product">
-                    <span id="del">X</span>
-                    <img src="../asset/pic/chocolate-oblivion-cake-.jpg" alt="product">
-                    <!-- product name -->
-                    <p id="product_name">Dove</p>
-                </div>
-                <?php
-                    }
-                ?>
-            </div>
-        </section>
-        
-
-        <!-- section 8 users section -->
-        <section id="sec8">
-            <article id="artic8">
-                <header>
-                    list of subscribed users
-                </header>
-            </article>
-            <div id="container3">
-                <table id="table">
-                    <!-- The heading for table -->
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Contact</th>
-                            <th scope="col">Number of items he/she buys</th>
-                        </tr>
-                    </thead>
-
-                    <!-- data of the table-->
-                   <tbody>
-                   <?php 
-                        for ($i=1; $i<=30;$i++){
-                    ?>
-                    <tr>
-                            <td><?php echo $i ?></td>
-                            <td>Abdulkerim</td>
-                            <td>abdulkerimademrcdf@gmail.com</td>
-                            <td>+251904004053</td>
-                            <td>10</td>
-                    </tr>
-                    <?php
-                      }
-                    ?>
-                   </tbody>
-                </table>
-            </div>
-        </section> 
-        */
-        ?> 
+       
     </main>
 
     <!-- js -->
     <script src="../asset/js/admin.app.js"></script> 
-    <!--  -->
-    <!--  -->
 </body>
 </html>
