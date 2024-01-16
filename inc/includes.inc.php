@@ -3,7 +3,7 @@
 spl_autoload_register('load');
 
 function load ($obj){
-    $path = "../classes/";
+    $path = "./classes/";
     $ext = ".class.php";
     $file = $path.$obj.$ext;
 

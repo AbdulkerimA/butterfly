@@ -24,7 +24,7 @@ $navigation = ['Home','about','products','discount','contact'];
             if (!isset($_SESSION['islogedin']))
             {
         ?>
-        <a href="./login/login.php">Login</a>
+        <a href="./login.php">Login</a>
         <?php
             }
             else {

@@ -1,0 +1,97 @@
+* {
+  padding: 0px;
+  margin: 10px;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main article {
+  border: 1px solid #a78a7f;
+  border-radius: 5vh;
+  box-shadow: 2px 2px 0.5em #a78a7f;
+  padding: 3vh 3vw;
+}
+body main article header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body main article header img {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  border: 1px solid #a78a7f;
+}
+body main article header h2 {
+  font-size: 2em;
+  letter-spacing: 0.5em;
+  color: #a78a7f;
+}
+body main article #form {
+  border: 2px solid #fff;
+  position: relative;
+}
+body main article #form #username-handle, body main article #form #password-handl {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #a78a7f;
+  background-color: white;
+}
+body main article #form #username-handle {
+  left: 14vh;
+  top: 5vh;
+  transition: all 0.5s;
+}
+body main article #form #password-handl {
+  left: 14vh;
+  top: 18vh;
+  transition: all 0.5s;
+}
+body main article #form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body main article #form form #pass-input, body main article #form form #user-name-input {
+  display: flex;
+  align-items: center;
+}
+body main article #form form #pass-input label i, body main article #form form #user-name-input label i {
+  color: #a78a7f;
+  font-size: 1.5em;
+}
+body main article #form form #pass-input input, body main article #form form #user-name-input input {
+  color: #a78a7f;
+  width: 15em;
+  padding-left: 1vw;
+  height: 5vh;
+  border: 1px solid #a78a7f;
+  border-radius: 1vh;
+}
+body main article #form form #pass-input input:focus, body main article #form form #user-name-input input:focus {
+  visibility: visible;
+  outline: none;
+}
+body main article #form form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+  border-radius: 1vw;
+  border: 1px solid #a78a7f;
+  font-size: 1.5em;
+  color: white;
+  background-color: #a78a7f;
+}
+body main article #form form #register {
+  color: #a78a7f;
+  font-size: 1.2em;
+}/*# sourceMappingURL=login.style.css.map */
