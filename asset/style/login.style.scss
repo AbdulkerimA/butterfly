@@ -86,7 +86,7 @@ body{
                     button{
                         display: flex;
                         justify-content: center;
-                        align-items: center;
+                        align-items: center; 
                         height: 7vh;
                         border-radius: 1vw;
                         border: 1px solid #a78a7f;
@@ -97,6 +97,21 @@ body{
                     #register{
                         color: #a78a7f;
                         font-size: 1.2em;
+                    }
+                    #error{
+                        background-color: #ffc3bb;
+                        position: absolute;
+                        top: -35vh;
+                        right: -35vw;
+                        width: 28vw;
+                        height: 10vh;
+                        font-size: 1.5em;
+                        color: #ff2d2d;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding-left:2vw;
+                        visibility:visible;
                     }
                 }
             }

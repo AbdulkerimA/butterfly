@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <input type="password" name="pass" id="pass" >
                     </div>
                     <!-- error message --> 
-                    <dev> <?php echo $error; ?> </dev>
+                    <dev id="error"> <?php echo '<i class="fa fa-exclamation-circle" aria-hidden="true"></i>'.$error; ?> </dev>
                     <button type="submit">submit</button>
                     <div id="register">
                         <p>dont have an account? <a href="./signup.php">click here</a></p>
