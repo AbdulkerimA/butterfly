@@ -29,7 +29,7 @@ $navigation = ['Home','about','products','discount','contact'];
             }
             else {
         ?>
-        <a href="#"><?php echo $_SERVER['username']; ?> </a>
+        <a href="#"><?php echo $_SESSION['username']; ?> </a>
         <?php
             }
         ?>
