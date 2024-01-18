@@ -11,11 +11,11 @@ class View extends Model {
                 $_SESSION['user'] = $luname;
                 $_SESSION['islogedin'] = true;
 
-                header("Location:../products/product.php");
+                header("Location:./products/product.php");
                 exit;
             }   
         }
         $error = "username or password is incorrect";
-        header("Location:../login/login.php?error=$error");
+        header("Location:./login.php?error=$error");
     }
 }
