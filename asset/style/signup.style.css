@@ -1,0 +1,119 @@
+* {
+  padding: 0px;
+  margin: 5px;
+}
+
+body {
+  overflow: hidden;
+}
+body #cont {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #cont #noerror {
+  position: absolute;
+  visibility: hidden;
+}
+body #cont #error {
+  background-color: rgb(255, 194, 194);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: red;
+  font-family: monospace;
+  font-size: 1.2em;
+  padding: 2vh 1vw;
+  border: none;
+}
+body #cont #error i {
+  margin: 1px 1vw;
+}
+body #cont #side-image {
+  border: 1px solid #a78a7f;
+  margin: 0px;
+  padding: 0px;
+  border-left: none;
+  border-radius: 30px 0px 0px 30px;
+}
+body #cont #side-image img {
+  padding: 0px;
+  margin: 0px;
+  border-radius: 30px 0px 0px 30px;
+}
+body #cont form {
+  border: 1px solid #a78a7f;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: none;
+  border-radius: 0px 30px 30px 0px;
+  margin-left: 0px;
+}
+body #cont form i {
+  color: #a78a7f;
+  font-size: 2em;
+}
+body #cont form div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body #cont form div input {
+  width: 200px;
+  height: 30px;
+  padding-left: 2vw;
+  margin-left: 2vw;
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  font-size: 1.2em;
+  color: #a78a7f;
+  border: 1px solid #a78a7f;
+  border-radius: 1vh;
+}
+body #cont form div input:focus {
+  outline: none;
+  border: 1px solid #a78a7f;
+}
+body #cont form div button {
+  margin-top: 2vh;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 10vh;
+  background-color: #a78a7f;
+  color: white;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+body #cont form div button a {
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+}
+body #cont form #logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #cont form #logo img {
+  width: 10vh;
+  height: 10vh;
+  border: 1px solid #a78a7f;
+  border-radius: 50%;
+}
+body #cont form #logo p {
+  color: #a78a7f;
+  font-family: monospace;
+  font-size: 2em;
+  text-transform: capitalize;
+  letter-spacing: 1vw;
+}/*# sourceMappingURL=signup.style.css.map */
