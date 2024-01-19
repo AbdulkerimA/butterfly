@@ -1,14 +1,69 @@
 * {
   padding: 0px;
-  margin: 10px;
+  margin: 3px;
   box-sizing: border-box;
   font-family: monospace;
 }
 
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
 body main {
+  margin: 0px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body main #noerror {
+  background-color: #ffc3bb;
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  transition: all 2s;
+  visibility: hidden;
+}
+body main #error {
+  background-color: #ffc3bb;
+  position: absolute;
+  top: 0vh;
+  right: 0vw;
+  width: 28vw;
+  height: 10vh;
+  font-size: 1.5em;
+  color: #ff2d2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  visibility: hidden;
+  animation: error_animation 5s ease-in-out;
+}
+@keyframes error_animation {
+  0% {
+    top: 100px;
+    visibility: visible;
+  }
+  75% {
+    top: 0px;
+  }
+  80% {
+    background-color: #f7d6d6;
+    color: #f8a2a2;
+  }
+  90% {
+    background-color: #fae0e0;
+    color: #f5bbbb;
+  }
+  95% {
+    background-color: #f5ebeb;
+    color: #f5bbbb;
+  }
+  100% {
+    background-color: #fae0e0;
+    color: #f5bbbb;
+  }
 }
 body main article {
   border: 1px solid #a78a7f;
@@ -17,25 +72,28 @@ body main article {
   padding: 3vh 3vw;
 }
 body main article header {
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 body main article header img {
+  margin: 15px;
   width: 8em;
   height: 8em;
   border-radius: 50%;
   border: 1px solid #a78a7f;
 }
 body main article header h2 {
+  text-transform: capitalize;
   font-size: 2em;
   letter-spacing: 0.5em;
   color: #a78a7f;
 }
 body main article #form {
-  border: 2px solid #fff;
   position: relative;
+  padding: 2vh 2vw;
 }
 body main article #form #username-handle, body main article #form #password-handl {
   position: absolute;
@@ -46,16 +104,17 @@ body main article #form #username-handle, body main article #form #password-hand
   background-color: white;
 }
 body main article #form #username-handle {
-  left: 14vh;
-  top: 5vh;
+  top: 32px;
+  left: 85px;
   transition: all 0.5s;
 }
 body main article #form #password-handl {
-  left: 14vh;
-  top: 18vh;
+  top: 88px;
+  left: 85px;
   transition: all 0.5s;
 }
 body main article #form form {
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -63,16 +122,21 @@ body main article #form form {
 body main article #form form #pass-input, body main article #form form #user-name-input {
   display: flex;
   align-items: center;
+  margin: 0.5vh 0px;
 }
 body main article #form form #pass-input label i, body main article #form form #user-name-input label i {
   color: #a78a7f;
   font-size: 1.5em;
+  margin-right: 10px;
+}
+body main article #form form #pass-input label[for=pass], body main article #form form #user-name-input label[for=pass] {
+  margin-right: 8px;
 }
 body main article #form form #pass-input input, body main article #form form #user-name-input input {
   color: #a78a7f;
-  width: 15em;
+  width: 250px;
   padding-left: 1vw;
-  height: 5vh;
+  height: 40px;
   border: 1px solid #a78a7f;
   border-radius: 1vh;
 }
@@ -81,10 +145,14 @@ body main article #form form #pass-input input:focus, body main article #form fo
   outline: none;
 }
 body main article #form form button {
+  position: relative;
+  left: 35px;
+  width: 250px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7vh;
+  height: 50px;
   border-radius: 1vw;
   border: 1px solid #a78a7f;
   font-size: 1.5em;
@@ -92,21 +160,10 @@ body main article #form form button {
   background-color: #a78a7f;
 }
 body main article #form form #register {
+  margin-top: 10px;
   color: #a78a7f;
   font-size: 1.2em;
 }
-body main article #form form #error {
-  background-color: #ffc3bb;
-  position: absolute;
-  top: -35vh;
-  right: -35vw;
-  width: 28vw;
-  height: 10vh;
-  font-size: 1.5em;
-  color: #ff2d2d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2vw;
-  visibility: visible;
+body main article #form form #register a {
+  text-decoration: none;
 }/*# sourceMappingURL=login.style.css.map */

@@ -29,6 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 <body>
     <main id="main">
+        <!-- error message --> 
+        <dev id="<?php if($error == null){echo 'noerror';}else{echo 'error';}?>"> 
+            <?php echo '<i class="fa fa-exclamation-circle" aria-hidden="true"></i>'.$error; ?> 
+        </dev>
         <article id="atic1">
             <header>
                 <img src="./asset/pic/logos/Iconsmind-Outline-Butterfly.512.png" alt="logo" id="logo">
@@ -51,9 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <label for="pass"><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
                     <input type="password" name="pass" id="pass" >
                     </div>
-                    <!-- error message --> 
-                    <dev id="error"> <?php echo '<i class="fa fa-exclamation-circle" aria-hidden="true"></i>'.$error; ?> </dev>
-                    <button type="submit">submit</button>
+                    <button type="submit">Login</button>
                     <div id="register">
                         <p>dont have an account? <a href="./signup.php">click here</a></p>
                     </div>

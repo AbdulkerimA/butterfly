@@ -6,7 +6,7 @@
 body{
     overflow: hidden;
     #cont{
-        border: 1px solid red;
+        //border: 1px solid red;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -15,22 +15,32 @@ body{
             visibility: hidden;
         }
         #error{
-            background-color: rgb(255, 194, 194);
+            background-color: #fff;
             position: absolute;
             top: 0px;
             right: 0px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: red;
+            color: #fff;
             font-family: monospace;
             font-size: 1.2em;
             padding: 2vh 1vw;
             border: none;
+            //visibility: hidden;
+            animation: error_animation 5s ease-in-out;
             i{
                 margin: 1px 1vw;
             }
         }
+        @keyframes error_animation {
+            0% {top: 100px; background-color: rgb(255, 194, 194); color: red;}
+            75%{top: 0px;}
+            80%{background-color: #f7d6d6; color: #f8a2a2;}
+            90%{background-color: #fae0e0; color: #f5bbbb;}
+            95%{background-color: #f5ebeb; color: #f5bbbb;}
+            100% {background-color: #fff; color: #fff;}
+        } 
         #side-image{
             border: 1px solid #a78a7f;
             margin: 0px;
