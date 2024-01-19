@@ -9,6 +9,7 @@
     </section>
     <!-- section two for percent growth display -->
     <div id="container1">
+        
     <section id="sec2">
         <article>
             weekly growth rate in percent

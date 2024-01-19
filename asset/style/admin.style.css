@@ -89,13 +89,17 @@ body main #sec1 article {
   font-size: 2em;
 }
 body main #container1 {
+  border: 2px solid rebeccapurple;
+  overflow-x: scroll;
   position: relative;
   overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main #container1 #sec2 {
+  margin: 1vh 1vw;
 }
 body main #container1 #sec2 article {
-  position: relative;
-  left: 3vw;
-  top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,10 +136,10 @@ body main #container1 #sec2 article #percent::before {
   background-color: #a78a7f;
   border-radius: 50%;
 }
+body main #container1 #sec3 {
+  margin: 1vh 1vw;
+}
 body main #container1 #sec3 article {
-  position: relative;
-  left: 35vw;
-  bottom: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,10 +160,10 @@ body main #container1 #sec3 article #piechart #squer {
   height: 2vh;
   background-color: #264653;
 }
+body main #container1 #sec4 {
+  margin: 1vh 1vw;
+}
 body main #container1 #sec4 article {
-  position: relative;
-  left: 3vw;
-  bottom: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
