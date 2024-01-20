@@ -388,7 +388,7 @@ session_start();
 
             </div>
             <div>
-                <a href="./products/product.html">see more </a>
+                <a href="./product.php">see more </a>
             </div>
         </section>
 

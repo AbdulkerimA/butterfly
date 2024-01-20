@@ -1,0 +1,309 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+body nav {
+  /*border: 1px solid black;/**/
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  background-color: #a78a7f;
+  position: relative;
+  transition: 0.5s;
+}
+body nav #logo {
+  width: 45%;
+}
+body nav #logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 3vw;
+}
+body nav #links {
+  /*border: 1px solid;/**/
+  width: 55%;
+  padding-left: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3vw;
+}
+body nav #links a {
+  text-decoration: none;
+  color: white;
+  margin: 0vh 1vw;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+body nav #links #cart {
+  background-color: rgba(165, 42, 42, 0.692);
+  border-radius: 30vw;
+}
+body main {
+  display: flex;
+}
+body main #side-panel {
+  width: 230px;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 2px solid #a78a7f;
+  margin-left: 5px;
+  margin-bottom: 5vh;
+  margin-top: 10px;
+  /* custom drop down menu */
+}
+body main #side-panel h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 2em;
+  color: #a78a7f;
+  margin-top: 4vh;
+}
+body main #side-panel p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #a78a7f;
+  display: flex;
+  justify-content: center;
+}
+body main #side-panel #controll {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: monospace;
+  font-size: 1.2em;
+  color: #a78a7f;
+}
+body main #side-panel #controll span {
+  padding: 1vh 1vw;
+  border: 1px solid #a78a7f;
+}
+body main #side-panel #controll span[id=amunt] {
+  width: 5vw;
+  display: flex;
+  justify-content: center;
+}
+body main #side-panel #prage {
+  margin-top: 10vh;
+  position: relative;
+}
+body main #side-panel #prage::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -20px;
+  left: 0px;
+  border: 1px solid #a78a7f;
+}
+body main #side-panel #range-collection {
+  font-family: sans-serif;
+  font-size: 1.5em;
+  color: #a78a7f;
+}
+body main #side-panel #range-collection div:nth-child(1) {
+  margin-top: 10px;
+}
+body main #side-panel #range-collection div {
+  margin-bottom: 10px;
+  padding-left: 2vw;
+  /*border: 1px solid #a78a7f;*/
+}
+body main #side-panel #range-collection div input {
+  height: 1.5em;
+  width: 1.5em;
+}
+body main #side-panel #catagory {
+  display: flex;
+  flex-direction: column;
+}
+body main #side-panel .brand, body main #side-panel .type {
+  font-family: monospace;
+  font-size: 1.5em;
+  color: #a78a7f;
+}
+body main #side-panel .brand #title, body main #side-panel .type #title {
+  margin: 2vh 0px;
+  margin-top: 5vh;
+  position: relative;
+}
+body main #side-panel .brand #title::before, body main #side-panel .type #title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -20px;
+  left: 0px;
+  border: 1px solid #a78a7f;
+}
+body main #side-panel .brand div, body main #side-panel .type div {
+  margin: 1vh 1vw;
+}
+body main #side-panel .brand div input, body main #side-panel .type div input {
+  height: 1.5em;
+  width: 1.5em;
+}
+body main #products {
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
+}
+body main #products #product {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 2vh;
+  margin-left: 2vw;
+  padding: 2vh 2vw;
+  font-family: monospace;
+  color: #a78a7f;
+  border: 1px solid #a78a7f;
+  position: relative;
+}
+body main #products #product img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1vh;
+}
+body main #products #product #pname {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 2vw;
+  margin-bottom: 1vh;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  background-color: #a78a7f;
+}
+body main #products #product #pdisc {
+  width: 20vw;
+  font-size: 1.2em;
+}
+body main #products #product #add-to-cart {
+  width: 50%;
+  border: 2px solid gold;
+  font-size: 2em;
+  margin-top: 1vh;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+body main #products #product #add-to-cart:hover {
+  color: #fff;
+}
+body main #products #product #add-to-cart::before {
+  content: "";
+  position: absolute;
+  background: #a78a7f;
+  width: 0%;
+  height: 100%;
+  top: 0px;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+body main #products #product #add-to-cart:hover:before {
+  width: 100%;
+}
+body footer {
+  background-color: #DCC9BD;
+  color: white;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+}
+body footer #comment {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 2vw;
+}
+body footer #comment h2 {
+  margin-top: 20px;
+  font-family: monospace;
+  font-size: 1.5em;
+  margin-left: 2vw;
+  text-transform: capitalize;
+}
+body footer #comment form input[type=email] {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #a78a7f;
+  border-radius: 1vh;
+  font-size: 1.2em;
+  color: #a78a7f;
+  margin: 1vh 2vw;
+  padding-left: 10px;
+}
+body footer #comment form input[type=email]:focus {
+  outline: none;
+}
+body footer #comment form textarea {
+  border: 1px solid #a78a7f;
+  margin-left: 2vw;
+  font-size: 1.2em;
+  color: #a78a7f;
+}
+body footer #comment form textarea:focus {
+  outline: none;
+}
+body footer #comment form button {
+  width: 15vw;
+  height: 8vh;
+  background-color: #a78a7f;
+  margin: 1vh 2vw;
+  outline: none;
+  border: none;
+  border-radius: 1vh;
+  color: white;
+  font-size: 1.2em;
+}
+body footer #comment form button:hover {
+  background-color: #a89892;
+}
+body footer #top {
+  background-color: #877767;
+  display: flex;
+  padding: 50px 40px;
+}
+body footer #top a {
+  margin: 10px;
+  display: block;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+body footer #top h3 {
+  font-family: sans-serif;
+  margin-bottom: 5px;
+}
+body footer #top #contact {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  position: relative;
+  left: 10vh;
+}
+body footer #top #links {
+  position: relative;
+  left: 35vw;
+}
+body footer #top #links h3 {
+  display: flex;
+  justify-content: center;
+}
+body footer #top #Group_members {
+  position: relative;
+  left: 60vw;
+}
+body footer #bottom {
+  background-color: #a78a7f;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}/*# sourceMappingURL=products.css.map */
