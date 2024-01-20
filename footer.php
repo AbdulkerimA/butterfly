@@ -1,6 +1,21 @@
 <?php 
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    // send the comment to company email
+    echo "<script>alert('tank you for commenting :)')</script>";
+    header("Location:./index.php#comment");
+}
 
 ?>
+
+<div id="comment">
+
+    <h2>feed back</h2>
+    <form action="./footer.php" method="post">
+        <input type="email" placeholder="email@gmail.com">
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="your comment"></textarea>
+        <button type="submit">submit</button>
+    </form>
+</div>
 
 <div id="top">
     <div id="contact">
@@ -34,7 +49,7 @@
                 <a href="">lemi </a> 
     </div>
 </div>
-
+ 
 <div id="bottom">
     <p>&copy copy right reserved by butterfly</p>
 </div>

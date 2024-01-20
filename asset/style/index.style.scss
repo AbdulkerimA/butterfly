@@ -849,13 +849,66 @@ main {
     }
     /*footer section*/
     footer{
-        background-color: #1a0900;
+        background-color: #DCC9BD;
         color:white;
-        padding: 10px;
+        font-family: monospace;
+        //padding: 10px;
 
         display: flex;
         flex-direction: column;
+        #comment{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-left: 2vw;
+            h2{
+                margin-top: 20px;
+                font-family: monospace;
+                font-size: 1.5em;
+                margin-left: 2vw;
+                text-transform: capitalize;
+            }
+            form{
+                input[type="email"]{
+                    width: 200px;
+                    height: 40px;
+                    border:1px solid #a78a7f;
+                    border-radius: 1vh;
+                    font-size: 1.2em;
+                    color: #a78a7f;
+                    margin: 1vh 2vw;
+                    padding-left: 10px;
+                }
+                input[type="email"]:focus{
+                    outline: none;
+                }
+                textarea{
+                    border: 1px solid #a78a7f;
+                    margin-left: 2vw;
+                    font-size: 1.2em;
+                    color: #a78a7f;
+                }
+                textarea:focus{
+                    outline: none;
+                }
+                button{
+                    width: 15vw;
+                    height: 8vh;
+                    background-color: #a78a7f;
+                    margin: 1vh 2vw;
+                    outline: none;
+                    border: none;
+                    border-radius: 1vh;
+                    color: white;
+                    font-size: 1.2em;
+                }
+                button:hover{
+                    background-color: #a89892;
+                }
+            }
+        }
         #top{
+            background-color: #877767;
             display: flex;
             padding: 50px 40px;        
             a{
@@ -890,7 +943,8 @@ main {
             }
         }
         #bottom{
-            margin-top:30px;
+            background-color: #a78a7f;
+            padding:30px 0px;
             display: flex;
             justify-content: center;
             font-family: sans-serif;
