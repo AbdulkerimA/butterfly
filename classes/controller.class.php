@@ -30,7 +30,7 @@ class Controller extends Model{
             if ($queryResult == "success"){
                 $_SESSION['user'] = $Runame;
                 $_SESSION['islogedin'] = true;
-                header("Location:./products/product.php");
+                header("Location:./product.php");
                 exit;
             }
             else{

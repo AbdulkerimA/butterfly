@@ -3,7 +3,7 @@
 class Model extends Db{
     // to get a spesfic user from db
     protected function getUser($uname){
-        $sqlstmt = "select * from customers_information where userName = '$uname';";
+        $sqlstmt = "select * from Account where user_name = '$uname';";
         if ($result = $this->conn()->query($sqlstmt)){
             return $result;
         }
@@ -16,7 +16,7 @@ class Model extends Db{
     // user registration 
 
     protected function setUser($Rname,$Rpass,$Remail,$Rtel){
-        $sqlstmt = "insert into customers_information (userName,email,password,tel) 
+        $sqlstmt = "insert into customers (user_name,email,password,tel) 
         values('$Rname','$Remail','$Rpass','$Rtel')";
 
         if ($result = $this->conn()->query($sqlstmt)){

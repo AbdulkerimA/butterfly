@@ -7,11 +7,11 @@ class View extends Model {
         $dbResult = $this->getUser($luname);
 
         while($row = $dbResult->fetch_assoc()){
-            if ($luname == $row['userName'] && $lpass == $row['password']){
+            if ($luname == $row['user_name'] && $lpass == $row['password']){
                 $_SESSION['user'] = $luname;
                 $_SESSION['islogedin'] = true;
 
-                header("Location:./products/product.php");
+                header("Location:./product.php");
                 exit;
             }   
         }
