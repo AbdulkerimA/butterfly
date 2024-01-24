@@ -10,8 +10,16 @@ class View extends Model {
             if ($luname == $row['user_name'] && $lpass == $row['password']){
                 $_SESSION['user'] = $luname;
                 $_SESSION['islogedin'] = true;
+                $user_type = $row['user_type'];
 
-                header("Location:./product.php");
+                if($user_type == "admin")
+                {
+                    header("Location:./admin");
+                }
+                else
+                {
+                    header("Location:./product.php");
+                }
                 exit;
             }   
         }
