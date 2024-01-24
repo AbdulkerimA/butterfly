@@ -16,8 +16,8 @@ class Model extends Db{
     // user registration 
 
     protected function setUser($Rname,$Rpass,$Remail,$Rtel){
-        $sqlstmt = "insert into customers (user_name,email,password,tel) 
-        values('$Rname','$Remail','$Rpass','$Rtel')";
+        $sqlstmt = "insert into customers(user_name,password,email,tel) 
+        values('$Rname','$Rpass','$Remail','$Rtel')";
 
         if ($result = $this->conn()->query($sqlstmt)){
             return $result;
