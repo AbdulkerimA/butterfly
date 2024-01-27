@@ -40,3 +40,4 @@ let loadProduct = (ptype) =>{
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("ptype=" + ptype);
 }
+
