@@ -18,3 +18,25 @@ let set_product_section_size = () => {
 }
 
 setInterval(set_product_section_size,100);
+
+
+// request 
+
+let loadProduct = (ptype) =>{
+
+    // creat an obj
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = () => {
+        if(xhttp.status == "200"){
+            document.getElementById("products").innerHTML = xhttp.responseText;
+        }
+        else{
+            document.getElementById("products").innerHTML = "there is some kind of error here";
+        }
+    }
+
+    xhttp.open("post","/butterfly/scripts/products.script.php");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("ptype=" + ptype);
+}

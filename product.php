@@ -34,7 +34,7 @@ session_start();
                <h2>catagorization</h2>
                <p id="prage">price range</p>
                <div id="range-collection">
-                <div>
+                <div onclick="loadProduct('30')">
                 <input type="checkbox" name="pr1" id="price-range-1">
                 <span> under $30</span>
                 </div>
@@ -88,35 +88,9 @@ session_start();
        
         <!-- products section -->
         <div id="products">
-            <?php
-                // array of product full information from db 
-                $pimage_link = [
-                    './asset/pic/products/1.jpg','./asset/pic/products/caramels.jpg',
-                    './asset/pic/products/darkmaltesers.jpg','./asset/pic/products/ferrerorochertjpg.jpg',
-                    './asset/pic/products/kitkat.jpg','./asset/pic/products/maltesers.jpg',
-                    './asset/pic/products/shopping.png','./asset/pic/products/shopping.png',
-                    './asset/pic/products/shopping.png','./asset/pic/products/shopping.png',
-                    './asset/pic/products/shopping.png','./asset/pic/products/shopping.png',
-                    './asset/pic/products/shopping.png','./asset/pic/products/shopping.png'
-                ];
-                $i = 0;
-                foreach($pimage_link as $url){
-                    // display prod
-            ?>
-            <div id="product">
-                <img src="<?php echo $pimage_link[$i]?>" alt="product1">
-                <div id="pname">diary milk</div>
-                <p id="pdisc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                </p>
-                <div id="add-to-cart">
-                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                </div>
-            </div>
-            <?php 
-                $i++; // increment the indexer
-            }
-            ?>
+          <?php 
+            include "./scripts/products.script.php";
+          ?>
         </div>
     </main>
    <footer>
