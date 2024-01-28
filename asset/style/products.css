@@ -4,6 +4,7 @@
 }
 
 body {
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
@@ -209,10 +210,10 @@ body main #products #product #add-to-cart::before {
 body main #products #product #add-to-cart:hover:before {
   width: 100%;
 }
-body main #cart {
-  visibility: hidden;
+body main #cart-display {
   position: absolute;
   right: 20px;
+  visibility: hidden;
   background-color: #fff;
   border: 1px solid gold;
   height: -moz-fit-content;
@@ -221,7 +222,7 @@ body main #cart {
   flex-direction: column;
   align-items: center;
 }
-body main #cart #mycart {
+body main #cart-display #mycart {
   font-family: monospace;
   font-size: 2.5em;
   color: #a78a7f;
@@ -231,7 +232,7 @@ body main #cart #mycart {
   border: 1px solid #a78a7f;
   margin: 10px 10vw;
 }
-body main #cart #prod-cont {
+body main #cart-display #prod-cont {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,50 +244,50 @@ body main #cart #prod-cont {
   height: fit-content;
   margin-bottom: 2px;
 }
-body main #cart #prod-cont img {
+body main #cart-display #prod-cont img {
   width: 100px;
   height: 100px;
   margin: 10px;
   border: 1px solid #a78a7f;
   border-radius: 1vh;
 }
-body main #cart #prod-cont #item-name {
+body main #cart-display #prod-cont #item-name {
   font-family: monospace;
   font-size: 1.5em;
   color: #a78a7f;
   margin: 10px;
   margin-top: 0px;
 }
-body main #cart #prod-cont #amnt-controll {
+body main #cart-display #prod-cont #amnt-controll {
   display: flex;
   flex-wrap: wrap;
   font-family: monospace;
   font-size: 1em;
   color: #a78a7f;
 }
-body main #cart #prod-cont #amnt-controll span {
+body main #cart-display #prod-cont #amnt-controll span {
   padding: 1vh 1vw;
   border: 1px solid #a78a7f;
 }
-body main #cart #prod-cont #amnt-controll span[id=amunt] {
+body main #cart-display #prod-cont #amnt-controll span[id=amunt] {
   width: 5vw;
   font-size: 1.2em;
   display: flex;
   justify-content: center;
 }
-body main #cart #prod-cont #amnt-controll #delete {
+body main #cart-display #prod-cont #amnt-controll #delete {
   margin-left: 10px;
 }
-body main #cart #prod-cont #amnt-controll #delete:hover {
+body main #cart-display #prod-cont #amnt-controll #delete:hover {
   background-color: rgb(241, 130, 130);
   color: white;
 }
-body main #cart #pay {
+body main #cart-display #pay {
   margin: 10px 0px;
   display: flex;
   justify-content: space-between;
 }
-body main #cart #pay #subtotal {
+body main #cart-display #pay #subtotal {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   color: #a78a7f;
@@ -295,7 +296,7 @@ body main #cart #pay #subtotal {
   position: relative;
   right: 2vw;
 }
-body main #cart #pay button {
+body main #cart-display #pay button {
   width: 10vw;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
@@ -306,8 +307,11 @@ body main #cart #pay button {
   position: relative;
   left: 2vw;
 }
-body main #cart #pay button:hover {
+body main #cart-display #pay button:hover {
   background-color: #b69e95;
+}
+body main #cart-display.cart-visible {
+  visibility: visible;
 }
 body footer {
   background-color: #DCC9BD;

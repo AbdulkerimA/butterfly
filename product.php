@@ -94,7 +94,7 @@ session_start();
         </div>
 
         <!-- the cart -->
-        <div id="cart">
+        <div id="cart-display">
                 <h1 id="mycart">my cart</h1>
 
                 <div id="prod-cont">

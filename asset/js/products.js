@@ -41,3 +41,17 @@ let loadProduct = (ptype) =>{
     xhttp.send("ptype=" + ptype);
 }
 
+// adding class to the cart 
+let enabled= false; // a bit to controll when to display a cart 
+
+document.getElementById("cart").addEventListener("click",()=>{
+    if (!enabled){
+        document.getElementById("cart-display").classList.add("cart-visible");
+        enabled=true;
+    }
+    else{
+        document.getElementById("cart-display").classList.remove("cart-visible");
+        enabled = false;
+    }
+    
+});

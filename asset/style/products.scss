@@ -3,6 +3,7 @@
     margin: 0px;
 }
 body{
+    overflow-x: hidden;
     //overflow-y:hidden ;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
@@ -214,10 +215,10 @@ body{
         }
 
         // cart style
-        #cart{
-            visibility: hidden;
+        #cart-display{
             position: absolute;
             right: 20px;
+            visibility: hidden;
             background-color: #fff;
             //padding: 10vh 10vw;
             border: 1px solid gold;
@@ -313,6 +314,9 @@ body{
                     background-color: #b69e95;
                 }
             }
+        }
+        #cart-display.cart-visible{
+            visibility: visible;
         }
     }
 // footer section
