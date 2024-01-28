@@ -55,3 +55,63 @@ document.getElementById("cart").addEventListener("click",()=>{
     }
     
 });
+
+// amount controller
+let amnt_contorller = ()=>{
+    
+    let plus = document.querySelectorAll("#plus");
+    let minus = document.querySelectorAll("#minus");
+    let delete_ = document.querySelectorAll("#delete");
+
+    // add amount of a single product to buy
+    for(let i=0;i<plus.length;i++){
+        plus[i].addEventListener("click",()=>{
+            ++(document.querySelectorAll("#amunt")[i].innerText);
+        });
+    }
+
+    // decreas amount of a single product to buy
+    for(let i=0;i<minus.length;i++){
+        minus[i].addEventListener("click",()=>{
+            let amount = document.querySelectorAll("#amunt")[i].innerText;
+            if (amount > 1){
+                alert("hi");
+                --(document.querySelectorAll("#amunt")[i].innerText);
+            }
+            else{
+                document.querySelectorAll("#amunt")[i].parentElement.parentElement.remove();
+            }
+        });
+    }
+
+    //remove a product from the cart 
+    for(let i=0;i<delete_.length;i++){
+        delete_[i].addEventListener("click",()=>{
+            document.querySelectorAll("#amunt")[i].parentElement.parentElement.remove();
+        });
+    }
+}
+
+amnt_contorller();
+
+let privious_amount = 0;
+
+let cart_elements = ()=>{
+    
+    let amount_of_element = document.querySelectorAll("#prod-cont");
+
+    if(amount_of_element.length > 0 && privious_amount == 0){
+        privious_amount = amount_of_element.length;
+        console.log("seted in 0 ");
+        console.log(privious_amount);
+    } 
+
+    if(amount_of_element.length < privious_amount || amount_of_element.length > privious_amount){
+        privious_amount = amount_of_element.length;
+        amnt_contorller();
+        console.log("seted in 1");
+        console.log(privious_amount);
+    }
+}
+
+setInterval(cart_elements,100);

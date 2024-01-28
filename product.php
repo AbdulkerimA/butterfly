@@ -103,7 +103,7 @@ session_start();
                         mega-chocolate
                     </p>
                     <div id="amnt-controll">
-                        <span id=""><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <span id="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
                         <span id="amunt">1</span>
                         <span id="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
                         <span id="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
