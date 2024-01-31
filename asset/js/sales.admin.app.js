@@ -13,7 +13,7 @@ let sales_section_width_height = () => {
     // container width
     let sec1 = document.getElementById("sec1").offsetHeight;
     document.getElementById("container1").style.width=(width-(width_nav)-20)+"px";
-    document.getElementById("container1").style.height = (height-sec1-50)+"px";
+    document.getElementById("container1").style.height = (height-sec1-0)+"px";
 }
 setInterval(sales_section_width_height,1);
 
