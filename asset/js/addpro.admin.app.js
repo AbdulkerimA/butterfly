@@ -17,21 +17,22 @@ let addpro_width_height = () => {
 
 setInterval(addpro_width_height,1);
 
+document.getElementById("pnumber").value = 1;
 let minus = document.getElementById("minus");
 let add = document.getElementById("plus");
 
 minus.addEventListener('click',() => {
    // decresing the value by 1 ervy time the minus button is clicked
-   if(document.getElementById("pnumber").textContent <= 1)
+   if(document.getElementById("pnumber").value <= 1)
     alert("the lowest product you can add is 1 ");
    else
-    --(document.getElementById("pnumber").textContent);
+    --(document.getElementById("pnumber").value);
 });
 
 // adding the number of a product every time the add button is clicked
 add.addEventListener('click',() => {
     // decresing the value by 1 ervy time the minus button is clicked
-    ++(document.getElementById("pnumber").textContent);
+    ++(document.getElementById("pnumber").value);
  });
 
 

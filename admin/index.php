@@ -1,5 +1,5 @@
 <?php
-include "../inc/includes.inc.php";
+
 session_start();
 /*if (isset($_SESSION['islogedin'])){
     if ($_SESSION['user'] != 'admin'){

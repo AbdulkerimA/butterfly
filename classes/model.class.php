@@ -13,6 +13,19 @@ class Model extends Db{
 
     }
 
+
+    // get a specific products
+    public function getProduct($pName){
+        $sqlstmt = "select * from products where p_name = '$pName';";
+        if ($result = $this->conn()->query($sqlstmt)){
+            return $result;
+        }
+        else {
+            return "query error".$this->conn()->error;
+        }
+
+    }  
+
     // user registration 
 
     protected function setUser($Rname,$Rpass,$Remail,$Rtel){

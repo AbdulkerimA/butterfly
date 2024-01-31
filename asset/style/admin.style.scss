@@ -206,14 +206,7 @@ body{
                 }
             }
         }
-        // end of section two
 
-        // section three
-
-        // end of section 3
-
-      
-        // end of section 4
        }
 
         // section 5 add products 
@@ -286,18 +279,18 @@ body{
                         font-size: 1.2em;
                         display: flex;
                         justify-content: center;
-                        span{
-                            // the number
-                            border: 1px solid white;
-                            width: fit-content;
-                            height: 100%;
-                            padding: 0vh .5vw;
-                            font-size: 1.5em;
+                        input{
+                            border:1px solid white;
+                            background-color: #a78a7f;
+                            text-align: center;
+                            font-family: monospace;
+                            font-weight: bold;
+                            font-size: 1.2em;
+                            color: white;
                         }
-                        span:focus{
-                            height: 3.3vh;
+                        input:focus{
+                            border:1px solid white;
                             outline: none;
-                            border: 1px solid white;
                         }
                         #minus,#plus{
                             border: 1px solid white;

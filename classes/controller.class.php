@@ -39,5 +39,37 @@ class Controller extends Model{
         }
     }
 
+    // add product function 
+    function checkProductName($pName){
+        $result = $this->getProduct($pName);
+        if ($result->num_rows != 0){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    public function addProduct($img,$amount,$pName,$price,$pType,$pDisc){
+
+
+
+        $queryStr = "insert into products (p_name,p_disc,img_url,price,type,p_amount) 
+        values ('$pName','$pDisc','$img','$price','$pType','$amount')";
+
+        if ($this->checkProductName($pName)){
+           
+            if($this->conn()->query($queryStr)){
+                return "The product is added successfully";
+            }
+            else{
+                return "the product is not added ";
+            }
+
+        }
+        
+        else{
+            return "this product is avliable in the db";
+        }
+    }
 
 }

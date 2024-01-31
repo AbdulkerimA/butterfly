@@ -1,7 +1,8 @@
 <?php 
+include "../inc/includes.admin.inc.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if (empty($_POST['name'])|| empty($_POST['price'])){
+    if (empty($_POST['name'])|| empty($_POST['price']) || empty($_POST['type']) || empty($_POST['dic'])){
         header("Location:index.php?load=addProduct&&error=infomiss");
         echo "<script>alert('pleas fill all of the informations')</script>";
     }
@@ -14,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 function upload_image() {
     if (isset($_FILES['file'])){
         $file = $_FILES['file'];
-        $path = "../asset/pic/";
+        $path = "../asset/pic/products/";
         $file_to_be_uploaded = $path.basename($file['name']);
         // check if the file is actual image then upload
 
@@ -22,7 +23,18 @@ function upload_image() {
 
         // display a message if the file is uploaded successfuly 
         if ($upload_status) {
-            header("Location:index.php?load=addProduct");
+
+            $pName = htmlspecialchars($_POST['name']);
+            $price = htmlspecialchars($_POST['price']);
+            $type = htmlspecialchars($_POST['type']);
+            $amount = htmlspecialchars($_POST['amnt']);
+            $disc = htmlspecialchars($_POST['dic']);
+            $img_url = "/butterfly/asset/pic/products/".basename($file['name']);
+            
+            $controllObj = new Controller();
+            $queryResult = $controllObj->addProduct($img_url,$amount,$pName,$price,$type,$disc);
+
+            header("Location:index.php?load=addProduct&&result=".$queryResult);
             echo "<script>alert('File uploaded successfully')</script>";
         }
         else {
@@ -59,12 +71,13 @@ function upload_image() {
                         
                         <div id="amount">
                             <div id="minus" onclick>-</div>
-                            <span id="pnumber"  contenteditable="true">1</span>
+                            <input type="text" name="amnt" id="pnumber">
                             <div id="plus">+</div>
                         </div>
                         
                         <input type="text" name="name" id="name" placeholder="product name">
                         <input type="text" name="price" id="price" placeholder="price $0">
+                        <input type="text" name="type" id="price" placeholder="product type">
                         
                         <textarea name="dic" id="dic" cols="30" rows="10">product description</textarea>
                           <!-- ADD THE  product to the db -->

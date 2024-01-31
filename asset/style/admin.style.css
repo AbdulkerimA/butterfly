@@ -268,18 +268,18 @@ body main #sec6 article #container #amount {
   display: flex;
   justify-content: center;
 }
-body main #sec6 article #container #amount span {
+body main #sec6 article #container #amount input {
   border: 1px solid white;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 100%;
-  padding: 0vh 0.5vw;
-  font-size: 1.5em;
+  background-color: #a78a7f;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
 }
-body main #sec6 article #container #amount span:focus {
-  height: 3.3vh;
-  outline: none;
+body main #sec6 article #container #amount input:focus {
   border: 1px solid white;
+  outline: none;
 }
 body main #sec6 article #container #amount #minus, body main #sec6 article #container #amount #plus {
   border: 1px solid white;
