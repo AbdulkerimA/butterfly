@@ -89,17 +89,79 @@ body main #sec1 article {
   font-size: 2em;
 }
 body main #container1 {
-  border: 2px solid rebeccapurple;
   overflow-x: scroll;
   position: relative;
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
 }
-body main #container1 #sec2 {
+body main #container1 #sec2, body main #container1 #sec3, body main #container1 #sec4, body main #container1 #sec1_5 {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #a78a7f;
+  margin: 2vh 2vw;
+  border: 1px solid gold;
+  border-radius: 2vh;
+  padding: 10px;
+}
+body main #container1 #sec2 #article1, body main #container1 #sec3 #article1, body main #container1 #sec4 #article1, body main #container1 #sec1_5 #article1 {
+  display: flex;
+  align-items: center;
+  background-color: #a78a7f;
+}
+body main #container1 #sec2 #article1 #icon1, body main #container1 #sec3 #article1 #icon1, body main #container1 #sec4 #article1 #icon1, body main #container1 #sec1_5 #article1 #icon1 {
+  display: inline;
+  margin: 1vh 2vw;
+}
+body main #container1 #sec2 #article1 #icon1 i, body main #container1 #sec3 #article1 #icon1 i, body main #container1 #sec4 #article1 #icon1 i, body main #container1 #sec1_5 #article1 #icon1 i {
+  color: #fff;
+  font-size: 2em;
+}
+body main #container1 #sec2 #article1 h2, body main #container1 #sec3 #article1 h2, body main #container1 #sec4 #article1 h2, body main #container1 #sec1_5 #article1 h2 {
+  margin-right: 2vw;
+  color: #fff;
+  display: inline;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body main #container1 #sec2 #article2, body main #container1 #sec3 #article2, body main #container1 #sec4 #article2, body main #container1 #sec1_5 #article2 {
+  display: flex;
+}
+body main #container1 #sec2 #article2 h1, body main #container1 #sec3 #article2 h1, body main #container1 #sec4 #article2 h1, body main #container1 #sec1_5 #article2 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body main #container1 #sec2 #article3, body main #container1 #sec3 #article3, body main #container1 #sec4 #article3, body main #container1 #sec1_5 #article3 {
+  margin: 1vh 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body main #container1 #sec2 #article3 #visit-growth #icon2, body main #container1 #sec3 #article3 #visit-growth #icon2, body main #container1 #sec4 #article3 #visit-growth #icon2, body main #container1 #sec1_5 #article3 #visit-growth #icon2 {
+  display: inline;
+}
+body main #container1 #sec2 #article3 #visit-growth #icon2 i, body main #container1 #sec3 #article3 #visit-growth #icon2 i, body main #container1 #sec4 #article3 #visit-growth #icon2 i, body main #container1 #sec1_5 #article3 #visit-growth #icon2 i {
+  font-size: 1.2em;
+  color: rgb(156, 230, 156);
+  margin-right: 2px;
+}
+body main #container1 #sec2 #article3 #visit-growth p, body main #container1 #sec3 #article3 #visit-growth p, body main #container1 #sec4 #article3 #visit-growth p, body main #container1 #sec1_5 #article3 #visit-growth p {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: rgb(156, 230, 156);
+}
+body main #container1 #sec1_6 {
   margin: 1vh 1vw;
 }
-body main #container1 #sec2 article {
+body main #container1 #sec1_6 article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +176,7 @@ body main #container1 #sec2 article {
   color: white;
   box-shadow: 2em 2em 10em #b19990;
 }
-body main #container1 #sec2 article #percent {
+body main #container1 #sec1_6 article #percent {
   margin: 2vh 0vw;
   display: flex;
   justify-content: center;
@@ -124,63 +186,17 @@ body main #container1 #sec2 article #percent {
   border: 1px solid burlywood;
   border-radius: 50%;
 }
-body main #container1 #sec2 article #percent #number {
+body main #container1 #sec1_6 article #percent #number {
   position: relative;
   font-size: 2em;
 }
-body main #container1 #sec2 article #percent::before {
+body main #container1 #sec1_6 article #percent::before {
   content: "";
   position: absolute;
   width: 7.5em;
   height: 7.5em;
   background-color: #a78a7f;
   border-radius: 50%;
-}
-body main #container1 #sec3 {
-  margin: 1vh 1vw;
-}
-body main #container1 #sec3 article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2vh 2vw;
-  border: 1px solid gold;
-  border-radius: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #a78a7f;
-  font-family: monospace;
-  font-size: 1.5em;
-  color: white;
-  box-shadow: 2em 2em 10em #b19990;
-}
-body main #container1 #sec3 article #piechart #squer {
-  color: #264653;
-  width: 2vw;
-  height: 2vh;
-  background-color: #264653;
-}
-body main #container1 #sec4 {
-  margin: 1vh 1vw;
-}
-body main #container1 #sec4 article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2vh 2vw;
-  border: 1px solid gold;
-  border-radius: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #a78a7f;
-  font-family: monospace;
-  font-size: 1.5em;
-  color: white;
-  box-shadow: 2em 2em 10em #b19990;
-}
-body main #container1 #sec4 article i {
-  color: #ffeedf;
-  font-size: 20vw;
 }
 body main #sec5 {
   display: flex;

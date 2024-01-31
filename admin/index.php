@@ -31,7 +31,7 @@ $error = null;
         <i class="fa fa-bars" aria-hidden="true"></i>
         <h3>Dashboard</h3>
         </div>   
-        <div id="options">
+        <div id="options"> 
             <form action="./index.php" method="get" id="options">
             <!-- buton one -->
             <button id="sales" type="submit" name="load" value="sales">

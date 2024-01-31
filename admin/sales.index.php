@@ -11,6 +11,99 @@
     <div id="container1">
         
     <section id="sec2">
+        <article id="article1">
+            <span id="icon1">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </span>
+            <h2>daily visit </h2>
+        </article>
+        
+        <article id="article2">
+            <h1>
+                200
+            </h1>
+        </article>
+
+        <article id="article3">
+            <div id="visit-growth">
+                <span id="icon2"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></span>
+                <p id="visit-percent"><span id="growth-num">20</span>%</p>
+            </div>
+        </article>
+
+    </section>
+   
+    <!-- number of subscribers -->
+    <section id="sec3">
+        <article id="article1">
+            <span id="icon1">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            </span>
+            <h2>number of subscribers</h2>
+        </article>
+        
+        <article id="article2">
+            <h1>
+                200k
+            </h1>
+        </article>
+
+        <article id="article3">
+            <div id="visit-growth">
+                <span id="icon2"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></span>
+                <p id="visit-percent"><span id="growth-num">2</span>%</p>
+            </div>
+        </article>
+        
+    </section>
+
+    <section id="sec4">
+        <article id="article1">
+            <span id="icon1">
+             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </span>
+            <h2>number of orders</h2>
+        </article>
+        
+        <article id="article2">
+            <h1>
+                430 <span>items</span>
+            </h1>
+        </article>
+
+        <article id="article3">
+            <div id="visit-growth">
+                <span id="icon2"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></span>
+                <p id="visit-percent"><span id="growth-num">2</span>%</p>
+            </div>
+        </article>
+        
+    </section>
+
+    <section id="sec1_5">
+        <article id="article1">
+            <span id="icon1">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </span>
+            <h2>sold items</h2>
+        </article>
+        
+        <article id="article2">
+            <h1>
+                430 <span>items</span>
+            </h1>
+        </article>
+
+        <article id="article3">
+            <div id="visit-growth">
+                <span id="icon2"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></span>
+                <p id="visit-percent"><span id="growth-num">2</span>%</p>
+            </div>
+        </article>
+        
+    </section>
+
+    <section id="sec1_6">
         <article>
             weekly growth rate in percent
             <div id="percent">
@@ -20,30 +113,10 @@
         </article>
     </section>
     <!-- section three for piechart of sold items -->
-    <section id="sec3">
-        <article>
-            most sold chocolates this week
-            <div id="piechart">
-                <br> <br>
-                <span id="squer"> x</span>
-                fererrorocher 30 item 
-                <br> <br>
-                <span id="squer"> x</span>
-                fererrorocher 30 item 
-                <br> <br>
-                <span id="squer"> x</span>
-                fererrorocher 30 item 
-                <br> <br>
 
-            </div>
-        </article>
-    </section>
 
     <!-- section four bargraph -->
-    <section id="sec4">
-        <article>
-        <i class="fa fa-bar-chart" aria-hidden="true"></i>
-        </article>
-    </section>
+
     </div>
+
     <script src="../asset/js/sales.admin.app.js"></script>
