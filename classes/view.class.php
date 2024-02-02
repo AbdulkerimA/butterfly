@@ -11,6 +11,7 @@ class View extends Model {
                 session_start();
                 $_SESSION['user'] = $luname;
                 $_SESSION['islogedin'] = true;
+                $_SESSION['user_type'] = $row['user_type'];
                 $user_type = $row['user_type'];
 
                 if($user_type == "admin")

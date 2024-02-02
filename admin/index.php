@@ -1,16 +1,18 @@
 <?php
+//session_start();
 
-if(isset($_GET['load']) && $_GET['load'] != "dump"){
+if(isset($_GET['load'])){
     session_start();
 }
-/*if (isset($_SESSION['islogedin'])){
-    if ($_SESSION['user'] != 'admin'){
-        header("Location:../login.php");
+if (isset($_SESSION['islogedin'])){
+    if ($_SESSION['user_type'] != 'admin'){
+        header("Location:../product.php");
     }
 }
 else{
     header("Location:../login.php");
-}*/
+}
+
 $error = null;
 
 ?>
