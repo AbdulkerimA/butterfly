@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if(isset($_GET['load']) && $_GET['load'] != "dump"){
+    session_start();
+}
 /*if (isset($_SESSION['islogedin'])){
     if ($_SESSION['user'] != 'admin'){
         header("Location:../login.php");
@@ -63,6 +65,7 @@ $error = null;
     </nav>
 
     <main>
+
         <?php
         if (isset($_GET['load'])){
             $page = $_GET["load"] . ".index.php";

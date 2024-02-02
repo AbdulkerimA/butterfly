@@ -8,6 +8,7 @@ body{
     display: flex;
     background-color: #ffeedf;
     overflow-y:hidden ;
+    overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     nav{
@@ -76,6 +77,7 @@ body{
     main{
         //overflow-y:scroll; 
         // dsection one 
+
         #sec1{
             position: relative;
             right: 25px;
@@ -219,7 +221,7 @@ body{
 
        }
 
-        // section 5 add products 
+        // section 5-6 add products 
         #sec5{
             display: flex;
             flex-direction: column;
@@ -363,56 +365,98 @@ body{
                     color: white;
                 }
             }
-            
+            // table 
             #container2{
-                margin: 3vh 2vw;
-                //border: 1px solid gray;
-                display: flex;
-                flex-wrap: wrap;
-                overflow-y: auto;
+                overflow-y:scroll;
+                border: 1px solid #a78a7f;
+                //height: 45px;
+                table{
+                    font-family: monospace;
+                    color: #a78a7f;
+                    width: 100%;
+                    table-layout:fixed;
+                    border-collapse: collapse;
+                    thead{
+                       
+                        width: 100%;
+                        tr{
+                            th{
+                                padding-bottom:2vh;
+                                font-weight: bold;
+                                font-size:3vh;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    tbody{
+                        margin: 10vh 0px;
+                        width: 100%;
+                        tr{
+                            td{
+                                padding:2vh 0px;
+                                font-size: 1.5em;
+                                text-align: center;
+                                .price{
+                                    background-color: transparent;
+                                    border: none;
+                                    text-align: center;
+                                    color: #a78a7f;
+                                    font-family: monospace;
+                                    font-size: 1em;
+                                }
+                                .price:focus{
+                                    outline: none;
+                                    border: 1px solid #a78a7f;
+                                }
+                                img{
+                                    width: 100px;
+                                    height: 100px;
+                                    border-radius: 5px;
+                                }
+                                button{
+                                    position: relative;
+                                    border: 1px solid #a78a7f;
+                                    padding:1vh 1vw;
+                                    width: 100%;
+                                    background-color: transparent;
+                                    font-family: monospace;
+                                    font-size: 1em;
+                                    color: #a78a7f;
+                                    transition: all 1s ease;
+                                }
+                                button:hover{
+                                    color: #fff;
+                                }
+                                button::after{
+                                    content: "";
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                    width: 0%;
+                                    height: 100%;
+                                    background-color: #a78a7f;
+                                    transition: all 1s ease;
+                                    z-index: -1;
+                                }
+                                button:hover::after{
+                                    width: 100%;
+                                }
+                                i{
+                                    border: 1px solid #a78a7f;
+                                    padding: 1vh 1vw;
+                                }
+                                i:hover{
+                                    background-color: rgb(248, 153, 153);
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
 
-                .product{
-                    border: 1px solid gold;
-                    border-radius: 10px;
-                    padding: 1vh 1vw ;
-                    margin-right:.5vw;
-                    position: relative;
-                    .del{
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family:Arial, Helvetica, sans-serif;
-                        color: white;
-                        background-color: red;
-                    }
-                    img{
-                        border: 1px solid gold;
-                        width: 150px;
-                        height: 150px;
-                        margin: 1vh 0vw;
-                        border-radius: 10px;
-                    }
-                    p{
-                        background-color: #735751;
-                        font-family: monospace;
-                        font-size: 1.5em;
-                        color: white;
-                        text-align: center;
-                        padding: 1vh 0px;
-                        margin: .5vh;
-                        border-radius: 1vw;
-                    }
-                }
-                .product:hover{
-                    box-shadow: 2em 2em 15em #a78a7f;
-                }
             }
+
+            
         }
         // end of section 7
 

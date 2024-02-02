@@ -72,4 +72,26 @@ class Controller extends Model{
         }
     }
 
+    // delete product from the db
+    public function DeleteProduct($pName){
+        $result = $this->removeProduct($pName);
+
+        if ($result == "successfully removed"){
+            return $result;
+        }
+        else {
+            return $result;
+        }
+    }
+
+    // update price 
+    public function changePrice($pName,$price){
+        $result = $this->priceUpdate($pName,$price);
+        if ($result == "query error"){
+            return "error";
+        }
+        else {
+            return $result;
+        }
+    }
 }

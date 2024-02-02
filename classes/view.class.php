@@ -26,4 +26,23 @@ class View extends Model {
         $error = "username or password is incorrect";
         header("Location:./login.php?error=$error");
     }
+
+
+    // display products in admin page
+    public function displayProductForAdmin(){
+        
+        $result = $this->getAllProduct();
+        $products = array();
+
+        while ($row = $result->fetch_assoc()){
+            array_push($products,
+                array(
+                    "pName"=>$row['p_name'],"pdisc"=>$row['p_disc'],
+                    "imgUrl"=>$row['img_url'],"price"=>$row['price'],
+                    "type"=>$row['type'],"pAmount"=>$row['p_amount']
+                )
+            );
+        }
+        return $products;
+    } 
 }
