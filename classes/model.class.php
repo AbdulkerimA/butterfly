@@ -51,6 +51,21 @@ class Model extends Db{
 
     }  
 
+
+    // get all product that are in the cart table
+    public function getProductsOnCart($userSession){
+        $sqlstmt = "select * from Cart where userSession = '$userSession';";
+        if ($result = $this->conn()->query($sqlstmt)){
+            return $result;
+        }
+        else {
+            return "query error".$this->conn()->error;
+        }
+
+    }
+
+
+    //Admin 
     // delete product
 
     public function removeProduct($pName){
@@ -89,5 +104,7 @@ class Model extends Db{
             return "query error";
         }
     }
+
+
 
 }

@@ -95,38 +95,9 @@ session_start();
 
         <!-- the cart -->
         <div id="cart-display">
-                <h1 id="mycart">my cart</h1>
-
-                <div id="prod-cont">
-                    <img src="./asset/pic/mega-chocolate-brownie-sundae-.jpg" alt="selected product">
-                    <p id="item-name">
-                        mega-chocolate
-                    </p>
-                    <div id="amnt-controll">
-                        <span id="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                        <span id="amunt">1</span>
-                        <span id="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                        <span id="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                    </div>
-                </div>
-
-                <div id="prod-cont">
-                    <img src="./asset/pic/mega-chocolate-brownie-sundae-.jpg" alt="selected product">
-                    <p id="item-name">
-                        mega-chocolate
-                    </p>
-                    <div id="amnt-controll">
-                        <span id=""><i class="fa fa-minus" aria-hidden="true"></i></span>
-                        <span id="amunt">1</span>
-                        <span id="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                        <span id="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                    </div>
-                </div>
-
-                <div id="pay">
-                    <span id="subtotal">subtotal $<span id="sum">10</span> </span>
-                    <button>checkout</button>
-                </div>
+                <?php
+                    include "./scripts/cart.script.php";
+                ?>
         </div>
 
     </main>
@@ -137,6 +108,10 @@ session_start();
     ?>
    </footer>
 
-   <script src="./asset/js/products.js"></script>
+    <script> 
+    let uid ="<?php echo $_SESSION['user'];?>";
+    </script>
+    
+    <script src="./asset/js/products.js"> </script>
 </body>
 </html>

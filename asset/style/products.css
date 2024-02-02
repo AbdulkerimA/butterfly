@@ -173,11 +173,11 @@ body main #products #product img {
   margin-bottom: 1vh;
 }
 body main #products #product #pname {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 15vw;
   padding-right: 2vw;
+  padding-left: 5px;
   margin-bottom: 1vh;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   color: white;
   background-color: #a78a7f;
@@ -186,7 +186,7 @@ body main #products #product #pdisc {
   width: 20vw;
   font-size: 1.2em;
 }
-body main #products #product #add-to-cart {
+body main #products #product .add-to-cart {
   width: 50%;
   border: 2px solid gold;
   font-size: 2em;
@@ -194,10 +194,10 @@ body main #products #product #add-to-cart {
   position: relative;
   transition: 1s ease-in-out;
 }
-body main #products #product #add-to-cart:hover {
+body main #products #product .add-to-cart:hover {
   color: #fff;
 }
-body main #products #product #add-to-cart::before {
+body main #products #product .add-to-cart::before {
   content: "";
   position: absolute;
   background: #a78a7f;
@@ -207,7 +207,7 @@ body main #products #product #add-to-cart::before {
   z-index: -1;
   transition: 0.5s ease-in-out;
 }
-body main #products #product #add-to-cart:hover:before {
+body main #products #product .add-to-cart:hover:before {
   width: 100%;
 }
 body main #cart-display {

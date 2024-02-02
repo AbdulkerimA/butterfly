@@ -3,10 +3,18 @@
 // this page is only accessable by post request 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+include "../inc/includes.admin.inc.php";
 
+$contobj = new Controller();
 
+$pName = $_POST['pName'];
+$amount = $_POST['amnt'];
+$uid = $_POST['uid'];
 
+$result = $contobj->addProductinTheCart($pName,$amount,$uid);
 
-//END OF IF STATMENT
+var_dump($result);
+//echo $pName;
+//END OF THE IF STATMENT
 }
 ?>

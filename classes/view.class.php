@@ -30,6 +30,41 @@ class View extends Model {
     }
 
 
+    // display products for users 
+    public function displayProductForUsers(){
+        
+        $result = $this->getAllProduct();
+        $products = array();
+
+        while ($row = $result->fetch_assoc()){
+            array_push($products,
+                array(
+                    "pName"=>$row['p_name'],"pdisc"=>$row['p_disc'],
+                    "imgUrl"=>$row['img_url'],"price"=>$row['price'],
+                    "type"=>$row['type']
+                )
+            );
+        }
+        return $products;
+    } 
+
+    // display products in the cart 
+    public function displayProductsOnTheCart($userSession){
+        
+        $result = $this->getAllProduct($userSession);
+        $products = array();
+
+        while ($row = $result->fetch_assoc()){
+            array_push($products,
+                array(
+                    "pName"=>$row['p_name'],"imgUrl"=>$row['img_url'],
+                    "amount"=>$row['p_amount']
+                )
+            );
+        }
+        return $products;
+    } 
+
     // display all users for admin page 
     public function displayAllUsers(){
         $result = $this-> getAllUsers();

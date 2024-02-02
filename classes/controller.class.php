@@ -39,6 +39,34 @@ class Controller extends Model{
         }
     }
 
+
+    // add products in the cart 
+    public function addProductinTheCart($pName,$amount,$userSession){
+
+        // get a data 
+        $products = $this->getProduct($pName);
+        
+        $data = array();
+        while ($row = $products->fetch_assoc()){
+            array_push($data,array("img" => $row['img_url'] ,"price" => $row['price'] ));
+        }
+
+        $img = $data[0]['img'];
+        $price = $data[0]['price'];
+
+        $queryStr = "insert into cart (p_name,img_url,price,p_amount,userSession) 
+        values ('$pName','$img','$price','$amount','$userSession')";
+           
+            if($this->conn()->query($queryStr)){
+                return "The product is added successfully";
+            }
+            else{
+                return "the product is not added ";
+            }
+        
+    }
+
+    // ADMIN FUNCTIONS 
     // add product function 
     function checkProductName($pName){
         $result = $this->getProduct($pName);
@@ -49,9 +77,8 @@ class Controller extends Model{
             return true;
         }
     }
+   
     public function addProduct($img,$amount,$pName,$price,$pType,$pDisc){
-
-
 
         $queryStr = "insert into products (p_name,p_disc,img_url,price,type,p_amount) 
         values ('$pName','$pDisc','$img','$price','$pType','$amount')";
@@ -72,7 +99,7 @@ class Controller extends Model{
         }
     }
 
-    // delete product from the db
+    // delete product from the db 
     public function DeleteProduct($pName){
         $result = $this->removeProduct($pName);
 
@@ -94,4 +121,6 @@ class Controller extends Model{
             return $result;
         }
     }
+
+
 }

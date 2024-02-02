@@ -1,9 +1,9 @@
 <?php
-//session_start();
-
+session_start();
+/*
 if(isset($_GET['load'])){
     session_start();
-}
+}*/
 if (isset($_SESSION['islogedin'])){
     if ($_SESSION['user_type'] != 'admin'){
         header("Location:../product.php");
