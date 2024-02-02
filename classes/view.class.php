@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 class View extends Model {
 
@@ -8,6 +8,7 @@ class View extends Model {
 
         while($row = $dbResult->fetch_assoc()){
             if ($luname == $row['user_name'] && $lpass == $row['password']){
+                session_start();
                 $_SESSION['user'] = $luname;
                 $_SESSION['islogedin'] = true;
                 $user_type = $row['user_type'];
@@ -28,6 +29,29 @@ class View extends Model {
     }
 
 
+    // display all users for admin page 
+    public function displayAllUsers(){
+        $result = $this-> getAllUsers();
+        $data = array();
+
+        while ($row = $result->fetch_assoc()){
+
+            array_push(
+                $data,
+                array(
+                    "id"=>$row['id'],
+                    "name"=>$row['user_name'],
+                    "email"=>$row['email'],
+                    "tel"=>$row['tel'],
+                    "comment"=>$row['comment'],
+                )
+            );
+        }
+
+        return $data;
+    }
+
+
     // display products in admin page
     public function displayProductForAdmin(){
         
@@ -45,4 +69,6 @@ class View extends Model {
         }
         return $products;
     } 
+
+
 }

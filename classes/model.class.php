@@ -1,6 +1,17 @@
 <?php
 
 class Model extends Db{
+    // get all usrs 
+    public function getAllUsers(){
+        $sqlstmt =  "select * from customers";
+        if ($result = $this->conn()->query($sqlstmt)){
+            return $result;
+        }
+        else {
+            return "query error".$this->conn()->error;
+        }
+    }
+    
     // to get a spesfic user from db
     protected function getUser($uname){
         $sqlstmt = "select * from Account where user_name = '$uname';";
