@@ -13,8 +13,8 @@ $uid = $_POST['uid'];
 
 $result = $contobj->addProductinTheCart($pName,$amount,$uid);
 
-var_dump($result);
-//echo $pName;
+//var_dump($result);
+//echo $uid;
 //END OF THE IF STATMENT
 }
 ?>

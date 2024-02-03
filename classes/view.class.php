@@ -51,7 +51,7 @@ class View extends Model {
     // display products in the cart 
     public function displayProductsOnTheCart($userSession){
         
-        $result = $this->getAllProduct($userSession);
+        $result = $this->getProductsOnCart($userSession);
         $products = array();
 
         while ($row = $result->fetch_assoc()){

@@ -1,21 +1,31 @@
 <?php 
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+    include "../inc/includes.admin.inc.php";
+    
+    $uid = $_POST['uid'];
+    $viewobj = new View();
+    $result = $viewobj->displayProductsOnTheCart($uid);
+
+    //echo $result[0]['pName'];
+    if (count($result) > 0){
+
 ?>
-
-
 
 <h1 id="mycart">my cart</h1>
 
-<?php
-for ($i=0;$i<3;$i++){
+<?php 
+for ($i=0;$i<count($result);$i++){
 ?>
-<div id="prod-cont">
-    <img src="./asset/pic/mega-chocolate-brownie-sundae-.jpg" alt="selected product">
+<div id="prod-cont" class="prod-cont">
+    <img src="<?php echo $result[$i]['imgUrl'] ?>" alt="selected product">
     <p id="item-name" class="item-name">
-        mega-chocolate
+       <?php echo $result[$i]['pName'] ?>
     </p>
     <div id="amnt-controll">
         <span id="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-        <span id="amunt" class="amunt">1</span>
+        <span id="amunt" class="amunt"><?php echo $result[$i]['amount'] ?></span>
         <span id="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
         <span id="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
     </div>
@@ -27,3 +37,8 @@ for ($i=0;$i<3;$i++){
     <span id="subtotal">subtotal $<span id="sum">10</span> </span>
     <button>checkout</button>
 </div>
+
+<?php
+    }
+}
+?>
