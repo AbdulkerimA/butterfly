@@ -27,7 +27,9 @@ for ($i=0;$i<count($result);$i++){
         <span id="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
         <span id="amunt" class="amunt"><?php echo $result[$i]['amount'] ?></span>
         <span id="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-        <span id="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+        <span id="delete<?php echo $i; ?>" class="delete" onclick=" deleteProductOnCart(<?php echo $i; ?>)">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </span>
     </div>
 </div>
 <?php
@@ -39,6 +41,10 @@ for ($i=0;$i<count($result);$i++){
 </div>
 
 <?php
+    }
+    else {
+        echo '<h1 id="mycart">my cart</h1>';
+        echo "no product is added";
     }
 }
 ?>

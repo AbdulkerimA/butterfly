@@ -5,16 +5,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 include "../inc/includes.admin.inc.php";
 
-$contobj = new Controller();
+if(isset($_POST['delete'])){
+    $contobj1 = new Controller();
 
-$pName = $_POST['pName'];
-$amount = $_POST['amnt'];
-$uid = $_POST['uid'];
+    $cartPName = trim($_POST['cartPName']);
+    $uid = $_POST['uid'];
+    
+    $d_result = $contobj1->DeleteProductFromCart($uid,$cartPName);
 
-$result = $contobj->addProductinTheCart($pName,$amount,$uid);
+    //echo $d_result;
+    
+    unset($_POST['delete']);
+}
+else{
+    $contobj = new Controller();
 
-//var_dump($result);
-//echo $uid;
+    $pName = $_POST['pName'];
+    $amount = $_POST['amnt'];
+    $uid = $_POST['uid'];
+
+    $result = $contobj->addProductinTheCart($pName,$amount,$uid);
+
+    //var_dump($result);
+    //echo $uid;
+}
 //END OF THE IF STATMENT
 }
 ?>

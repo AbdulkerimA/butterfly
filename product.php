@@ -112,6 +112,6 @@ session_start();
     let uid ="<?php echo $_SESSION['user'];?>";
     </script>
     
-    <script src="./asset/js/products.js"> </script>
+    <script src="./asset/js/products.js" defer> </script>
 </body>
 </html>

@@ -66,6 +66,20 @@ class Controller extends Model{
         
     }
 
+    // remove product from cart 
+    public function DeleteProductFromCart($uid,$pName){
+        $result = $this->removeProductFromCart($uid,$pName);
+
+        if ($result == "successfully removed"){
+            return $result;
+        }
+        else {
+            return "error ".$result;
+        }
+    }
+
+
+    
     // ADMIN FUNCTIONS 
     // add product function 
     function checkProductName($pName){

@@ -274,10 +274,10 @@ body main #cart-display #prod-cont #amnt-controll span[id=amunt] {
   display: flex;
   justify-content: center;
 }
-body main #cart-display #prod-cont #amnt-controll #delete {
+body main #cart-display #prod-cont #amnt-controll .delete {
   margin-left: 10px;
 }
-body main #cart-display #prod-cont #amnt-controll #delete:hover {
+body main #cart-display #prod-cont #amnt-controll .delete:hover {
   background-color: rgb(241, 130, 130);
   color: white;
 }

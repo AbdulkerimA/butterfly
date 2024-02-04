@@ -64,6 +64,17 @@ class Model extends Db{
 
     }
 
+    // remove product from cart 
+    public function removeProductFromCart($uid,$pName){
+        $sqlstmt = "delete from cart where p_name = '$pName' and userSession='$uid'";
+
+        if ($result = $this->conn()->query($sqlstmt)){
+            return "successfully removed";
+        } 
+        else {
+            return "query problem";
+        }
+    }
 
     //Admin 
     // delete product

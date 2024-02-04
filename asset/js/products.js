@@ -66,18 +66,20 @@ let products = document.querySelectorAll(".prod");
 let pname = document.querySelectorAll("#pname");
 //let amount = document.querySelectorAll(".amunt");
 
-console.log(uid);
+//console.log(uid);
 
 // for every product button add an event listner 
 for (let i=0;i<products.length;i++){
     document.getElementById("add-to-cart"+i).addEventListener("click",()=>{
-        //alert("hi i am working");
+        //alert("hi i am working");// for debuging only
+
         ++(document.getElementById("num").innerText); // adding the cart number
+
         const xhttp = new XMLHttpRequest();
 
-        /*xhttp.onload = () => {
-            document.getElementById("cart-display").innerHTML = xhttp.responseText;
-        }*/
+        xhttp.onload = () => {
+            displayCart();
+        }
 
         xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -100,3 +102,24 @@ let displayCart = () => {
 }
 
 // count number of elements add by user in the past visit but somehow not buyed
+
+
+// delete product from cart 
+
+let deleteProductOnCart = (i) => {
+    let cartPName = document.querySelectorAll("#item-name");
+    //console.log(cartPName[i].innerText); // for debuging only
+
+    --(document.getElementById("num").innerText); 
+
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = () => {
+        displayCart();
+    }
+
+    xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("uid="+uid+"&&cartPName="+cartPName[i].innerHTML+"&&delete=1");
+
+}
