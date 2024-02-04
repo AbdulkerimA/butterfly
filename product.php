@@ -34,24 +34,29 @@ session_start();
                <h2>catagorization</h2>
                <p id="prage">price range</p>
                <div id="range-collection">
-                <div onclick="loadProduct('30')">
-                <input type="checkbox" name="pr1" id="price-range-1">
-                <span> under $30</span>
+                <div onclick="loadProduct('All','All')">
+                    <input type="checkbox" name="pr1" id="price-range-1">
+                    <span> All </span>
+                </div> 
+                
+                <div onclick="loadProduct('byprice','30')">
+                    <input type="checkbox" name="pr1" id="price-range-1">
+                    <span> under $30</span>
                 </div>
 
-                <div>
+                <div onclick="loadProduct('byprice','90')">
                 <input type="checkbox" name="pr2" id="price-range-2">
                 <span> $30-$90</span>
                 </div>
                 
-                <div>
+                <div onclick="loadProduct('byprice','120')">
                 <input type="checkbox" name="pr3" id="price-range-3">
                 <span> $90-$120</span>
                 </div>
 
-                <div>
+                <div onclick="loadProduct('byprice','121')">
                 <input type="checkbox" name="pr4" id="price-range-4">
-                <span> ubove $90</span>
+                <span> ubove $120</span>
                 </div>
                 <!-- end of price range div-->
                </div>
@@ -63,10 +68,15 @@ session_start();
                         <p id="title">brands</p>
                         <?php 
                             $i =0;
-                            $brand = ['Dov','ferrero rocher','silk','kit kat','galaxy'];
+                            $brand = ['Dov','ferrero rocher','silk','kit kat','milks'];
                             foreach($brand as $b){
                                 $i++;
-                                echo "<div id='brand.".$i."'><input type='checkbox'> <span>".$b."</span></div>";
+                                ?>
+                                <div id="brand<?php echo $i ?>" onclick="loadProduct('byname','<?php echo $b ?>')">
+                                    <input type='checkbox'> 
+                                    <span><?php echo $b ?></span>
+                                </div>
+                            <?php
                             }
                         ?>
                     </div>
@@ -76,10 +86,16 @@ session_start();
                         <p id="title">chocolate type</p>
                         <?php 
                             $i =0;
-                            $brand = ['Dark ','White ','milk ','biskut','mix'];
+                            $brand = ['Dark ','White ','milk ','biskut','mix','chocolate cake'];
                             foreach($brand as $b){
                                 $i++;
-                                echo "<div id='brand.".$i."'><input type='checkbox'> <span>".$b."</span></div>";
+                                ?>
+
+                               <div id="brand<?php echo $i ?>" onclick="loadProduct('bytype','<?php echo $b ?>')">
+                                    <input type='checkbox'> 
+                                    <span><?php echo $b ?></span>
+                               </div>
+                        <?php
                             }
                         ?>
                     </div>

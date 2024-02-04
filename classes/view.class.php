@@ -48,6 +48,23 @@ class View extends Model {
         return $products;
     } 
 
+    public function displaySingleTypeProduct($searchType,$str_){
+        
+        $result = $this->getProductByType($searchType,$str_);
+        $products = array();
+
+        while ($row = $result->fetch_assoc()){
+            array_push($products,
+                array(
+                    "pName"=>$row['p_name'],"pdisc"=>$row['p_disc'],
+                    "imgUrl"=>$row['img_url'],"price"=>$row['price'],
+                    "type"=>$row['type']
+                )
+            );
+        }
+        return $products;
+    } 
+
     // display products in the cart 
     public function displayProductsOnTheCart($userSession){
         

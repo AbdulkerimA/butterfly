@@ -22,7 +22,7 @@ setInterval(set_product_section_size,100);
 
 // request 
 
-let loadProduct = (ptype) =>{
+let loadProduct = (ptype,value) =>{
 
     // creat an obj
     const xhttp = new XMLHttpRequest();
@@ -30,6 +30,10 @@ let loadProduct = (ptype) =>{
     xhttp.onload = () => {
         if(xhttp.status == "200"){
             document.getElementById("products").innerHTML = xhttp.responseText;
+            let products = document.querySelectorAll(".prod");
+            let pname = document.querySelectorAll("#pname");
+
+            add_to_cart_btn_event(products,pname);
         }
         else{
             document.getElementById("products").innerHTML = "there is some kind of error here";
@@ -38,7 +42,7 @@ let loadProduct = (ptype) =>{
 
     xhttp.open("post","/butterfly/scripts/products.script.php");
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("ptype=" + ptype);
+    xhttp.send(ptype+"=1"+"&&type="+value);
 }
 
 // adding class to the cart element to display it when the cart icon is cliced
@@ -69,25 +73,27 @@ let pname = document.querySelectorAll("#pname");
 //console.log(uid); // for debuging only
 
 // for every product button add an event listner 
-for (let i=0;i<products.length;i++){
-    document.getElementById("add-to-cart"+i).addEventListener("click",()=>{
-        //alert("hi i am working");// for debuging only
-       
-        ++(document.getElementById("num").innerText); // adding the cart number
-        
-        const xhttp = new XMLHttpRequest();
-
-        xhttp.onload = () => {
-            displayCart();
-            subtotalCalcu();
-        }
-
-        xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send("uid="+uid+"&&pName="+pname[i].innerHTML+"&&amnt=1");
-    });
+let add_to_cart_btn_event = (pro,p_name) =>{
+    for (let i=0;i<pro.length;i++){
+        document.getElementById("add-to-cart"+i).addEventListener("click",()=>{
+            //alert("hi i am working");// for debuging only
+           
+            ++(document.getElementById("num").innerText); // adding the cart number
+            
+            const xhttp = new XMLHttpRequest();
+    
+            xhttp.onload = () => {
+                displayCart();
+                subtotalCalcu();
+            }
+    
+            xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("uid="+uid+"&&pName="+p_name[i].innerHTML+"&&amnt=1");
+        });
+    }
 }
-
+add_to_cart_btn_event(products,pname);
 
 
 //display elements added to cart 
