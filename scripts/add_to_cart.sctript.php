@@ -17,6 +17,17 @@ if(isset($_POST['delete'])){
     
     unset($_POST['delete']);
 }
+elseif(isset($_POST['update'])){
+
+    $newAmount = $_POST['pamount']; // amount of an item in the cart
+    $cartPName = trim($_POST['cartPName']);
+    $uid = $_POST['uid'];
+
+    $contobj2 = new Controller();    
+    $u_result = $contobj2->changeAmountOnCart($uid,$cartPName,$newAmount);
+    
+    unset($_POST['update']);
+}
 else{
     $contobj = new Controller();
 

@@ -24,12 +24,21 @@ for ($i=0;$i<count($result);$i++){
        <?php echo $result[$i]['pName'] ?>
     </p>
     <div id="amnt-controll">
-        <span id="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-        <span id="amunt" class="amunt"><?php echo $result[$i]['amount'] ?></span>
-        <span id="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
+        <!-- minus button -->
+        <span id="minus<?php echo $i; ?>" class="minus" onclick="decreaseAmount(<?php echo $i; ?>)">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+        </span>
+        <!-- amount -->
+        <span id="amunt<?php echo $i; ?>" class="amunt"><?php echo $result[$i]['amount'] ?></span>
+        <!-- add button -->
+        <span id="plus<?php echo $i; ?>" class="plus" onclick="addAmount(<?php echo $i; ?>)">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </span>
+        <!-- delete button -->
         <span id="delete<?php echo $i; ?>" class="delete" onclick=" deleteProductOnCart(<?php echo $i; ?>)">
             <i class="fa fa-trash-o" aria-hidden="true"></i>
         </span>
+
     </div>
 </div>
 <?php

@@ -34,13 +34,13 @@ let addToCart = () => {
 
 // chacking for number of product on  session storage 
 
-window.addEventListener("load", () => {
+/*window.addEventListener("load", () => {
     prodNum = sessionStorage.getItem("prodamount");
     if (prodNum == null)
-    document.getElementById("num").innerHTML = 0;
+    //document.getElementById("num").innerHTML = 0;
     else
-    document.getElementById("num").innerHTML = prodNum;
-});
+   // document.getElementById("num").innerHTML = prodNum;
+});*/
 
 
 // function for nav bar to hide when scroll down

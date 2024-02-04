@@ -76,6 +76,19 @@ class Model extends Db{
         }
     }
 
+    // update amount of a product in cart 
+    public function productAmountUpdate($uid,$pName,$newAmount){
+        $sqlstmt = "UPDATE cart SET p_amount = '$newAmount' WHERE p_name = '$pName' and userSession='$uid'";
+
+        if($result = $this->conn()->query($sqlstmt)){
+            return $newAmount;
+        }
+        else{
+            return "query error";
+        }
+    }
+    
+    
     //Admin 
     // delete product
 

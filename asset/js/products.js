@@ -41,7 +41,7 @@ let loadProduct = (ptype) =>{
     xhttp.send("ptype=" + ptype);
 }
 
-// adding class to the cart 
+// adding class to the cart element to display it when the cart icon is cliced
 let enabled= false; // a bit to controll when to display a cart 
 
 document.getElementById("cart").addEventListener("click",()=>{
@@ -66,13 +66,13 @@ let products = document.querySelectorAll(".prod");
 let pname = document.querySelectorAll("#pname");
 //let amount = document.querySelectorAll(".amunt");
 
-//console.log(uid);
+//console.log(uid); // for debuging only
 
 // for every product button add an event listner 
 for (let i=0;i<products.length;i++){
     document.getElementById("add-to-cart"+i).addEventListener("click",()=>{
         //alert("hi i am working");// for debuging only
-
+       
         ++(document.getElementById("num").innerText); // adding the cart number
 
         const xhttp = new XMLHttpRequest();
@@ -87,7 +87,10 @@ for (let i=0;i<products.length;i++){
     });
 }
 
-//display elements add to cart 
+
+
+//display elements added to cart 
+
 let displayCart = () => {
 
     xhttp = new XMLHttpRequest();
@@ -100,9 +103,6 @@ let displayCart = () => {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("uid="+uid);
 }
-
-// count number of elements add by user in the past visit but somehow not buyed
-
 
 // delete product from cart 
 
@@ -122,4 +122,42 @@ let deleteProductOnCart = (i) => {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("uid="+uid+"&&cartPName="+cartPName[i].innerHTML+"&&delete=1");
 
+}
+
+// update amount of prduct added to the cart 
+
+let updateAmount = (i,newAmount) => {
+    let cartPName = document.querySelectorAll("#item-name");
+    let pAmount =newAmount;// ++(document.getElementById("amunt"+i).innerText);
+
+    //console.log(pAmount); // for debuging only
+    
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = () => {
+        displayCart();
+    }
+
+    xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("uid="+uid+"&&cartPName="+cartPName[i].innerHTML+"&&pamount="+pAmount+"&&update=1");
+}
+
+// decrease the amount of a product by one 
+let decreaseAmount = (i) => {
+    let num = document.getElementById("amunt"+i).innerText;
+    if (num > 1){
+        let pAmount = --(document.getElementById("amunt"+i).innerText);
+        updateAmount(i,pAmount);
+    }
+    else {
+        deleteProductOnCart(i);
+    }
+} 
+
+// increase the amount of a product by one
+
+let addAmount = (i) => {
+    let pAmount = ++(document.getElementById("amunt"+i).innerText);
+    updateAmount(i,pAmount);
 }

@@ -210,6 +210,10 @@ body main #products #product .add-to-cart::before {
 body main #products #product .add-to-cart:hover:before {
   width: 100%;
 }
+body main #products #product .price-tag {
+  font-family: monospace;
+  font-size: 1.5em;
+}
 body main #cart-display {
   position: absolute;
   right: 20px;
@@ -268,7 +272,7 @@ body main #cart-display #prod-cont #amnt-controll span {
   padding: 1vh 1vw;
   border: 1px solid #a78a7f;
 }
-body main #cart-display #prod-cont #amnt-controll span[id=amunt] {
+body main #cart-display #prod-cont #amnt-controll span[class=amunt] {
   width: 5vw;
   font-size: 1.2em;
   display: flex;

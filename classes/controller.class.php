@@ -78,7 +78,16 @@ class Controller extends Model{
         }
     }
 
-
+    // change amount of a product in the cart table
+    public function changeAmountOnCart($uid,$cartPName,$newAmount){
+        $result = $this->productAmountUpdate($uid,$cartPName,$newAmount);
+        if ($result == "query error"){
+            return "error";
+        }
+        else {
+            return $result;
+        }
+    }
     
     // ADMIN FUNCTIONS 
     // add product function 

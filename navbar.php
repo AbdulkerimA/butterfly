@@ -1,6 +1,16 @@
 <?php
 
 $navigation = ['Home','about','products','discount','contact'];
+if (isset($_SESSION['islogedin']))
+{
+    $viewobj = new View();
+    $result = $viewobj->displayProductsOnTheCart($_SESSION['user']);
+
+    $numberOfProductsInCart = count($result);
+}
+else {
+    $numberOfProductsInCart = 0;
+}
 ?>
 <nav id="navbar" class="section1">
     <!-- Logo -->
@@ -17,7 +27,7 @@ $navigation = ['Home','about','products','discount','contact'];
         <div id="cart">
             <a href="#" id="car">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <span id="num">0</span>
+                <span id="num"><?php echo $numberOfProductsInCart;?></span>
             </a>
         </div>
         <?php 

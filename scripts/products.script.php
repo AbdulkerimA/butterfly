@@ -49,7 +49,7 @@
         <p id="pdisc">
             <?php echo $product[$i]['pdisc']?>. 
         </p>
-        <p id="price-tag"><?php echo $product[$i]['price']?></p>
+        <p id="price-tag<?php echo $i?>" class="price-tag"><?php echo $product[$i]['price']?></p>
         <div id="add-to-cart<?php echo $i?>" class="add-to-cart">
         <i class="fa fa-cart-plus" aria-hidden="true"></i>
         </div>
