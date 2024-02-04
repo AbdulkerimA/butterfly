@@ -17,6 +17,7 @@ if(isset($_POST['delete'])){
     
     unset($_POST['delete']);
 }
+
 elseif(isset($_POST['update'])){
 
     $newAmount = $_POST['pamount']; // amount of an item in the cart
@@ -28,6 +29,7 @@ elseif(isset($_POST['update'])){
     
     unset($_POST['update']);
 }
+
 else{
     $contobj = new Controller();
 
@@ -40,6 +42,7 @@ else{
     //var_dump($result);
     //echo $uid;
 }
+
 //END OF THE IF STATMENT
 }
 ?>

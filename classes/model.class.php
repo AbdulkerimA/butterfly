@@ -88,7 +88,42 @@ class Model extends Db{
         }
     }
     
+    // add subtotal 
+    public function setSubtotal($uid,$sub){
+        $sqlstmt = "insert into subtotal values('$sub','$uid')";
+
+        if ($result = $this->conn()->query($sqlstmt)){
+            return "successfuly inserted";
+        }
+        else{
+            return "query error";
+        }
+    }
     
+    // get users subtotal 
+    public function getSubtotal($userSession){
+        $sqlstmt = "select * from subtotal where uid = '$userSession';";
+        if ($result = $this->conn()->query($sqlstmt)){
+            return $result;
+        }
+        else {
+            return "query error".$this->conn()->error;
+        }
+
+    }
+
+    //update sub total
+    public function subtotalUpdate($uid,$sub){
+        $sqlstmt = "UPDATE subtotal SET subtotal = '$sub' WHERE uid='$uid'";
+
+        if($result = $this->conn()->query($sqlstmt)){
+            return $sub;
+        }
+        else{
+            return "query error";
+        }
+    }
+
     //Admin 
     // delete product
 

@@ -74,11 +74,12 @@ for (let i=0;i<products.length;i++){
         //alert("hi i am working");// for debuging only
        
         ++(document.getElementById("num").innerText); // adding the cart number
-
+        
         const xhttp = new XMLHttpRequest();
 
         xhttp.onload = () => {
             displayCart();
+            subtotalCalcu();
         }
 
         xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");
@@ -97,6 +98,7 @@ let displayCart = () => {
 
     xhttp.onload = () => {
         document.getElementById("cart-display").innerHTML = xhttp.responseText;
+        subtotalCalcu();
     }
 
     xhttp.open("post","/butterfly/scripts/cart.script.php");
@@ -116,6 +118,7 @@ let deleteProductOnCart = (i) => {
 
     xhttp.onload = () => {
         displayCart();
+        subtotalCalcu();
     }
 
     xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");
@@ -136,6 +139,7 @@ let updateAmount = (i,newAmount) => {
 
     xhttp.onload = () => {
         displayCart();
+        subtotalCalcu();
     }
 
     xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");
@@ -161,3 +165,16 @@ let addAmount = (i) => {
     let pAmount = ++(document.getElementById("amunt"+i).innerText);
     updateAmount(i,pAmount);
 }
+
+// subtotal calculator
+let subtotalCalcu = () => {
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = () =>{
+        document.getElementById("subtotal").innerText ="subtotal $" + xhttp.responseText;
+    }
+
+    xhttp.open("post","/butterfly/scripts/subtotalCalculator.script.php");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("uid="+uid);
+} 

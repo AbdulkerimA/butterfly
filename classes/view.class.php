@@ -58,9 +58,21 @@ class View extends Model {
             array_push($products,
                 array(
                     "pName"=>$row['p_name'],"imgUrl"=>$row['img_url'],
-                    "amount"=>$row['p_amount']
+                    "amount"=>$row['p_amount'],"p"=>$row['price']
                 )
             );
+        }
+        return $products;
+    } 
+
+    // display all users subtotal
+    public function displaySubtotal($userSession){
+        
+        $result = $this->getSubtotal($userSession);
+        $products = array();
+
+        while ($row = $result->fetch_assoc()){
+            array_push($products,array("sub"=>$row['subtotal'],"user"=>$row['uid']));
         }
         return $products;
     } 

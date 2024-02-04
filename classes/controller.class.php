@@ -88,6 +88,18 @@ class Controller extends Model{
             return $result;
         }
     }
+
+    // insert into subtotal
+    public function insertSubtotal($uid,$sub){
+        $result = $this->setSubtotal($uid,$sub);
+        return $result;
+    }
+
+    //update subtotal
+    public function updateSubtotal($uid,$sub){
+        $result = $this->subtotalUpdate($uid,$sub);
+        return $result;
+    }
     
     // ADMIN FUNCTIONS 
     // add product function 

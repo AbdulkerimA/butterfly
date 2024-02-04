@@ -54,6 +54,10 @@ for ($i=0;$i<count($result);$i++){
     else {
         echo '<h1 id="mycart">my cart</h1>';
         echo "no product is added";
+        echo '<div id="pay">
+                <span id="subtotal">subtotal $<span id="sum">10</span> </span>
+                <button>checkout</button>
+              </div>';
     }
 }
 ?>
