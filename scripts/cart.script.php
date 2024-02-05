@@ -45,8 +45,8 @@ for ($i=0;$i<count($result);$i++){
 }
 ?>
 <div id="pay">
-    <span id="subtotal">subtotal $<span id="sum">10</span> </span>
-    <button>checkout</button>
+    <span id="subtotal">subtotal<span id="sum">10</span>ETB </span>
+    <a href="./pay.php"><button>checkout</button></a>
 </div>
 
 <?php
@@ -56,7 +56,7 @@ for ($i=0;$i<count($result);$i++){
         echo "no product is added";
         echo '<div id="pay">
                 <span id="subtotal">subtotal $<span id="sum">10</span> </span>
-                <button>checkout</button>
+                <a href="./pay.php"><button>checkout</button></a>
               </div>';
     }
 }

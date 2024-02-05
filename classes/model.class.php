@@ -159,6 +159,21 @@ class Model extends Db{
         }
     }
 
+    // delete all p from car for this user
+    protected function deleteAllFromCart($uid){
+        $sqlstmt = "delete from cart where userSession='$uid';
+                    delete from subtotal where uid='$uid';
+                    update customers set number_item_they_buy = number_item_they_buy+1 where user_name='$uid';
+";
+
+        if($result = $this->conn()->multi_query($sqlstmt)){
+            return "removed";
+        }
+        else{
+            return "query error";
+        }
+    }
+
     //Admin 
     // delete product
 

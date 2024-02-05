@@ -101,6 +101,13 @@ class Controller extends Model{
         return $result;
     }
     
+
+    // remove p from cart 
+    public function removeAllProductsFromCart($uid)
+    {
+        $result = $this->deleteAllFromCart($uid);
+        return $result;
+    }
     // ADMIN FUNCTIONS 
     // add product function 
     function checkProductName($pName){

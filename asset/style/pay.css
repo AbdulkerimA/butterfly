@@ -1,0 +1,128 @@
+* {
+  font-family: sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+body #container {
+  background-color: #002b36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #container #cont {
+  width: 50%;
+  padding: 2vh 2vw;
+  background-color: #ffffff;
+  position: relative;
+  border: 1px solid brown;
+  display: flex;
+  border-radius: 2vw;
+}
+body #container #cont img {
+  width: 50px;
+  height: 50px;
+}
+body #container #cont #right {
+  border: 1px solid brow;
+  position: relative;
+  width: 50%;
+}
+body #container #cont #right #chapa-logo {
+  background-color: #002b36;
+  display: flex;
+  justify-content: center;
+  padding: 5vh 5vw;
+  border-radius: 2vw;
+}
+body #container #cont #right #chapa-logo svg {
+  width: 100px;
+  height: 100px;
+}
+body #container #cont #right #price {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2vh 2vw;
+  position: relative;
+  top: -20px;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+  background-color: #ffffff;
+  border-radius: 1vw;
+  box-shadow: 3px 7px 5px gray;
+  color: gray;
+}
+body #container #cont #right #price #amount {
+  color: #002b36;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+body #container #cont #right #headers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1em;
+  color: #002b36;
+  height: 15vh;
+}
+body #container #cont #right form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #container #cont #right form input {
+  width: 80%;
+  height: 4vh;
+  border: 2px solid gray;
+  border-radius: 0.5vw;
+  padding-left: 2vw;
+  margin-bottom: 1vh;
+}
+body #container #cont #right form input:focus {
+  outline: none;
+  color: #002b36;
+}
+body #container #cont #right form button {
+  font-size: 1.2em;
+  color: white;
+  background-color: rgba(99, 161, 5, 0.911);
+  width: 80%;
+  padding: 1vh 1vw;
+  border: 1px solid gray;
+  border-radius: 1vh;
+}
+body #container #cont #left {
+  border: 1px solid brow;
+  position: relative;
+  width: 50%;
+}
+body #container #cont #left div {
+  background: rgb(199, 198, 198);
+  width: 20vw;
+  display: flex;
+  align-items: center;
+}
+body #container #cont #left div span {
+  margin: 2vh 2vw;
+}
+body #container #cont #left div:hover {
+  background-color: whitesmoke;
+}
+body #container #cont #left #title1 {
+  background-color: #002b36;
+  font-size: 1.5em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1vh 0px;
+  border-radius: 1vh 1vh 0px 0px;
+}
+body #container #cont #left #coop {
+  border-radius: 0vh 0vh 1vh 1vh;
+}/*# sourceMappingURL=pay.css.map */
