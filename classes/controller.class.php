@@ -14,7 +14,7 @@ class Controller extends Model{
         return true;
     }
 
-    public function register($Runame,$Rpass,$Remail,$Rtel){
+    public function register($Runame,$Rpass,$Rconf,$Remail,$Rtel){
         // before storing a phone num we have to check the length
         if (strlen($Rtel) < 10){
             $error = "phnone number must be atleast 10 digits";
@@ -22,19 +22,25 @@ class Controller extends Model{
         }
         elseif(strlen($Rtel) > 12){
             $error = "phone number must be lessthan 13 digits";
-            header("Location:./signup.phpp?error=$error");   
+            header("Location:./signup.php?error=$error");   
+        }
+        elseif($Rpass != $Rconf){
+            $error = "password doesn't match";
+            header("Location:./signup.php?error=$error");   
         }
         else{
-            $this->userNameAveleblityChecker($Runame);
-            $queryResult = $this->setUser($Runame,$Rpass,$Remail,$Rtel);
-            if ($queryResult == "success"){
-                $_SESSION['user'] = $Runame;
-                $_SESSION['islogedin'] = true;
-                header("Location:./product.php");
-                exit;
-            }
-            else{
-                header("Loction:./signup.php?error=$queryResult");
+            if ($this->userNameAveleblityChecker($Runame)){
+                $queryResult = $this->setUser($Runame,$Rpass,$Remail,$Rtel);
+                
+                if ($queryResult == "success"){
+                    $_SESSION['user'] = $Runame;
+                    $_SESSION['islogedin'] = true;
+                    header("Location:./product.php");
+                    exit;
+                }
+                else{
+                    header("Loction:./signup.php?error=$queryResult");
+                }
             }
         }
     }

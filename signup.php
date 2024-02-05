@@ -10,9 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $email = htmlspecialchars($_POST['email']);
         $tel = htmlentities($_POST['tel']);
         $pass = htmlspecialchars($_POST['pass']);
+        $confpass = htmlspecialchars($_POST['cpass']);
 
         $controllObj = new Controller();
-        $controllObj->register($user,$pass,$email,$tel);
+        $controllObj->register($user,$pass,$confpass,$email,$tel);
     }
     else{
         // if any of the filds are empty display this message

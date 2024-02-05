@@ -164,7 +164,7 @@ class Model extends Db{
         $sqlstmt = "delete from cart where userSession='$uid';
                     delete from subtotal where uid='$uid';
                     update customers set number_item_they_buy = number_item_they_buy+1 where user_name='$uid';
-";
+                ";
 
         if($result = $this->conn()->multi_query($sqlstmt)){
             return "removed";
@@ -204,9 +204,12 @@ class Model extends Db{
     // user registration 
     protected function setUser($Rname,$Rpass,$Remail,$Rtel){
         $sqlstmt = "insert into customers(user_name,password,email,tel) 
-        values('$Rname','$Rpass','$Remail','$Rtel')";
+                    values('$Rname','$Rpass','$Remail','$Rtel');
+                    INSERT INTO account(user_name, password, user_type) 
+                    VALUES ('$Rname','$Rpass','user');
+        ";
 
-        if ($result = $this->conn()->query($sqlstmt)){
+        if ($result = $this->conn()->multi_query($sqlstmt)){
             return $result;
         }
         else {
