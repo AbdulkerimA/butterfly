@@ -39,7 +39,8 @@ else {
             }
             else {
         ?>
-        <a href="#"><?php echo $_SESSION['user']; ?> </a>
+        <a href="#" id="user-name"><?php $name = $_SESSION['user']; echo strtoupper($name[0]); ?> </a>
+        <a href="./scripts/logout.scripts.php">Logout</a>
         <?php
             }
         ?>
