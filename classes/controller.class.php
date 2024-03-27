@@ -45,10 +45,17 @@ class Controller extends Model{
         }
     }
 
+    function decreaseAmountofAprod($pName,$amnt=1){
+        $result = $this->decreaseAfterSell($pName,$amnt);
+        if ($result){
+            return "success";
+        }
+    }
 
     // add products in the cart 
     public function addProductinTheCart($pName,$amount,$userSession){
-
+        // decrease the amount of the product and then add it to the cart
+        $this->decreaseAmountofAprod($pName);
         // get a data 
         $products = $this->getProduct($pName);
         
@@ -84,8 +91,9 @@ class Controller extends Model{
         }
     }
 
-    // change amount of a product in the cart table
+    // change amount of a product in the cart table 
     public function changeAmountOnCart($uid,$cartPName,$newAmount){
+        $this->decreaseAmountofAprod($cartPName,$newAmount-1);
         $result = $this->productAmountUpdate($uid,$cartPName,$newAmount);
         if ($result == "query error"){
             return "error";

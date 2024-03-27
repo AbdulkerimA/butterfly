@@ -77,7 +77,7 @@ let add_to_cart_btn_event = (pro,p_name) =>{
     for (let i=0;i<pro.length;i++){
         document.getElementById("add-to-cart"+i).addEventListener("click",()=>{
             //alert("hi i am working");// for debuging only
-           
+            
             ++(document.getElementById("num").innerText); // adding the cart number
             
             const xhttp = new XMLHttpRequest();
@@ -85,6 +85,7 @@ let add_to_cart_btn_event = (pro,p_name) =>{
             xhttp.onload = () => {
                 displayCart();
                 subtotalCalcu();
+                location.reload()
             }
     
             xhttp.open("post","/butterfly/scripts/add_to_cart.sctript.php");

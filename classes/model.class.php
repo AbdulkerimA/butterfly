@@ -28,7 +28,7 @@ class Model extends Db{
     // get all products 
     
     public function getAllProduct(){
-        $sqlstmt = "select * from products ";
+        $sqlstmt = "select * from products where p_amount > 0";
         if ($result = $this->conn()->query($sqlstmt)){
             return $result;
         }
@@ -86,6 +86,16 @@ class Model extends Db{
 
     } 
 
+    // decreast the amount of products in the products table 
+    protected function decreaseAfterSell($pName,$amnt = 1){
+        $sqlstmt = "update products set p_amount = p_amount - $amnt where p_name = '$pName'";
+        if($result = $this->conn()->query($sqlstmt)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
     // get all product that are in the cart table
     public function getProductsOnCart($userSession){
