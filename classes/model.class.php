@@ -217,6 +217,18 @@ class Model extends Db{
         }
     }
 
+    // add comment 
+    protected function addComent($uid,$cmnt){
+        $sqlstmt = "UPDATE `customers` SET comment ='$cmnt' WHERE user_name='$uid'";
+
+        if ($result = $this->conn()->query($sqlstmt)){
+            return $result;
+        }
+        else{
+            return "Query Error ".$this->conn()->error;
+        }
+    }
+
 
 
 }

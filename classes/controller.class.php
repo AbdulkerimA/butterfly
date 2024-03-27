@@ -114,6 +114,11 @@ class Controller extends Model{
         $result = $this->deleteAllFromCart($uid);
         return $result;
     }
+
+    public function comment($uid,$cmnt){
+        $result = $this->addComent($uid,$cmnt);
+        return $result;
+    }
     // ADMIN FUNCTIONS 
     // add product function 
     function checkProductName($pName){

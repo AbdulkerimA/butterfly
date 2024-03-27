@@ -1,8 +1,18 @@
 <?php 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     // send the comment to company email
-    echo "<script>alert('tank you for commenting :)')</script>";
-    header("Location:./index.php#comment");
+    include "./inc/includes.inc.php";
+    session_start();
+    if (isset($_SESSION['user'])){
+        $cmnt = htmlspecialchars($_POST['comment']);
+
+        $contobj = new Controller();
+        $result = $contobj->comment($_SESSION['user'],$cmnt);
+        header("Location:./index.php#comment");
+    }
+    else{
+        header("Location:./login.php");
+    }
 }
 
 ?>
